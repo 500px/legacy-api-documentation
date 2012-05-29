@@ -18,7 +18,6 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 ## Basics
 
 - **[Formats and Terms](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md)**
-- **[Examples](https://github.com/500px/api-documentation/blob/master/basics/examples.md)**
 - **[API Terms of Use](https://github.com/500px/api-documentation/blob/master/basics/terms_of_use.md)**
 
 ## Endpoints
@@ -52,13 +51,17 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 - **[<code>POST</code> blogs/:id](https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs_id.md)**
 - **[<code>DELETE</code> blogs/:id](https://github.com/500px/api-documentation/blob/master/endpoints/blog/DELETE_blogs_id.md)**
 
-
 ## Authentication
 
 - **[<code>POST</code> oauth/request_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_requesttoken.md)**
 - **[<code>POST</code> oauth/authorize](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_authorize.md)**
 - **[<code>POST</code> oauth/access_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_accesstoken.md)**
 - **[Upload key](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)**
+
+## Examples
+- **[iOS](https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md)**
+- **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/Ruby.md)**
+- **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
 
 ***
 
