@@ -43,8 +43,8 @@ Categories of photos may be specified by their ID or string name, depending on t
 
 <table id="categories">
   <tr>
-    <td>ID</td>
-    <td>Category</td>
+    <th>ID</th>
+    <th>Category</th>
   </tr>
   <tr><td>0</td><td>Uncategorized</td></tr>
   <tr><td>10</td><td>Abstract</td></tr>
@@ -93,7 +93,7 @@ The short format of a Photo object includes the following data:
 - **comments\_count** — The number of comments on this photo, integer
 - **times\_viewed** — The number of times this photo has been viewed, integer
 - **created\_at** — Timestamp indicating time of photo creation, timestamp
-- **user** — Author’s profile in short format, object
+- **user** — Author’s profile in [short format][], object
 
 [Category]: #categories
 
@@ -122,9 +122,6 @@ The full format of a Photo object includes the following data:
 - **location** — A human-readable name of the location where the photo was taken, string
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
-
-[Category]: #categories
-[short format]: #user_formats
 
 The following data will also be returned for an authenticated request:
 
@@ -164,7 +161,7 @@ The profile format of a User object includes the following data:
 - **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users.
 - **domain** — This user’s portfolio’s domain (hostname), string
 - **fotomoto\_on** — Whether the user has the store option enabled, boolean
-- **locale** — User’s preferred locale, string. Current values: ‘en’, ‘ru’, ‘de’, ‘br’.
+- **locale** — User’s preferred locale, string. Current values: <code>'en', 'ru', 'de', 'br'</code>.
 - **show\_nude** — Whether the user has content filter disabled, boolean.
 - **friends\_count** — Number of people this user follows, integer.
 - **followers\_count** — Number of people this user is being followed by, integer.
@@ -183,7 +180,7 @@ The short format of a Blog Post object includes the following data:
 - **id** — ID of the blog post, integer
 - **title** — Title of the blog post, string
 - **created\_at** — Timestamp indicating time the blog post was created, timestamp
-- **user** — Author’s profile in short format, object
+- **user** — Author’s profile in [short format][], object
 
 ### Full format
 The full format of a Blog Post object includes the following data:
@@ -195,8 +192,8 @@ The full format of a Blog Post object includes the following data:
 - **body** — Content of post, string
 - **tags** — Comma separated list of tags, string
 - **created\_at** — Timestamp indicating time the blog post was created, timestamp
-- **user** — Author’s profile in short format, object
-- **photos** — A list of photos given in short format, object
+- **user** — Author’s profile in [short format][], object
+- **photos** — A list of photos given in [short format][], object
 
 ***
 
@@ -211,4 +208,7 @@ The full format of a Comment object includes the following data:
 - **to_whom_user_id** — To which user the comment was made, string
 - **user_id** — User ID of author of the comment, string
 - **created_at** — Timestamp indicating time the comment was created, timestamp
-- **user** — Author's profile in short format, object
+- **user** — Author's profile in [short format][], object
+
+[Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
+[short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
