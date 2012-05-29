@@ -115,11 +115,11 @@ Two-legged OAuth authentication, sometimes referred to as XAuth, is also possibl
 
 At a high-level, signing requests is just adding a special value for the `Authorization` HTTP header field. The POST request looks something like this:
 
-![OAuth at a glance](oauth_post.png "OAuth at a glance")
+![OAuth at a glance](https://github.com/500px/api-documentation/raw/master/examples/iOS/oauth_post.png "OAuth at a glance")
 
 The process to create this request is represented in the following flow chart.
 
-![OAuth Flowchart](oauth_flowchart.png "Creating an OAuth POST request")
+![OAuth Flowchart](https://github.com/500px/api-documentation/raw/master/examples/iOS/oauth_flowchart.png "Creating an OAuth POST request")
 
 Signing requests with OAuth involves creating a special value for the `Authorization` HTTP header field. Creating that header value requires the HTTP method (POST, GET, or DELETE), the  POST or GET parameters you're sending, and the token/secret combination you obtained when the user was authenticated (above).
 
