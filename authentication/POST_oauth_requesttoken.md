@@ -3,7 +3,7 @@
     POST oauth/request_token
 
 ## Description
-Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills [Section 6.1](http://oauth.net/core/1.0/#auth_step1) of the [OAuth 1.0 authentication flow](http://oauth.net/core/1.0/#anchor9).
+Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills **[Section 6.1][]** of the **[OAuth 1.0 authentication flow][]**.
 
 ***
 
@@ -31,3 +31,6 @@ Text, containing an query string-encoded list of OAuth parameters.
 ## Errors
 
 - **401 Invalid OAuth Request** — Request for the token was malformed or uses an unknown OAuth version
+
+[Section 6.1]: http://oauth.net/core/1.0/#auth_step1
+[OAuth 1.0 authentication flow]: http://oauth.net/core/1.0/#anchor9

@@ -3,14 +3,14 @@
     POST oauth/access_token
 
 ## Description
-Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills [Section 6.1](http://oauth.net/core/1.0/#auth_step1) of the [OAuth 1.0 authentication flow](http://oauth.net/core/1.0/#anchor9).
+Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills [Section 6.1][] of the [OAuth 1.0 authentication flow][].
 
 The OAuth access token may also be used for xAuth operations.
 
 ***
 
 ## Requires authentication
-OAuth Request Token received using oauth/request_token method. Requires **oauth_verifier** when using oauth/authorize in authentication workflow.
+OAuth Request Token received using the **[request_token][]** method. Requires **oauth_verifier** when using **[authorize](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_authorize.modificator)** in authentication workflow.
 
 ***
 
@@ -38,3 +38,7 @@ Text, containing an query string-encoded list of OAuth parameters.
 ## Errors
 
 - **401 Invalid OAuth Request** — Request for the token was malformed or uses an unknown OAuth version
+
+[Section 6.1]: http://oauth.net/core/1.0/#auth_step1
+[OAuth 1.0 authentication flow]: http://oauth.net/core/1.0/#anchor9
+[request_token]: https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_requesttoken.md
