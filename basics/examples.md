@@ -6,7 +6,7 @@
 
 There is an extensive wiki on of OAuth and xAuth authentication over at [oauth-php-wiki][] on Google Code. 500px.com oAuth is actually quite similar to Twitter's. Appropriating [@abraham's][] [TwitterOAuth][] library give you a head start.
 
-In **lib/TwitterOAuth.php**, make the following adjustments:
+In <code>lib/TwitterOAuth.php</code> make the following adjustments:
     
     $host = 'https://api.500px.com/v1/
 
