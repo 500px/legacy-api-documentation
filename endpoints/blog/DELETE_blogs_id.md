@@ -8,7 +8,7 @@ Deletes a blog post.
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
@@ -41,3 +41,5 @@ All known errors cause the resource to return HTTP error code header together wi
     {
       "status": "OK"
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication

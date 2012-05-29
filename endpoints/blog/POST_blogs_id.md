@@ -8,7 +8,7 @@ Updates a blog post.
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
@@ -25,7 +25,9 @@ OAuth
 ***
 
 ## Return format
-Blog post information in full format.
+Blog post information in **[full format][]**.
+
+
 
 ***
 
@@ -88,3 +90,6 @@ All known errors cause the resource to return HTTP error code header together wi
         }
       ]
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

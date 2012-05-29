@@ -26,7 +26,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **comments** — An array of Comment objects in full format.
+- **comments** — An array of Comment objects in **[full format][]**.
 
 ***
 
@@ -68,3 +68,5 @@ An array with the following keys and values:
         }
       ]
     }
+
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

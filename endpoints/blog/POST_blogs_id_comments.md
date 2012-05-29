@@ -8,12 +8,11 @@ Creates a new blog post.
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
 ## Parameters
-
 - **id** _(required)_ — The Blog Post ID to get comments for. Can be provided either as blogs/:id or in the query string.
 - **body** _(required)_ — Content of the comment.
 
@@ -48,3 +47,5 @@ All known errors cause the resource to return HTTP error code header together wi
       "message":"Successfully added a comment.",
       "error":"None"
     }
+
+  [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication

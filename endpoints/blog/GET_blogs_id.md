@@ -8,9 +8,8 @@ Returns detailed information of a single blog post.
 ***
 
 ## Requires authentication
-
-- A valid **Consumer Key** must be provided in **consumer_key** parameter.
-- Alternatively, a valid **OAuth** request with an authorized Access Token will be accepted.
+* A valid Consumer Key must be provided in **consumer_key** parameter.
+* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
 
 ***
 
@@ -21,7 +20,7 @@ Returns detailed information of a single blog post.
 ***
 
 ## Return format
-A JSON object containing a BlogPost object in full format.
+A JSON object containing a BlogPost object in **[full format][]**.
 
 ***
 
@@ -78,3 +77,6 @@ All known errors cause the resource to return HTTP error code header together wi
         }
       ]
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format
