@@ -8,8 +8,8 @@ Returns a listing of up to one hundred photos from search results for a specifie
 ***
 
 ## Requires authentication
-* A valid Consumer Key must be provided in consumer_key parameter.
-* Alternatively, a valid OAuth request with an authorized Access Token will be accepted.
+* A valid Consumer Key must be provided in **consumer_key** parameter.
+* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
 
 ***
 
@@ -29,7 +29,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in short format.
+- **photos** — An array of Photo objects in **[short format][]**.
 
 ***
 
@@ -40,3 +40,6 @@ None
 
 ## Example
 None
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1

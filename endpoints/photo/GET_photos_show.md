@@ -8,8 +8,8 @@ Returns detailed information of a single photo.
 ***
 
 ## Requires authentication
-- A valid Consumer Key must be provided in consumer_key parameter.
-- Alternatively, a valid OAuth request with an authorized Access Token will be accepted.
+* A valid Consumer Key must be provided in **consumer_key** parameter.
+* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
 
 ***
 
@@ -22,12 +22,12 @@ Returns detailed information of a single photo.
 ***
 
 ## Return format
-A JSON object containing keys **photo** and **comments**, where **photo** is a Photo object in full format and comments is a list of **comments** associated with the photo in the following format:
+A JSON object containing keys **photo** and **comments**, where **photo** is a Photo object in **[full format][]** and comments is a list of **comments** associated with the photo in the following format:
 
 - **id** — ID of the comment.
 - **body** — Text of the comment.
 - **user_id** — The ID of the author of the comment.
-- **user** — Profile of the author of the comment in short format.
+- **user** — Profile of the author of the comment in **[short format][]**.
 - **to_whom_user_id** — Is always the ID of the author of the photo.
 
 ### When requested with OAuth authentication, following keys will be included in the photo object:
@@ -413,3 +413,7 @@ All known errors cause the resource to return HTTP error code header together wi
       "votes_count": 450
      }
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

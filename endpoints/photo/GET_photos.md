@@ -3,13 +3,13 @@
     GET photos
 
 ## Description
-Returns a listing of up to one hundred photos for a specified photo stream.
+Returns a listing of up to one hundred photos for a specified **[photo stream][]**.
 
 ***
 
 ## Requires authentication
 * A valid Consumer Key must be provided in **consumer_key** parameter.
-* Alternatively, a valid OAuth request with an authorized Access Token will be accepted.
+* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
 
 ***
 
@@ -26,12 +26,12 @@ Returns a listing of up to one hundred photos for a specified photo stream.
     ### Per-user features
     All per-user streams require a **user_id** or **username** parameter
     
-    - 'user' — Return photos by a specific user, as displayed on http://500px.com/:username
-    - 'user_friends' — Return photos by users the specified user is following, as displayed on http://500px.com/:username/following
-    - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on http://500px.com/:username/favorites
+    - 'user' — Return photos by a specific user, as displayed on **[http://500px.com/:username][]**
+    - 'user_friends' — Return photos by users the specified user is following, as displayed on **[http://500px.com/:username/following][]**
+    - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**
 
-- **only** — String name of the **category** to return photos from.
-- **exclude** — String name of the **category** to exclude photos by.
+- **only** — String name of the **[category][]** to return photos from.
+- **exclude** — String name of the **[category][]** to exclude photos by.
 - **sort** — Sort photos in the specified order.
     ### Recognized values:
     **Note:** For global features default sorting will take precedence. (Consider a SQL query "ORDER BY rating DESC, times_viewed DESC" for feature popular)
@@ -53,13 +53,13 @@ An array with the following keys and values:
 
 - **feature** — Feature that is being returned.
 - **filters** — Additional filters that were used:
-    - 'category' — The ID of the category that photos were filtered by;
+    - 'category' — The ID of the **[category][]** that photos were filtered by;
     - 'user_id' — The ID of the user specified by 'user_id' or 'username' parameters;
     - 'friends_ids' — IDs of users the user specified is following;
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in short format.
+- **photos** — An array of Photo objects in **[short format][]**.
 
 ***
 
@@ -424,3 +424,11 @@ None
      "total_items": 1738, 
      "total_pages": 87
     }
+
+[photo stream]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[http://500px.com/:username]: http://500px.com/iansobolev
+[http://500px.com/:username/following]: http://500px.com/iansobolev/following
+[http://500px.com/:username/favorites]: http://500px.com/iansobolev/favorites
+[category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
+[short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1

@@ -3,12 +3,12 @@
     POST photos
 
 ## Description
-Create a new photo on behalf of the user, and receive an upload token in exchange.
+Create a new photo on behalf of the user, and receive an **[upload key][]** in exchange.
 
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
@@ -17,7 +17,7 @@ Essential information:
 
 - **name** — Title of the photo
 - **description** — Description for the photo
-- **category** — A numerical ID for the category of the photo
+- **category** — A numerical ID for the **[Category][]** of the photo
 
 Technical details of the photo: (this information may be overridden when the file is uploaded and parsed for EXIF and IPTC tags)
 
@@ -40,7 +40,7 @@ Technical details of the photo: (this information may be overridden when the fil
 ***
 
 ## Return format
-Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in short format, and 'upload_key' is the token to be used by the client to upload the file.
+Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file.
 
 ***
 
@@ -86,3 +86,8 @@ All known errors cause the resource to return HTTP error code header together wi
      }, 
      "upload_key": "1170cbb2fa4d75379e72c2e55a33d69c"
     }
+
+[upload key]: https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
+[short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1

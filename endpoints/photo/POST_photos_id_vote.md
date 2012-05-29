@@ -8,7 +8,7 @@ Allows the user to vote for a photo.
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
@@ -20,7 +20,7 @@ OAuth
 ***
 
 ## Return format
-A JSON object containing key **photo**, where **photo** is a Photo object in full format.
+A JSON object containing key **photo**, where **photo** is a Photo object in [full format][].
 
 ***
 
@@ -82,3 +82,6 @@ All known errors cause the resource to return HTTP error code header together wi
       "votes_count": 6
      }
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format
