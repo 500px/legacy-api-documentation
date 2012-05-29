@@ -1,0 +1,50 @@
+# Blog Resources
+
+    POST blogs/:id/comments
+
+## Description
+Creates a new blog post.
+
+***
+
+## Requires authentication
+OAuth
+
+***
+
+## Parameters
+
+- **id** _(required)_ — The Blog Post ID to get comments for. Can be provided either as blogs/:id or in the query string.
+- **body** _(required)_ — Content of the comment.
+
+***
+
+## Return format
+A JSON object with key "status" and value of 200, and key "message" with value of "Successfully added a comment."
+
+***
+
+## Errors
+All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
+
+- **400 Bad Request** — The body of the comment was not specified.
+- **404 Not Found** — The specified blog post was not found.
+
+***
+
+## Example
+**Request**
+
+    POST /v1/blogs/30/comments
+
+**Body**
+
+    body=I+like+your+photos
+
+**Return**
+
+    {
+      "status":200,
+      "message":"Successfully added a comment.",
+      "error":"None"
+    }
