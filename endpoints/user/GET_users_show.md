@@ -8,9 +8,8 @@ Returns the profile information for a specified user.
 ***
 
 ## Requires authentication
-
-- A valid **Consumer Key** must be provided in **consumer_key** parameter.
-- Alternatively, a valid **OAuth** request with an authorized Access Token will be accepted.
+* A valid Consumer Key must be provided in **consumer_key** parameter.
+* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
 
 ***
 
@@ -24,7 +23,7 @@ Returns the profile information for a specified user.
 ***
 
 ## Return format
-User profile information in full format.
+User profile information in **[full format][]**.
 
 Additional data:
 - **following** — (OAuth only) whether the currently authenticated user is following the user specified by the identifier, boolean.
@@ -79,3 +78,6 @@ All known errors cause the resource to return HTTP error code header together wi
       "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/3798.jpg"
     }
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

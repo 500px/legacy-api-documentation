@@ -8,7 +8,7 @@ Returns the profile information for the current user.
 ***
 
 ## Requires authentication
-OAuth
+**[OAuth][]**
 
 ***
 
@@ -18,9 +18,10 @@ None
 ***
 
 ## Return format
-Current user's profile information in full format. 
+Current user's profile information in **[full format][]**. 
 
 Additional data:
+
 - **upload_limit** — the number of photos the user may upload at this moment, integer.
 - **upload_limit_expiry** — date and time of the beginning of the new upload limit cycle, datetime.
 
@@ -32,7 +33,7 @@ None.
 ***
 
 ## Example
-**Request (Using OAuth)**
+**Request (Using [OAuth][])**
 
     https://api.500px.com/v1/users
 
@@ -70,3 +71,6 @@ None.
       "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/3798.jpg"
     }
     }
+
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format
