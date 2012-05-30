@@ -60,7 +60,7 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 
 ## Examples
 - **[iOS](https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md)**
-- **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/Ruby.md)**
+- **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/)**
 - **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
 
 ***
