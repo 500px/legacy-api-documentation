@@ -58,45 +58,46 @@ All known errors cause the resource to return HTTP error code header together wi
 
 
 **Return**
-
-  {
-      "upload_key": "89653832030e7d26daf3a43fc2ccd501",
-      "photo": {
-          "id": 10000277,
-          "user_id": 173,
-          "name": "Hello",
-          "description": "World",
-          "camera": null,
-          "lens": null,
-          "focal_length": null,
-          "iso": null,
-          "shutter_speed": null,
-          "aperture": null,
-          "times_viewed": 0,
-          "rating": null,
-          "status": 0,
-          "created_at": "2012-06-08T13:17:14-04:00",
-          "category": 0,
-          "location": null,
-          "privacy": false,
-          "latitude": null,
-          "longitude": null,
-          "taken_at": null,
-          "hi_res_uploaded": 0,
-          "for_sale": false,
-          "width": null,
-          "height": null,
-          "votes_count": 0,
-          "favorites_count": 0,
-          "comments_count": 0,
-          "positive_votes_count": 0,
-          "nsfw": false,
-          "sales_count": 0,
-          "for_sale_date": null,
-          "highest_rating": 0,
-          "highest_rating_date": null
-      }
+``` json
+{
+  "upload_key": "89653832030e7d26daf3a43fc2ccd501",
+  "photo": {
+    "id": 10000277,
+    "user_id": 173,
+    "name": "Hello",
+    "description": "World",
+    "camera": null,
+    "lens": null,
+    "focal_length": null,
+    "iso": null,
+    "shutter_speed": null,
+    "aperture": null,
+    "times_viewed": 0,
+    "rating": null,
+    "status": 0,
+    "created_at": "2012-06-08T13:17:14-04:00",
+    "category": 0,
+    "location": null,
+    "privacy": false,
+    "latitude": null,
+    "longitude": null,
+    "taken_at": null,
+    "hi_res_uploaded": 0,
+    "for_sale": false,
+    "width": null,
+    "height": null,
+    "votes_count": 0,
+    "favorites_count": 0,
+    "comments_count": 0,
+    "positive_votes_count": 0,
+    "nsfw": false,
+    "sales_count": 0,
+    "for_sale_date": null,
+    "highest_rating": 0,
+    "highest_rating_date": null
   }
+}
+```
 
 [upload key]: https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication

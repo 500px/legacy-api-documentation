@@ -37,11 +37,12 @@ All known errors cause the resource to return HTTP error code header together wi
     DELETE v1/photos/8359543
 
 **Return**
-
-    {
-      "status": 200,
-      "message": "Successfully deleted a photo.",
-      "error": "None"
-    }
+``` json
+{
+    "status": 200,
+    "message": "Successfully deleted a photo.",
+    "error": "None"
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
