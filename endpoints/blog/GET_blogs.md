@@ -3,7 +3,7 @@
     GET blogs
 
 ## Description
-Returns a listing of up to one hundred blog posts.
+Returns a listing of five recent stories (maximum 100 per page).
 
 ***
 
@@ -14,17 +14,17 @@ Returns a listing of up to one hundred blog posts.
 ***
 
 ## Parameters
-- **feature** (required) — **[Blog stream][]** to be retrieved. Recognized values:
+- **feature** (required) — **[Story stream][]** to be retrieved. Default _fresh_. Recognized values:
     ### Global features
-    - **fresh** — Return recent blog posts made by any user.
+    - **fresh** — Return recent stories made by any user.
 
     ### Per-user features
     All per-user streams require a **user_id** or **username** parameter:
 
-    - **user** — Return blog posts by a specific user, as displayed on **[http://500px.com/:username/blog][]**
+    - **user** — Return stories by a specific user, as displayed on **[http://500px.com/:username/stories][]**
 
-- **page** — Return a specific page in the blog listing. Page numbering is 1-based.
-- **rpp** — The number of results to return. Can not be over 100, default 20.
+- **page** — Return a specific page in the story listing. Page numbering is 1-based.
+- **rpp** — The number of results to return. Can not be over 100, default 5.
 
 ***
 
@@ -32,12 +32,12 @@ Returns a listing of up to one hundred blog posts.
 An array with the following keys and values:
 
 - **feature** — **[Feature][]** that is being returned.
-- **filters** — Additional filters that were used:
+- **filters** — Additional filters that could be used:
     - 'user_id' — The ID of the user specified by 'user_id' or 'username' parameters;
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **blog_posts** — An array of BlogPost objects in **[short format][]**.
+- **blog_posts** — An array of Story objects in **[short format][]**.
 
 ***
 
@@ -49,58 +49,48 @@ None
 ## Example
 **Request**
 
-    https://api.500px.com/v1/blogs?feature=fresh&page=2&consumer_key=YOUR-CONSUMER-KEY
+    GET v1/blogs
 
 **Return**
 
     {
       feature":"fresh",
-      "filters":{},
-      "current_page":2,
-      "total_pages":4,
-      "total_items":17,
+      "filters":{ },
+      "current_page":1,
+      "total_pages":105698,
+      "total_items":528491,
       "blog_posts": [
         {
-          id":28,
-          "title":"I Took Some Photos",
+          "id": 528,
+          "title": "On the Top of the NYC — Part II",
+          "created_at": "2012-04-02T22:39:51-04:00",
           "user": {
-            city":"",
-            "country":"",
-            "firstname":"Ian",
-            "id":35,
-            "lastname":"Sobolev",
-            "upgrade_status":1,
-            "username":"iansobolev",
-            "fullname":"Ian Sobolev",
-            "userpic_url":"http://s3.amazonaws.com/devavatars.500px.net/35.jpg"
+          "id": 1,
+          "username": "tchebotarev",
+          "firstname": "Evgeny",
+          "lastname": "Tchebotarev",
+          "city": "Toronto",
+          "country": "Canada",
+          "fullname": "Evgeny Tchebotarev",
+          "userpic_url": "http://acdn.500px.net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
+          "upgrade_status": 2
           }
-        }, {
-          id":28,
-          "title":"My Photo Blog",
+        }, 
+        {
+          id":491,
+          "title": "On the Top of the NYC — Part I",
+          "created_at": "2012-04-02T22:37:26-04:00",
           "user": {
-            city":"",
-            "country":"",
-            "firstname":"Tom",
-            "id":35,
-            "lastname":"Creighton",
-            "upgrade_status":1,
-            "username":"tomcreighton",
-            "fullname":"Tom Creighton",
-            "userpic_url":"http://s3.amazonaws.com/devavatars.500px.net/36.jpg"
+          "id": 1,
+          "username": "tchebotarev",
+          "firstname": "Evgeny",
+          "lastname": "Tchebotarev",
+          "city": "Toronto",
+          "country": "Canada",
+          "fullname": "Evgeny Tchebotarev",
+          "userpic_url": "http://acdn.500px."net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
+          upgrade_status: 2
           }
-        }, {
-          id":28,
-          "title":"More Photos",
-          "user": {
-            city":"",
-            "country":"",
-            "firstname":"Ian",
-            "id":35,
-            "lastname":"Sobolev",
-            "upgrade_status":1,
-            "username":"iansobolev",
-            "fullname":"Ian Sobolev",
-            "userpic_url":"http://s3.amazonaws.com/devavatars.500px.net/35.jpg"
           }
         }
       ]
@@ -108,7 +98,7 @@ None
 
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
-[Blog stream]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms
+[Story stream]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms
 [Feature]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms
-[http://500px.com/:username/blog]: http://500px.com/iansobolev/blog
+[http://500px.com/:username/blog]: http://500px.com/tchebotarev/stories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1

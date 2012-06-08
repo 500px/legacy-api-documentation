@@ -3,7 +3,7 @@
     POST blogs
 
 ## Description
-Creates a new blog post.
+Creates a new Story.
 
 ***
 
@@ -16,8 +16,8 @@ Creates a new blog post.
 
 Essential information:
 
-- **title** — Title for the blog post.
-- **body** — Content of the blog post.
+- **title** _(required)_ — Title for the blog post.
+- **body** _(required)_ — Content of the blog post.
 
 Optional information:
 
@@ -29,7 +29,7 @@ Optional information:
 ***
 
 ## Return format
-Blog post information in **[full format][]**.
+New created Story information in **[full format][]**.
 
 ***
 
@@ -48,48 +48,41 @@ All known errors cause the resource to return HTTP error code header together wi
 
 **Body**
 
-    title=My+Vacation&body=I+went+on+a+vacation+to+Hawaii&photo_ids=251,254
+    title=My+Vacation&body=I+went+on+a+vacation+to+Hawaii&photo_ids=251
 
 **Return**
 
-    {
-        "body":"I went on a vacation to Hawaii",
-        "created_at":"2011-10-17T18:07:31Z",
-        "id":30,
-        "latitude":null,
-        "longitude":null,
-        "tags":"",
-        "title":"My Vacation",
-        "user":{
-          city":null,
-          "country":null,
-          "firstname":"Ian",
-          "id":76,
-          "lastname":"Sobolev",
-          "upgrade_status":0,
-          "username":"iansobolev",
-          "fullname":"Ian Sobolev",
-          "userpic_url":"/graphics/userpic.png" }
-        "photos": [
-          {
-            "category": 0,
-            "created_at": "2011-10-17T18:37:18Z",
+{
+    "id": 40186,
+    "title": "My Vacation",
+    "body": "I went on a vacation to Hawaii",
+    "created_at": "2012-06-07T17:10:57-04:00",
+    "latitude": null,
+    "longitude": null,
+    "user": {
+        "id": 173,
+        "username": "vovko",
+        "firstname": "Vladimir",
+        "lastname": "Drizhepolov",
+        "city": "Toronto",
+        "country": "Canada",
+        "fullname": "Vladimir Drizhepolov",
+        "userpic_url": "http://acdn.500px.net/173.jpg",
+        "upgrade_status": 2
+    },
+    "tags": null,
+    "photos": [
+        {
             "id": 251,
-            "name": "At the beach",
-            "rating": 0,
-            "image_url": "http://pcdn.500px.net/251/c636d054379a5496338ef153920be5b23bee1e9a/4.jpg",
-            "votes_count": 0
-          }, {
+            "name": "Untitled",
+            "rating": 59.7,
+            "created_at": "2012-06-05T17:40:48-04:00",
             "category": 0,
-            "created_at": "2011-10-17T18:37:18Z",
-            "id": 251,
-            "name": "My Vacation Photo",
-            "rating": 0,
-            "image_url": "http://pcdn.500px.net/251/c636d054379a5496338ef153920be5b23bee1e9a/4.jpg",
-            "votes_count": 0
-          }
-        ]
-      }
+            "votes_count": 1,
+            "image_url": "http://pcdn.500px.net/8309863/49a60b97f30125b223f4e38ab53c6525435888f2/4.jpg"
+        }
+    ]
+}
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

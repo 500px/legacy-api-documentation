@@ -1,0 +1,159 @@
+
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:apigee="http://api.apigee.com/wadl/2010/07/" 
+  xmlns="http://wadl.dev.java.net/2009/02"
+  xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
+
+  <!-- Base defines the domain and base path of the endpoint -->
+  <resources base="https://api.500px.com/v1">
+
+    <resource path="photos">
+
+
+      <param name="feature" type="xsd:string" style="query" default="fresh_today" required="true">
+        <doc>
+          Photo stream.
+        </doc>
+        <option value="popular"/>
+        <option value="upcoming"/>
+        <option value="editors"/>
+        <option value="fresh_today"/>
+        <option value="fresh_yesterday"/>
+        <option value="fresh_week"/>
+        <option value="user" />
+        <option value="user_friends" />
+        <option value="user_favorites" />
+      </param>
+
+      <param name="user_id" type="xsd:string" style="query">
+        <doc>User ID 'user' Photo streeam</doc>
+      </param>
+
+      <param name="username" type="xsd:string" style="query">
+        <doc>OR username for 'user' Photo streeam</doc>
+      </param>
+
+      <param name="only" type="xsd:string" style="query">
+        <doc>String name of the category to return photos from</doc>
+      </param>
+
+      <param name="exclude" type="xsd:string" style="query">
+        <doc>String name of the category to exclude photos by.</doc>
+      </param>
+
+      <param name="sort" type="xsd:string" style="template">
+        <doc>
+          Sort photos in the specified order.
+        </doc>
+        <option value="created_at"/>
+        <option value="rating"/>
+        <option value="times_viewed"/>
+        <option value="votes_count"/>
+        <option value="favorites_count"/>
+        <option value="comments_count"/>
+        <option value="taken_at" />
+      </param>
+      
+      <param name="page" type="xsd:string" style="query">
+        <doc>Return a specific page in the photo stream. Page numbering is 1-based.</doc>
+      </param>
+
+      <param name="rpp" type="xsd:string" style="query">
+        <doc>The number of results to return. Can not be over 100, default 20.</doc>
+      </param>
+
+      <method id="get_photos" name="GET" apigee:displayName="GET photos">
+
+        <apigee:tags>
+          <apigee:tag primary="true">Photos</apigee:tag>
+          <apigee:tag>Show</apigee:tag>
+        </apigee:tags>
+      
+      <apigee:authentication required="true" />
+      <apigee:example url="/photos" />
+
+      <doc title="GET Photos" apigee:url="photos">
+        Retrieves list of photos
+      </doc>
+    </method>
+    </resource>
+
+
+    <resource path="photos/{id}">
+      <method id="delete_photos_id" name="DELETE" apigee:displayName="DELETE photos/{id}">
+
+        <apigee:tags>
+          <apigee:tag primary="true">Photos</apigee:tag>
+        </apigee:tags>
+
+        <apigee:authentication required="true" />
+        <apigee:example url="/photos/{id}" />
+
+	    <doc title="" apigee:url="https://api.500px.com/v1/photos">
+		    Deletes the photo.
+	    </doc>
+      </method>
+    </resource>
+
+
+    <resource path="photos/{id}/favorite">
+      <method id="delete_photos_id_favorite" name="DELETE" apigee:displayName="DELETE photos/{id}/favorite">
+        
+        <apigee:tags>
+          <apigee:tag primary="true">Photos</apigee:tag>
+          <apigee:tag>Photos</apigee:tag>
+        </apigee:tags>
+
+        <apigee:authentication required="true" />
+        <apigee:example url="/photos/{id}/favorite" />
+
+      <doc title="" apigee:url="https://api.500px.com/v1/photos/{id}/favorite">
+        Deletes the photo from User's favorite list.
+      </doc>
+      </method>
+    </resource>
+
+
+    <resource path="photos/{id}/tags">
+      <method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/{id}/tags">
+        
+        <apigee:tags>
+          <apigee:tag primary="true">Photos</apigee:tag>
+        </apigee:tags>
+
+        <apigee:authentication required="true" />
+        <apigee:example url="/photos/{id}/tags" />
+
+      <doc title="" apigee:url="https://api.500px.com/v1/photos/{id}/tags">
+        Deletes one or multiple comma-separated tags from the photo.
+      </doc>
+      </method>
+    </resource>
+
+
+
+
+
+
+    <!-- BLOG -->
+    <resource path="blogs/{id}/comments">
+      <method id="post_blogs_id_comments" name="POST" apigee:displayName="POST blogs/{id}/comments">
+        
+        <apigee:tags>
+          <apigee:tag primary="true">Blogs</apigee:tag>
+        </apigee:tags>
+
+        <apigee:authentication required="true" />
+        <apigee:example url="/blogs/{id}/comments" />
+
+      <doc title="" apigee:url="https://api.500px.com/v1/blogs/{id}/comments">
+        Creates a comment for the Story.
+      </doc>
+      </method>
+    </resource>
+
+
+   
+  </resources>
+</application>

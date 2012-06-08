@@ -23,12 +23,10 @@ Returns a list of friends for the specified user.
 ## Return format
 A JSON array with keys:
 
-Additional data:
-
+- **friends_count** — Total number of friends.
+- **friends_pages** — The total number of pages available in this resource.
+- **page** — Number of the page currently being returned.
 - **friends** — An indexed array of User objects in **[short format][]**.
-- **current_page** — Number of the page currently being returned.
-- **total_pages** — The total number of pages available in this resource.
-- **total_items** — Total number of items in this resource.
 
 ***
 
