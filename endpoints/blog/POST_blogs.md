@@ -51,38 +51,39 @@ All known errors cause the resource to return HTTP error code header together wi
     title=My+Vacation&body=I+went+on+a+vacation+to+Hawaii&photo_ids=251
 
 **Return**
-
+``` json
 {
-    "id": 40186,
-    "title": "My Vacation",
-    "body": "I went on a vacation to Hawaii",
-    "created_at": "2012-06-07T17:10:57-04:00",
-    "latitude": null,
-    "longitude": null,
-    "user": {
-        "id": 173,
-        "username": "vovko",
-        "firstname": "Vladimir",
-        "lastname": "Drizhepolov",
-        "city": "Toronto",
-        "country": "Canada",
-        "fullname": "Vladimir Drizhepolov",
-        "userpic_url": "http://acdn.500px.net/173.jpg",
-        "upgrade_status": 2
-    },
-    "tags": null,
-    "photos": [
-        {
-            "id": 251,
-            "name": "Untitled",
-            "rating": 59.7,
-            "created_at": "2012-06-05T17:40:48-04:00",
-            "category": 0,
-            "votes_count": 1,
-            "image_url": "http://pcdn.500px.net/8309863/49a60b97f30125b223f4e38ab53c6525435888f2/4.jpg"
-        }
-    ]
+  "id": 40186,
+  "title": "My Vacation",
+  "body": "I went on a vacation to Hawaii",
+  "created_at": "2012-06-07T17:10:57-04:00",
+  "latitude": null,
+  "longitude": null,
+  "user": {
+    "id": 173,
+    "username": "vovko",
+    "firstname": "Vladimir",
+    "lastname": "Drizhepolov",
+    "city": "Toronto",
+    "country": "Canada",
+    "fullname": "Vladimir Drizhepolov",
+    "userpic_url": "http://acdn.500px.net/173.jpg",
+    "upgrade_status": 2
+  },
+  "tags": null,
+  "photos": [
+    {
+      "id": 251,
+      "name": "Untitled",
+      "rating": 59.7,
+      "created_at": "2012-06-05T17:40:48-04:00",
+      "category": 0,
+      "votes_count": 1,
+      "image_url": "http://pcdn.500px.net/8309863/49a60b97f30125b223f4e38ab53c6525435888f2/4.jpg"
+    }
+  ]
 }
+``` 
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

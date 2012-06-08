@@ -41,237 +41,51 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    http://500px.com/api/users/34/friends.json
+    GET v1/users/173/friends
 
-**Return**
-
+**Return** __shortened for example purpose__
+```
+{
+  "friends_count": 37,
+  "friends_pages": 2,
+  "page": 1,
+  "friends": [
     {
-    "friends": [
-     {
-         "city": "southern california", 
-         "country": "United States", 
-         "firstname": "Jessica", 
-         "fullname": "Jessica Trinh", 
-         "id": 124403, 
-         "lastname": "Trinh", 
-         "upgrade_status": 0, 
-         "username": "sprinklehappiness", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/124403.jpg"
-     }, 
-     {
-         "city": "London", 
-         "country": "UK", 
-         "firstname": "Richard", 
-         "fullname": "Richard Waters", 
-         "id": 118027, 
-         "lastname": "Waters", 
-         "upgrade_status": 0, 
-         "username": "RichardWaters", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/118027.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "", 
-         "firstname": "Tamara", 
-         "fullname": "Tamara L.", 
-         "id": 107451, 
-         "lastname": "L.", 
-         "upgrade_status": 0, 
-         "username": "Tam_ara", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/107451.jpg"
-     }, 
-     {
-         "city": "Oldsmar", 
-         "country": "United States", 
-         "firstname": "Scott", 
-         "fullname": "Scott Kelby", 
-         "id": 103003, 
-         "lastname": "Kelby", 
-         "upgrade_status": 2, 
-         "username": "skelby", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/103003.jpg"
-     }, 
-     {
-         "city": "Atlanta", 
-         "country": "USA", 
-         "firstname": "Zack", 
-         "fullname": "Zack Arias", 
-         "id": 98299, 
-         "lastname": "Arias", 
-         "upgrade_status": 1, 
-         "username": "zarias", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/98299.jpg"
-     }, 
-     {
-         "city": "K\u00f6ln", 
-         "country": "Deutschland", 
-         "firstname": "~t.", 
-         "fullname": "~t. k.~", 
-         "id": 91572, 
-         "lastname": "k.~", 
-         "upgrade_status": 0, 
-         "username": "-braun-", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/91572.jpg"
-     }, 
-     {
-         "city": "Mission", 
-         "country": "Canada", 
-         "firstname": "Alan", 
-         "fullname": "Alan Bailward", 
-         "id": 83485, 
-         "lastname": "Bailward", 
-         "upgrade_status": 0, 
-         "username": "AlanBailward", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/83485.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "UK", 
-         "firstname": "Will & Matt", 
-         "fullname": "Will & Matt Burrard-Lucas", 
-         "id": 82574, 
-         "lastname": "Burrard-Lucas", 
-         "upgrade_status": 1, 
-         "username": "wildlife", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/82574.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "United States", 
-         "firstname": "Misty Dawn", 
-         "fullname": "Misty Dawn Seidel", 
-         "id": 81736, 
-         "lastname": "Seidel", 
-         "upgrade_status": 0, 
-         "username": "MistyDawnS", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/81736.jpg"
-     }, 
-     {
-         "city": "Corona", 
-         "country": "", 
-         "firstname": "John", 
-         "fullname": "John Estep", 
-         "id": 78698, 
-         "lastname": "Estep", 
-         "upgrade_status": 0, 
-         "username": "jestep", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/78698.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "UK", 
-         "firstname": "Austin", 
-         "fullname": "Austin Thomas", 
-         "id": 74606, 
-         "lastname": "Thomas", 
-         "upgrade_status": 0, 
-         "username": "Austin_Thomas", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/74606.jpg"
-     }, 
-     {
-         "city": "Denver", 
-         "country": "United States", 
-         "firstname": "John", 
-         "fullname": "John De Bord Photography", 
-         "id": 74001, 
-         "lastname": "De Bord Photography", 
-         "upgrade_status": 0, 
-         "username": "jdebordphoto", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/74001.jpg"
-     }, 
-     {
-         "city": "San Francisco", 
-         "country": "US", 
-         "firstname": "Patrick", 
-         "fullname": "Patrick Smith", 
-         "id": 66477, 
-         "lastname": "Smith", 
-         "upgrade_status": 1, 
-         "username": "PatrickSmithPhotography", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/66477.jpg"
-     }, 
-     {
-         "city": "\u041c\u043e\u0441\u043a\u0432\u0430", 
-         "country": "\u0420\u043e\u0441\u0441\u0438\u044f ", 
-         "firstname": "Sergey", 
-         "fullname": "Sergey Konstantinov", 
-         "id": 65580, 
-         "lastname": "Konstantinov", 
-         "upgrade_status": 0, 
-         "username": "S_E_R_G_E_Y", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/65580.jpg"
-     }, 
-     {
-         "city": "Toronto", 
-         "country": "Canada", 
-         "firstname": "Sara", 
-         "fullname": "Sara Collaton", 
-         "id": 56732, 
-         "lastname": "Collaton", 
-         "upgrade_status": 1, 
-         "username": "saracollaton", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/56732.jpg"
-     }, 
-     {
-         "city": "Moskow", 
-         "country": "Russia. Ukraine. Europa", 
-         "firstname": "Yan", 
-         "fullname": "Yan McLine", 
-         "id": 54109, 
-         "lastname": "McLine", 
-         "upgrade_status": 0, 
-         "username": "YanMcLine", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/54109.jpg"
-     }, 
-     {
-         "city": "Caracas", 
-         "country": "Venezuela", 
-         "firstname": "Carmen", 
-         "fullname": "Carmen Moreno", 
-         "id": 48306, 
-         "lastname": "Moreno", 
-         "upgrade_status": 0, 
-         "username": "CarmenMoreno", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/48306.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "Canada", 
-         "firstname": "Roof", 
-         "fullname": "Roof Topper", 
-         "id": 48190, 
-         "lastname": "Topper", 
-         "upgrade_status": 2, 
-         "username": "tom", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/48190.jpg"
-     }, 
-     {
-         "city": "Moscow", 
-         "country": "", 
-         "firstname": "Sue", 
-         "fullname": "Sue Silence", 
-         "id": 41022, 
-         "lastname": "Silence", 
-         "upgrade_status": 0, 
-         "username": "Sue_silence", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/41022.jpg"
-     }, 
-     {
-         "city": "", 
-         "country": "", 
-         "firstname": "iuki ", 
-         "fullname": "iuki  Photography", 
-         "id": 30549, 
-         "lastname": "Photography", 
-         "upgrade_status": 0, 
-         "username": "iuki", 
-         "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/30549.jpg"
-     }
-    ], 
-    "friends_count": 26, 
-    "friends_pages": 2, 
-    "page": 1
+      "id": 457180,
+      "username": "mgcirillo",
+      "firstname": "Mike",
+      "lastname": "Cirillo",
+      "city": "Toronto",
+      "country": "Canada",
+      "fullname": "Mike Cirillo",
+      "userpic_url": "http://acdn.500px.net/457180/bcbec7f69f5275d5ecf189bc05f07ab2560b2b22/1.jpg?0",
+      "upgrade_status": 2
+    },
+    {
+      "id": 48920,
+      "username": "EvgueniTchebotarev",
+      "firstname": "Evgueni",
+      "lastname": "Tchebotarev",
+      "city": "Toronto",
+      "country": "Canada",
+      "fullname": "Evgueni Tchebotarev",
+      "userpic_url": "http://acdn.500px.net/48920.jpg",
+      "upgrade_status": 0
+    },
+    {
+      "id": 12150,
+      "username": "MaksimPo",
+      "firstname": "Maksim",
+      "lastname": "p.",
+      "city": "tallinn",
+      "country": "estonia",
+      "fullname": "Maksim p.",
+      "userpic_url": "http://external.ak.fbcdn.net/safe_image.php?d=47fb0c08b05d512cf1afaa8866774b39&url=http%3A%2F%2Fprofile.ak.fbcdn.net%2Fhprofile-ak-snc4%2F41765_100000921361830_4251_n.jpg&logo&v=5",
+      "upgrade_status": 0
     }
+  ]
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1

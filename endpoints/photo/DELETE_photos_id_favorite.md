@@ -38,12 +38,13 @@ All known errors cause the resource to return HTTP error code header together wi
     DELETE /v1/photos/7942222/favorite
 
 **Return**
-
-    {
-     status: 200,
-     message: "Successfully removed a favorite.",
-     error: "None"
-    }
+``` json
+{
+  status: 200,
+  message: "Successfully removed a favorite.",
+  error: "None"
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

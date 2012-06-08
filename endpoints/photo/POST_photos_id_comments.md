@@ -41,11 +41,12 @@ All known errors cause the resource to return HTTP error code header together wi
     body=I+like+your+photo
 
 **Return**
+``` json
+{
+  "status":200,
+  "message":"Successfully added a comment.",
+  "error":"None"
+}
+```
 
-    {
-      "status":200,
-      "message":"Successfully added a comment.",
-      "error":"None"
-    }
-
-  [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication

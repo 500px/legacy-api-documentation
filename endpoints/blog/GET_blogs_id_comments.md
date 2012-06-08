@@ -43,7 +43,7 @@ An array with the following keys and values:
     v1/blogs/27105/comments
 
 **Return**
-
+``` json
   {
     "media_type":"blog_post",
     "current_page":1,
@@ -51,24 +51,25 @@ An array with the following keys and values:
     "total_items":1,
     "comments": [
       {
-          "id": 9311893,
-          "user_id": 550582,
-          "to_whom_user_id": 1,
-          "body": "Awesome",
-          "created_at": "2012-02-23T02:36:47-05:00",
-          "parent_id": null,
-          "user": {
-              "id": 550582,
-              "username": "springfield",
-              "firstname": "Dipankar",
-              "lastname": "Dey",
-              "city": "Kolkata",
-              "country": "India",
-              "fullname": "Dipankar Dey",
-              "userpic_url": "http://acdn.500px.net/550582/88a46d1defb0bbbe41cc39c64ab6d9946a69e8f5/1.jpg?127",
-              "upgrade_status": 0
+        "id": 9311893,
+        "user_id": 550582,
+        "to_whom_user_id": 1,
+        "body": "Awesome",
+        "created_at": "2012-02-23T02:36:47-05:00",
+        "parent_id": null,
+        "user": {
+          "id": 550582,
+          "username": "springfield",
+          "firstname": "Dipankar",
+          "lastname": "Dey",
+          "city": "Kolkata",
+          "country": "India",
+          "fullname": "Dipankar Dey",
+          "userpic_url": "http://acdn.500px.net/550582/88a46d1defb0bbbe41cc39c64ab6d9946a69e8f5/1.jpg?127",
+          "upgrade_status": 0
       }
     ]
   }
+```
 
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

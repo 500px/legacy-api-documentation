@@ -29,7 +29,7 @@ None
     GET v1/collections
 
 **Return**
-
+``` json
   {
     collections: [
       {
@@ -81,7 +81,7 @@ None
         ]
     ]
   }
-
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [Feature]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms

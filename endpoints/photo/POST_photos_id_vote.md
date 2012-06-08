@@ -36,52 +36,60 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    POST /v1/photos/112116/vote
-
-**Body**
-
-    vote=1
+    POST /v1/photos/112116/vote?vote=1
 
 **Return**
-
-    {
-     "photo": {
-      "aperture": "2.8", 
-      "camera": "Nikon D200", 
-      "category": 7, 
-      "comments_count": 0, 
-      "created_at": "2010-07-22T19:15:28Z", 
-      "description": "", 
-      "favorites_count": 0, 
-      "focal_length": "50", 
-      "id": 112116, 
-      "image_url": "http://devphotos.500px.com/112116/faf4fcce33fe3e3e75b0cad1a7a0f420cb7b543a/4.jpg", 
-      "iso": "100", 
-      "latitude": null, 
-      "lens": null, 
-      "location": null, 
-      "longitude": null, 
-      "name": "***", 
-      "rating": 29.9, 
-      "shutter_speed": "1/125", 
-      "status": 1, 
-      "taken_at": null, 
-      "times_viewed": 144, 
-      "user": {
-       "city": "Moscow", 
-       "country": "Russian Federation", 
-       "domain": null, 
-       "firstname": "Arthur", 
-       "fullname": "Arthur Kartashev", 
-       "id": 2270, 
-       "lastname": "Kartashev", 
-       "username": "tch0rt", 
-       "userpic_url": "http://devavatars.500px.net/2270.jpg"
-      }, 
-      "user_id": 2270, 
-      "votes_count": 6
-     }
+``` json
+{
+  "photo": {
+    "id": 4928402,
+    "user_id": 69241,
+    "name": "Guitar",
+    "description": "",
+    "camera": "Canon EOS rebel T2i",
+    "lens": null,
+    "focal_length": "35",
+    "iso": "400",
+    "shutter_speed": "1/20",
+    "aperture": "2",
+    "times_viewed": 4,
+    "rating": 27,
+    "status": 1,
+    "created_at": "2012-02-09T21:12:01-05:00",
+    "category": 5,
+    "location": null,
+    "privacy": false,
+    "latitude": null,
+    "longitude": null,
+    "taken_at": "2012-02-09T14:50:29-05:00",
+    "hi_res_uploaded": 0,
+    "for_sale": false,
+    "width": 5184,
+    "height": 3456,
+    "votes_count": 1,
+    "favorites_count": 0,
+    "comments_count": 0,
+    "positive_votes_count": 1,
+    "nsfw": false,
+    "sales_count": 0,
+    "for_sale_date": null,
+    "highest_rating": 66.5287,
+    "highest_rating_date": "2009-11-14T09:26:56-05:00",
+    "image_url": "http://pcdn.500px.net/4928402/5868f8b7f020e4f7ce75fd8f1b66c6f75f53bd4f/4.jpg",
+    "user": {
+      "id": 69241,
+      "username": "rileywiebe",
+      "firstname": "Riley",
+      "lastname": "Wiebe",
+      "city": "Swift Current",
+      "country": "Canada",
+      "fullname": "Riley Wiebe",
+      "userpic_url": "http://acdn.500px.net/69241.jpg",
+      "upgrade_status": 0
     }
+  }
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

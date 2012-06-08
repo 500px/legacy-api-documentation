@@ -36,11 +36,12 @@ All known errors cause the resource to return HTTP error code header together wi
     DELETE /v1/photos/8309863/tags?tags=cute,puppy
 
 **Return**
+``` json
+{
+  "status":200,
+  "message":"Successfully deleted tags.",
+  "error":"None"
+}
+```
 
-    {
-      "status":200,
-      "message":"Successfully deleted tags.",
-      "error":"None"
-    }
-
-  [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
+[OAuth]: https://github.com/500px/api-documentation/tree/master/authentication

@@ -38,39 +38,64 @@ None.
     https://api.500px.com/v1/users
 
 **Return**
-
-    {
-    "user": {
-      "about": "Your local web-developer guy. Casual photographer.", 
-      "affection": 6, 
-      "birthday": null, 
-      "city": "Toronto", 
-      "contacts": {
-          "facebook": "769184274", 
-          "twitter": "freeatnet", 
-          "website": "freeatnet.com"
-      }, 
-      "country": "Canada", 
-      "domain": "freeatnet.500px.com", 
-      "firstname": "Arseniy", 
-      "followers_count": 14, 
-      "fotomoto_on": false, 
-      "friends_count": 26, 
-      "fullname": "Arseniy Ivanov", 
-      "id": 3798, 
-      "in_favorites_count": 2, 
-      "lastname": "Ivanov", 
-      "locale": null, 
-      "photos_count": 3, 
-      "registration_date": "2009-12-15T14:40:45Z", 
-      "sex": 1, 
-      "show_nude": false, 
-      "state": "ON", 
-      "upgrade_status": 2, 
-      "username": "freeatnet", 
-      "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/3798.jpg"
+``` json
+{
+  "user": {
+    "id": 173,
+    "username": "vovko",
+    "firstname": "Voldemar",
+    "lastname": "Petruskauskus",
+    "birthday": null,
+    "sex": 0,
+    "city": "",
+    "state": "",
+    "country": "",
+    "registration_date": "2009-11-08T12:41:14-05:00",
+    "about": "lbalblabla",
+    "domain": "vovko.500px.com",
+    "upgrade_status": 2,
+    "fotomoto_on": false,
+    "locale": "en",
+    "show_nude": true,
+    "store_on": false,
+    "contacts": {
+      "website": "www.drizhepolov.com",
+      "twitter": "vovko",
+      "livejournal": "vovko",
+      "flickr": "Vladimir Drizhepolov",
+      "gtalk": "vladimir@drizhepolov.com",
+      "skype": "trulllllll",
+      "facebook": "562874260",
+      "facebookpage": "www.facebook.com/vovko"
+    },
+    "equipment": {
+      "camera": [
+        "Kiev 88",
+        "Lomo Rocket",
+        "Lomo Action sampler"
+      ],
+      "lens": [
+        "Volna 80mm"
+      ]
+    },
+    "fullname": "Voldemar Petruskauskus",
+    "userpic_url": "http://acdn.500px.net/173.jpg",
+    "email": "vladimir@drizhepolov.com",
+    "photos_count": 5,
+    "affection": 7,
+    "in_favorites_count": 0,
+    "friends_count": 37,
+    "followers_count": 7,
+    "upload_limit": null,
+    "upload_limit_expiry": "2012-06-08T14:30:28-04:00",
+    "upgrade_status_expiry": "2012-12-12",
+    "auth": {
+      "facebook": 0,
+      "twitter": 0
     }
-    }
+  }
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

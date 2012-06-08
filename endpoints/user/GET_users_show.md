@@ -42,42 +42,57 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request (Using OAuth)**
 
-    https://api.500px.com/v1/users/show?username=freeatnet&consumer_key=YOUR-CONSUMER-KEY
+    GET v1/users/show?username=freeatnet
 
 **Return**
-
-    {
-    "user": {
-      "about": "Your local web-developer guy. Casual photographer.", 
-      "affection": 6, 
-      "birthday": null, 
-      "city": "Toronto", 
-      "contacts": {
-          "facebook": "769184274", 
-          "twitter": "freeatnet", 
-          "website": "freeatnet.com"
-      }, 
-      "country": "Canada", 
-      "domain": "freeatnet.500px.com", 
-      "firstname": "Arseniy", 
-      "followers_count": 14, 
-      "fotomoto_on": false, 
-      "friends_count": 26, 
-      "fullname": "Arseniy Ivanov", 
-      "id": 3798, 
-      "in_favorites_count": 2, 
-      "lastname": "Ivanov", 
-      "locale": null, 
-      "photos_count": 3, 
-      "registration_date": "2009-12-15T14:40:45Z", 
-      "sex": 1, 
-      "show_nude": false, 
-      "state": "ON", 
-      "upgrade_status": 2, 
-      "username": "freeatnet", 
-      "userpic_url": "http://s3.amazonaws.com/avatars.500px.net/3798.jpg"
-    }
-    }
+``` json
+{
+  "user": {
+    "id": 3798,
+    "username": "freeatnet",
+    "firstname": "Arseniy",
+    "lastname": "Ivanov",
+    "birthday": null,
+    "sex": 1,
+    "city": "Toronto",
+    "state": "Ontario",
+    "country": "Canada",
+    "registration_date": "2009-12-15T09:40:45-05:00",
+    "about": "Your local web-developer guy. Casual photographer.",
+    "domain": "freeatnet.500px.com",
+    "fotomoto_on": true,
+    "locale": "en",
+    "show_nude": true,
+    "fullname": "Arseniy Ivanov",
+    "userpic_url": "/graphics/userpic.png",
+    "upgrade_status": 2,
+    "store_on": true,
+    "contacts": {
+      "website": "freeatnet.com",
+      "twitter": "freeatnet_en",
+      "facebookpage": "www.facebook.com/av.ivanov",
+      "flickr": "freeatnet",
+      "facebook": "769184274"
+    },
+    "equipment": {
+      "camera": [
+        "FUJIFILM FinePix S1000",
+        "Canon EOS 50"
+      ],
+      "misc": [
+        "Google Nexus S",
+        "Apple Macbook Pro 15\""
+      ]
+    },
+    "photos_count": 12,
+    "affection": 20,
+    "in_favorites_count": 4,
+    "friends_count": 57,
+    "followers_count": 77,
+    "following": false
+  }
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [full format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#full-format

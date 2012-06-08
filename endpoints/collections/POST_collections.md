@@ -41,16 +41,16 @@ A JSON object with **collections** — An indexed array of Collection objects in
     POST v1/collections
 
 **Return**
-
+``` json
 {
-    "id": 298782,
-    "title": "bikes",
-    "position": 10,
-    "created_at": "2012-06-07T17:36:17-04:00",
-    "path": "bikes",
-    "photos": []
+  "id": 298782,
+  "title": "bikes",
+  "position": 10,
+  "created_at": "2012-06-07T17:36:17-04:00",
+  "path": "bikes",
+  "photos": []
 }
-
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [Feature]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms

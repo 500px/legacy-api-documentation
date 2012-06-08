@@ -38,30 +38,31 @@ All known errors cause the resource to return HTTP error code header together wi
     DELETE v1/users/827595/friends
 
 **Return**
-
-    {
-     user: {
-      id: 827595,
-      username: "voldemarpetruskauskus",
-      firstname: "Voldemar",
-      lastname: "Petruskauskus",
-      birthday: null,
-      sex: 0,
-      city: "",
-      state: "",
-      country: "",
-      registration_date: "2012-05-15T11:19:42-04:00",
-      about: "Voldemar",
-      domain: null,
-      upgrade_status: 9,
-      fotomoto_on: false,
-      locale: "en",
-      show_nude: false,
-      store_on: false,
-      contacts: { },
-      equipment: { }
-     }
-    }
+``` json
+{
+  user: {
+    id: 827595,
+    username: "voldemarpetruskauskus",
+    firstname: "Voldemar",
+    lastname: "Petruskauskus",
+    birthday: null,
+    sex: 0,
+    city: "",
+    state: "",
+    country: "",
+    registration_date: "2012-05-15T11:19:42-04:00",
+    about: "Voldemar",
+    domain: null,
+    upgrade_status: 9,
+    fotomoto_on: false,
+    locale: "en",
+    show_nude: false,
+    store_on: false,
+    contacts: { },
+    equipment: { }
+  }
+}
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
