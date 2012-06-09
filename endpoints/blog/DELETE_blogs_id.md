@@ -37,9 +37,10 @@ All known errors cause the resource to return HTTP error code header together wi
     DELETE /v1/blogs/528491
 
 **Return**
-
+``` json
     {
       "status": "OK"
     }
+```
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
