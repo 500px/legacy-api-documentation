@@ -38,7 +38,7 @@ A JSON object with **collections** — An indexed array of Collection objects in
 ## Example
 **Request**
 
-    POST v1/collections
+    POST v1/collections?title=bikes&path=bikes
 
 **Return**
 ``` json
