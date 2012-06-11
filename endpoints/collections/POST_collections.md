@@ -1,6 +1,6 @@
 # Blog Resources
 
-    POST collections/:id
+    POST collections
 
 ## Description
 Creates new a collection.
