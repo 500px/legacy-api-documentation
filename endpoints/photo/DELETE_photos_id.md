@@ -1,6 +1,6 @@
 # Photo Resources
 
-    DELETE photos
+    DELETE photos/:id
 
 ## Description
 Deletes the photo from the User's library.

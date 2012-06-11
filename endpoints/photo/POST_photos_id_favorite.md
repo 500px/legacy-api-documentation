@@ -1,6 +1,6 @@
 # Photo Resources
 
-    POST photos/:id/vote
+    POST photos/:id/favorite
 
 ## Description
 Adds the photo to user's list of favorites.
