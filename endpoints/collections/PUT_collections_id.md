@@ -17,6 +17,7 @@ Essential information:
 
 - **title** _(required)_ — Title for the collection.
 - **path** _(required)_ — Path where the collection will be accessible at 500px.com/user/sets/:path.
+- **photo_ids** — Comma separated list of Photo ID values to post with the blog.
 
 Optional information:
 
@@ -37,7 +38,7 @@ None
 ## Example
 **Request**
 
-    PUT v1/collections/298603?title=Bikes
+    PUT v1/collections/298603?title=Bikes&photo_ids=7651996
 
 **Return**
 ``` json
