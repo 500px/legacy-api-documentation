@@ -64,6 +64,7 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 #### Collections Resources
 
 - **[<code>GET</code> collections](https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md)**
+- **[<code>GET</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections_id.md)**
 - **[<code>POST</code> collections](https://github.com/500px/api-documentation/blob/master/endpoints/collections/POST_collections.md)**
 - **[<code>PUT</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md)**
 - **[<code>DELETE</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md)**
