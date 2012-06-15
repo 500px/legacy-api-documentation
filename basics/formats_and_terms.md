@@ -94,6 +94,10 @@ The short format of a Photo object includes the following data:
 - **times\_viewed** — The number of times this photo has been viewed, integer
 - **created\_at** — Timestamp indicating time of photo creation, timestamp
 - **user** — Author’s profile in [short format][], object
+- **privacy** — The photo is privacy, boolean
+- **nsfw** — The photo is not safe for work, boolean
+- **width** — Width of the photo, integer
+- **height** — Height of the photo, integer
 
 [Category]: #categories
 
@@ -101,6 +105,7 @@ The short format of a Photo object includes the following data:
 The full format of a Photo object includes the following data:
 
 - **id** — ID of the photo, integer
+- **user_id** — Author's profile ID, integer
 - **name** — Title of the photo, string
 - **description** — Description of the photo, string
 - **category** — [Category][] of the photo, (short) integer
@@ -122,6 +127,19 @@ The full format of a Photo object includes the following data:
 - **location** — A human-readable name of the location where the photo was taken, string
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
+- **privacy** — The photo is privacy, boolean
+- **nsfw** — The photo is not safe for work, boolean
+- **width** — Width of the photo, integer
+- **height** — Height of the photo, integer
+- **times_viewed** — Number of times this photo was viewed, integer
+- **for_sale** — The photo enabled for sales, boolean
+- **sales_count** — Number of times this photo was sales, integer
+- **highest_rating** — Highest rating of the photo, decimal
+- **highest_rating_date** — Timestamp of when the photo has highest raiting, timestamp
+- **store_download** — , The photo is enabled for digital download in store, boolean
+- **store_print** — The photo is enabled for canvas print in store, boolean
+- **hi_res_uploaded** — The photo is uploaded in hi-res. Values: 0 if hi-res not uploaded, 1 if uploaded, 2 if site version is different from the version in the store, integer
+- **for_sale_date**
 
 The following data will also be returned for an authenticated request:
 
@@ -141,7 +159,7 @@ The short format of a User object includes the following data:
 - **lastname** — Last name, string
 - **city** — City as specified in user's profile, string
 - **country** — Country as specified in user's profile, string
-- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users.
+- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users (1 for plus, 2 for awesome)
 
 ### Profile format
 The profile format of a User object includes the following data:
@@ -151,24 +169,27 @@ The profile format of a User object includes the following data:
 - **firstname** — First name, string
 - **lastname** — Last name, string
 - **fullname** — A combination of first and last names or a username that would naturally appear on the site, string
+- **email** — User's email, string
 - **userpic\_url** — Profile picture’s URL of the user, string
-- **sex** — Sex of the user, string. Values: 1 and 2 for male and female respectively, 0 if user refused to specify their sex.
+- **sex** — Sex of the user, string. Values: 1 and 2 for male and female respectively, 0 if user refused to specify their sex, integer
 - **city** — City as specified in user’s profile, string
 - **state** — State as specified in user’s profile, string
 - **country** — Country as specified in user’s profile, string
+- **birthday** — User's birthday, timestamp
 - **registration\_date** — Registration timestamp, timestamp
 - **about** — User’s about text, timestamp
-- **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users.
+- **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users (1 for plus, 2 for awesome)
 - **domain** — This user’s portfolio’s domain (hostname), string
 - **fotomoto\_on** — Whether the user has the store option enabled, boolean
-- **locale** — User’s preferred locale, string. Current values: <code>'en', 'ru', 'de', 'br'</code>.
-- **show\_nude** — Whether the user has content filter disabled, boolean.
-- **friends\_count** — Number of people this user follows, integer.
-- **followers\_count** — Number of people this user is being followed by, integer.
-- **photos\_count** — Number of active photos posted by the user, integer.
-- **in\_favorites\_count** — Number of times any photo of the user was added to favorites, integer.
-- **affection** — Affection value, integer.
-- **contacts** — A dictionary of user’s contacts, object. Keys should be treated as provider names, and values as user IDs with given provider.
+- **locale** — User’s preferred locale, string. Current values: <code>'en', 'ru', 'de', 'es', 'br'</code>
+- **show\_nude** — Whether the user has content filter disabled, boolean
+- **friends\_count** — Number of people this user follows, integer
+- **followers\_count** — Number of people this user is being followed by, integer
+- **photos\_count** — Number of active photos posted by the user, integer
+- **in\_favorites\_count** — Number of times any photo of the user was added to favorites, integer
+- **affection** — Affection value, integer
+- **contacts** — A dictionary of user’s contacts, object. Keys should be treated as provider names, and values as user IDs with given provider. Current providers: <code>'twitter', 'googleplus', 'facebook', 'website', 'flickr', 'livejournal', 'gtalk', 'skype', 'facebookpage', 'blog', 'tumblr'</code>
+- **equipment** — A dictionary of user's equipment, object. Key should be treated as equipment type, such as <code>'camera', 'lens', 'misc'</code>, and values as array of strings
 
 ***
 
@@ -206,7 +227,8 @@ The full format of a Comment object includes the following data:
 - **id** — ID of the comment, integer
 - **body** — Content of the comment, string
 - **to_whom_user_id** — To which user the comment was made, string
-- **user_id** — User ID of author of the comment, string
+- **parent_id** — ID of parent comment, integer
+- **user_id** — User ID of author of the comment, integer
 - **created_at** — Timestamp indicating time the comment was created, timestamp
 - **user** — Author's profile in [short format][], object
 
