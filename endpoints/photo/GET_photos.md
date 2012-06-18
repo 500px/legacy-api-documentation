@@ -33,7 +33,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 - **only** — String name of the **[category][]** to return photos from.
 - **exclude** — String name of the **[category][]** to exclude photos by.
 - **sort** — Sort photos in the specified order.
-    ### Recognized values:
+    ###### Recognized values:
     **Note:** For global features default sorting will take precedence. (Consider a SQL query "ORDER BY rating DESC, times_viewed DESC" for feature popular)
     - 'created_at' — Sort by time of upload, most recent first
     - 'rating' — Sort by rating, highest rated first
