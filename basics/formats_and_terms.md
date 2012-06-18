@@ -95,6 +95,15 @@ The short format of a Photo object includes the following data:
 - **created\_at** — Timestamp indicating time of photo creation, timestamp
 - **user** — Author’s profile in [short format][], object
 
+Values returned on **include_store** request:
+- 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
+- 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
+
+Values returned on **include_states** and authenticated request.
+- 'voted' — Boolean value whether the current user has voted for this photo
+- 'favorited' — Boolean value whether the current user has favorited this photo
+- 'purchased' — Boolean value whether the current user has bought this photo
+
 [Category]: #categories
 
 ### Full format
@@ -123,10 +132,16 @@ The full format of a Photo object includes the following data:
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
 
-The following data will also be returned for an authenticated request:
 
-- **voted** — Whether the current user has voted for this photo, boolean
-- **favorited** — Whether the current user currently has this photo in favorites, boolean
+Values returned on **include_store** request:
+- 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
+- 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
+
+Values returned on **include_states** and authenticated request.
+- 'voted' — Boolean value whether the current user has voted for this photo
+- 'favorited' — Boolean value whether the current user has favorited this photo
+- 'purchased' — Boolean value whether the current user has bought this photo
+
 
 ***
 

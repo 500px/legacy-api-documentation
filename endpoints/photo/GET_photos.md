@@ -15,7 +15,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
 ## Parameters
 - **feature** _(required)_ — Photo stream to be retrieved. Default _fresh_today_. Recognized values:
-    ### Global features
+    ###### Global features
     - 'popular' — Return photos in Popular
     - 'upcoming' — Return photos in Upcoming
     - 'editors' — Return photos in Editors' Choice
@@ -23,7 +23,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'fresh_yesterday' — Return photos in Fresh Yesterday
     - 'fresh_week' — Return photos in Fresh This Week
 
-    ### Per-user features
+    ###### Per-user features
     All per-user streams require a **user_id** or **username** parameter
     
     - 'user' — Return photos by a specific user, as displayed on **[http://500px.com/:username][]**
@@ -45,6 +45,17 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
 - **page** — Return a specific page in the photo stream. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
+
+- **include_store** — Returns market infomation about the photo.
+    ###### Returned values:
+    - 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
+    - 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
+
+- **include_states** — Returns state of the photo for the currently logged in user and authenticated request.
+    ###### Returned values:
+    - 'voted' — Boolean value whether the current user has voted for this photo
+    - 'favorited' — Boolean value whether the current user has favorited this photo
+    - 'purchased' — Boolean value whether the current user has bought this photo
 
 ***
 
