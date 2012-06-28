@@ -17,6 +17,7 @@ Essential information:
 
 - **title** _(required)_ — Title for the collection.
 - **path** _(required)_ — Path where the collection will be accessible at 500px.com/user/sets/:path.
+- **kind** — Kind of the Collection to be created Recognized values: 1 - Portfolio Set (default), 2 - Profile Set.
 - **photo_ids** — Comma separated list of Photo ID values to post with the blog.
 
 Optional information:
@@ -33,6 +34,7 @@ A JSON object with **collections** — An indexed array of Collection objects in
 ## Errors
 
 - **path** — path of the collection has already been taken.
+- **403 Forbidden** — You have to upgrade to create portfolios and sets.
 
 ***
 
