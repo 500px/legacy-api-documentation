@@ -34,7 +34,6 @@ An array with the following keys and values:
 ***
 
 ## Errors
-
 - **400 Bad Request** — The request issued is missing one or more of the required parameters or contains parameters in an invalid form.
 
 
@@ -43,7 +42,7 @@ An array with the following keys and values:
 ## Example
 **Request**
 
-  v1/photos/search?term=bike
+  GET v1/photos/search?term=bike
 
 ## Return __shortened for example purpose__
 ``` json
