@@ -22,6 +22,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'fresh_today' — Return photos in Fresh Today
     - 'fresh_yesterday' — Return photos in Fresh Yesterday
     - 'fresh_week' — Return photos in Fresh This Week
+    - 'user' - Return photos of a user, additional parameter 'user_id' or 'username' is required 
 
     ###### Per-user features
     All per-user streams require a **user_id** or **username** parameter
