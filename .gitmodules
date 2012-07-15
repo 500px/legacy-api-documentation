@@ -1,0 +1,3 @@
+[submodule "examples/python"]
+	path = examples/python
+	url = git@github.com:arthurnn/fivehundred-python.git
