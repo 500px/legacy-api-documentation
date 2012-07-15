@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>500px API docs by 500px</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>500px API docs</h1>
+        <p>This is the 500px API documentation. </p>
+
+        <p class="view"><a href="https://github.com/500px/api-documentation">View the Project on GitHub <small>500px/api-documentation</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/500px/api-documentation/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/500px/api-documentation/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/500px/api-documentation">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>500px API</h1>
+
+<p>500px API provides programmatic access to 500px functionality and content. Version 1 of the API is limited to the essentials of the website's functionality: viewing feature streams, photo information and comments, as well as user profiles.</p>
+
+<p>The API is <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" title="RESTful">REST API</a> and uses <a href="http://oauth.net/" title="OAuth">OAuth</a> 1.0a and 2.0 for user authentication purposes. Currently, return format for all endpoints is <a href="http://json.org/" title="JSON">JSON</a>.</p>
+
+<hr><h2>Checklist</h2>
+
+<ul>
+<li><a href="https://github.com/500px/api-documentation#what-do-i-need-to-know-before-i-start-using-the-api">See if the concepts used by the API are familiar to you</a></li>
+<li>Familiarize yourself with API functionality</li>
+<li>Read the 500px <a href="https://github.com/500px/api-documentation/blob/master/basics/terms_of_use.md">API Terms of Use</a>
+</li>
+<li>
+<a href="http://developers.500px.com/oauth_clients/new">Register your application</a> and get OAuth consumer key and secret</li>
+<li>Hack away</li>
+</ul><hr><h2>Basics</h2>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md">Formats and Terms</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/basics/terms_of_use.md">API Terms of Use</a></strong></li>
+</ul><h2>Endpoints</h2>
+
+<h4>Photo Resources</h4>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md"><code>GET</code> photos</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_search.md"><code>GET</code> photos/search</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md"><code>GET</code> photos/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_comments.md"><code>GET</code> photos/:id/comments</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/PUT_photos_id.md"><code>PUT</code> photos/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md"><code>POST</code> photos</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_vote.md"><code>POST</code> photos/:id/vote</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_tags.md"><code>POST</code> photos/:id/tags</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_favorite.md"><code>POST</code> photos/:id/favorite</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_comments.md"><code>POST</code> photos/:id/comments</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id.md"><code>DELETE</code> photos/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_tags.md"><code>DELETE</code> photos/:id/tags</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_favorite.md"><code>DELETE</code> photos/:id/favorite</a></strong></li>
+</ul><h4>Upload Method</h4>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/upload/POST_upload.md"><code>POST</code> upload</a></strong></li>
+</ul><h4>User Resources</h4>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users.md"><code>GET</code> users</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_show.md"><code>GET</code> users/show</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_id_friends.md"><code>GET</code> users/:id/friends</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_id_followers.md"><code>GET</code> users/:id/followers</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_search.md"><code>GET</code> users/search</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/POST_users_id_friends.md"><code>POST</code> users/:id/friends</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/user/DELETE_users_id_friends.md"><code>DELETE</code> users/:id/friends</a></strong></li>
+</ul><h4>Blog Resources</h4>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs.md"><code>GET</code> blogs</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id.md"><code>GET</code> blogs/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id_comments.md"><code>GET</code> blogs/:id/comments</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs_id_comments.md"><code>POST</code> blogs/:id/comments</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs.md"><code>POST</code> blogs</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/PUT_blogs_id.md"><code>PUT</code> blogs/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/blog/DELETE_blogs_id.md"><code>DELETE</code> blogs/:id</a></strong></li>
+</ul><h4>Collections Resources</h4>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md"><code>GET</code> collections</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections_id.md"><code>GET</code> collections/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/collections/POST_collections.md"><code>POST</code> collections</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md"><code>PUT</code> collections/:id</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md"><code>DELETE</code> collections/:id</a></strong></li>
+</ul><h2>Authentication</h2>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_requesttoken.md"><code>POST</code> oauth/request_token</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_authorize.md"><code>POST</code> oauth/authorize</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_accesstoken.md"><code>POST</code> oauth/access_token</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md">Upload key</a></strong></li>
+</ul><h2>Examples</h2>
+
+<ul>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md">iOS</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/examples/Ruby/">Ruby</a></strong></li>
+<li><strong><a href="https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md">PHP</a></strong></li>
+</ul><hr><h2>FAQ</h2>
+
+<h3>What do I need to know before I start using the API?</h3>
+
+<p>Got rust on your skills? No worries. Here are the docs you might need to get started:</p>
+
+<ul>
+<li><a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP protocol</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST software pattern</a></li>
+<li>Authentication with <a href="http://oauth.net/core/1.0a/">OAuth</a> (or the official <a href="http://hueniverse.com/oauth/">Beginner’s Guide</a>)</li>
+<li>Data serialization with <a href="http://json.org">JSON</a> (or see a <a href="http://www.webmonkey.com/2010/02/get_started_with_json/">quick tutorial</a>)</li>
+</ul><h3>How do I connect to the 500px.com API?</h3>
+
+<p>The API is only available to authenticated clients. Clients should authenticate users using <a href="http://oauth.net/">OAuth 1.0a or 2.0</a>. Once authenticated, you need to request a resource from one of the endpoints using <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a>. Generally, reading any data is done through a request with GET method. If you want our server to create, update or delete a given resource, POST or PUT methods are required.</p>
+
+<h3>What return formats do you support?</h3>
+
+<p>500px API currently returns data in <a href="http://json.org/" title="JSON">JSON</a> format.</p>
+
+<h3>What kind of authentication is required?</h3>
+
+<p>Applications must identify themselves to access any resource. 
+If your application only needs read-only access and does authenticate the user, <strong>consumer_key</strong> containing a valid Consumer Key parameter should be specified in the query string. Otherwise, <a href="https://github.com/500px/api-documentation/tree/master/authentication">OAuth</a> or upload key authentication takes care of identifying the application as well as the user accessing the API.</p>
+
+<h3>Is there a request rate limit?</h3>
+
+<p>There is no set rate limit, but we are monitoring API activity to make sure everyone can get their share of access. We may contact you or even temporarily disable your application if we find that your application is interfering with the system's stability. We may introduce a request rate limit in the future.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/500px">500px</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
