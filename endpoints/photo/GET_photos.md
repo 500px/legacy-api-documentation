@@ -46,6 +46,11 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
 - **page** — Return a specific page in the photo stream. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
+- **image_size** — The photo size to be returned. It has to be an integer: 1 to 4. Also an array is accepted:
+    ###### Example:
+    - '&image_size=3' — It will return one image_url.
+    - '&image_size[]=3?image_size[]=4' — It will return an array of image_url.
+
 
 - **include_store** — Returns market infomation about the photo.
     ###### Returned values:
