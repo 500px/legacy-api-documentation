@@ -87,6 +87,7 @@ The short format of a Photo object includes the following data:
 - **description** — Description of the photo, string
 - **category** — [Category][] of the photo, (short) integer
 - **image\_url** — URL of the image, string
+- **images** — Array with images URL and sizes
 - **rating** — Rating of the photo, decimal
 - **votes\_count** — The number of votes cast on this photo, integer
 - **favorites\_count** — The number of users that have this photo in favorites, integer
