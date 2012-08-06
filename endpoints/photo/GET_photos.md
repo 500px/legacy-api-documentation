@@ -36,7 +36,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 - **sort** — Sort photos in the specified order.
     ###### Recognized values:
     **Note:** For global features default sorting will take precedence. (Consider a SQL query "ORDER BY rating DESC, times_viewed DESC" for feature popular)
-    - 'created_at' — Sort by time of upload, most recent first
+    - 'created_at' — Sort by time of upload, most recent first (note: for a request of a user's favourite photos, this sort order will retrieve the list in the order that the user added photos to their favourites list, newest first.)
     - 'rating' — Sort by rating, highest rated first
     - 'times_viewed' — Sort by view count, most viewed first
     - 'votes_count' — Sort by votes count, most voted first
