@@ -20,6 +20,7 @@ Either of parameters **term** or **tag** is required.
 - **tag** — A complete tag string to search for.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
+- **tags** — Returns an array of tags for the photo.
 
 ***
 
