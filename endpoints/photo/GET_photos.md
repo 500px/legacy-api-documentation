@@ -63,6 +63,8 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'favorited' — Boolean value whether the current user has favorited this photo
     - 'purchased' — Boolean value whether the current user has bought this photo
 
+- **tags** — Returns an array of tags for the photo.
+
 ***
 
 ## Return format
