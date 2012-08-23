@@ -157,7 +157,7 @@ The short format of a User object includes the following data:
 - **lastname** — Last name, string
 - **city** — City as specified in user's profile, string
 - **country** — Country as specified in user's profile, string
-- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 1 identifies an Awesome user while a value of 2 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
+- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
 
 ### Profile format
 The profile format of a User object includes the following data:
