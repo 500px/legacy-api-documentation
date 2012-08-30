@@ -101,7 +101,7 @@ The API is only available to authenticated clients. Clients should authenticate 
 
 ### What kind of authentication is required?
 Applications must identify themselves to access any resource. 
-If your application only needs read-only access and does authenticate the user, **consumer_key** containing a valid Consumer Key parameter should be specified in the query string. Otherwise, [OAuth](https://github.com/500px/api-documentation/tree/master/authentication) or upload key authentication takes care of identifying the application as well as the user accessing the API.
+If your application only needs read-only access and does not authenticate the user, **consumer_key** containing a valid Consumer Key parameter should be specified in the query string. Otherwise, [OAuth](https://github.com/500px/api-documentation/tree/master/authentication) or upload key authentication takes care of identifying the application as well as the user accessing the API.
 
 ### Is there a request rate limit?
 There is no set rate limit, but we are monitoring API activity to make sure everyone can get their share of access. We may contact you or even temporarily disable your application if we find that your application is interfering with the system's stability. We may introduce a request rate limit in the future.
