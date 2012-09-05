@@ -3,7 +3,7 @@
     GET collections/:id
 
 ## Description
-Returns a listing of all User's collections and sets.
+Returns a collection.
 
 ***
 
