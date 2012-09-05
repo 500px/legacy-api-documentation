@@ -61,19 +61,19 @@ None
   "total_items":528491,
   "blog_posts": [
     {
-      "id": 528,
+	    "id": 528,
       "title": "On the Top of the NYC — Part II",
       "created_at": "2012-04-02T22:39:51-04:00",
       "user": {
-      "id": 1,
-      "username": "tchebotarev",
-      "firstname": "Evgeny",
-      "lastname": "Tchebotarev",
-      "city": "Toronto",
-      "country": "Canada",
-      "fullname": "Evgeny Tchebotarev",
-      "userpic_url": "http://acdn.500px.net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
-      "upgrade_status": 2
+        "id": 1,
+        "username": "tchebotarev",
+        "firstname": "Evgeny",
+        "lastname": "Tchebotarev",
+        "city": "Toronto",
+        "country": "Canada",
+        "fullname": "Evgeny Tchebotarev",
+        "userpic_url": "http://acdn.500px.net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
+        "upgrade_status": 2
       }
     }, 
     {
@@ -81,19 +81,18 @@ None
       "title": "On the Top of the NYC — Part I",
       "created_at": "2012-04-02T22:37:26-04:00",
       "user": {
-      "id": 1,
-      "username": "tchebotarev",
-      "firstname": "Evgeny",
-      "lastname": "Tchebotarev",
-      "city": "Toronto",
-      "country": "Canada",
-      "fullname": "Evgeny Tchebotarev",
-      "userpic_url": "http://acdn.500px."net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
-      "upgrade_status": 2
-      }
+        "id": 1,
+        "username": "tchebotarev",
+        "firstname": "Evgeny",
+        "lastname": "Tchebotarev",
+        "city": "Toronto",
+        "country": "Canada",
+        "fullname": "Evgeny Tchebotarev",
+        "userpic_url": "http://acdn.500px.net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
+        "upgrade_status": 2
       }
     }
-  ]
+  }]
 }
 ```
 
