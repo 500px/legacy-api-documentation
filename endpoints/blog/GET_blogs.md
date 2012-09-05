@@ -92,7 +92,7 @@ None
         "upgrade_status": 2
       }
     }
-  }]
+	]
 }
 ```
 
