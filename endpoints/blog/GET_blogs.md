@@ -54,7 +54,7 @@ None
 **Return**
 ``` json
 {
-  feature":"fresh",
+  "feature":"fresh",
   "filters":{ },
   "current_page":1,
   "total_pages":105698,
@@ -77,7 +77,7 @@ None
       }
     }, 
     {
-      id":491,
+      "id":491,
       "title": "On the Top of the NYC — Part I",
       "created_at": "2012-04-02T22:37:26-04:00",
       "user": {
@@ -89,7 +89,7 @@ None
       "country": "Canada",
       "fullname": "Evgeny Tchebotarev",
       "userpic_url": "http://acdn.500px."net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
-      upgrade_status: 2
+      "upgrade_status": 2
       }
       }
     }
