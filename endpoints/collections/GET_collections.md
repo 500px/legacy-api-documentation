@@ -8,8 +8,7 @@ Returns a listing of all User's collections and sets.
 ***
 
 ## Requires authentication
-* A valid Consumer Key must be provided in **consumer_key** parameter.
-* Alternatively, a valid **[OAuth][]** request with an authorized Access Token will be accepted.
+ **[OAuth][]**
 
 ***
 
