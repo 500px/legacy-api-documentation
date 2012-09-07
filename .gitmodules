@@ -1,3 +1,6 @@
 [submodule "examples/python-sdk"]
 	path = examples/python-sdk
 	url = git@github.com:500px/PxMagic.git
+[submodule "examples/android-sdk"]
+	path = examples/android-sdk
+	url = git@github.com:500px/500px-android-sdk.git
