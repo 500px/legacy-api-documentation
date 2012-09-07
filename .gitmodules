@@ -4,3 +4,6 @@
 [submodule "examples/android-sdk"]
 	path = examples/android-sdk
 	url = git@github.com:500px/500px-android-sdk.git
+[submodule "examples/iOS-sdk"]
+	path = examples/iOS-sdk
+	url = git@github.com:500px/500px-iOS-api.git
