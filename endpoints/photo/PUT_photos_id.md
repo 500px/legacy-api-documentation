@@ -50,7 +50,7 @@ All known errors cause the resource to return HTTP error code header together wi
   "tags":"",
   "title":"My Vacation",
   "user":{
-    city":null,
+    "city":null,
     "country":null,
     "firstname":"Ian",
     "id":76,
