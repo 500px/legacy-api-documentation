@@ -7,3 +7,6 @@
 [submodule "examples/iOS-sdk"]
 	path = examples/iOS-sdk
 	url = git@github.com:500px/500px-iOS-api.git
+[submodule "examples/TroubledPixels"]
+	path = examples/TroubledPixels
+	url = https://github.com/arthurnn/TroubledPixels
