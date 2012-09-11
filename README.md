@@ -4,6 +4,8 @@
 
 The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transfer "RESTful") and uses [OAuth](http://oauth.net/ "OAuth") 1.0a and 2.0 for user authentication purposes. Currently, return format for all endpoints is [JSON](http://json.org/ "JSON").
 
+You can check some hacks in [here](http://developer.500px.com/hacks)
+
 ***
 
 ## Checklist
@@ -19,6 +21,18 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 
 - **[Formats and Terms](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md)**
 - **[API Terms of Use](https://github.com/500px/api-documentation/blob/master/basics/terms_of_use.md)**
+
+## Examples
+
+- **[iOS](https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md)**
+- **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/)**
+- **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
+
+## SDK
+
+- **[Python](https://github.com/500px/PxMagic)**
+- **[Android](https://github.com/500px/500px-android-sdk)**
+- **[iOS](https://github.com/500px/500px-iOS-api)**
 
 ## Endpoints
 
@@ -77,12 +91,6 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 - **[<code>POST</code> oauth/access_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_accesstoken.md)**
 - **[Upload key](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)**
 
-## Examples
-- **[iOS](https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md)**
-- **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/)**
-- **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
-
-***
 
 ## FAQ
 ### What do I need to know before I start using the API?
