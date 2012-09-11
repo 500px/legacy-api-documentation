@@ -1,9 +1,9 @@
 # Photo Resources
 
-    GET photos/:id/favorites
+    GET photos/:id/votes
 
 ## Description
-Returns all users that had favourite that photo.
+Returns all users that had liked this photo.
 
 ***
 
@@ -20,7 +20,7 @@ Returns all users that had favourite that photo.
 ***
 
 ## Return format
-A JSON object containing users that favourited that photo.
+A JSON object containing users that liked that photo.
 
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
@@ -41,7 +41,7 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    v1/photos/4928401/favorites
+    v1/photos/4928401/votes
 
 **Return** __shortened for example purpose__
 ``` json
