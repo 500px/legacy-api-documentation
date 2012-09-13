@@ -24,7 +24,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **users** — An array of Users objects in **[full format][]**. **.
+- **users** — An array of Users objects in **[full format][]**.
 
 ***
 
