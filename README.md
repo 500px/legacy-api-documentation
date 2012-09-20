@@ -24,12 +24,14 @@ You can check some hacks in [here](http://developer.500px.com/hacks)
 
 ## Examples
 
+- **[JavaScript](http://500px.github.com/500px-js-sdk)**
 - **[iOS](https://github.com/500px/api-documentation/blob/master/examples/iOS/API%20Tutorials.md)**
 - **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/)**
 - **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
 
 ## SDK
 
+- **[JavaScript](https://github.com/500px/500px-js-sdk)**
 - **[Python](https://github.com/500px/PxMagic)**
 - **[Android](https://github.com/500px/500px-android-sdk)**
 - **[iOS](https://github.com/500px/500px-iOS-api)**
