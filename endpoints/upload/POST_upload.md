@@ -10,6 +10,8 @@ Allows an application to upload the photo file.
 ## Requires authentication
 Upload key
 
+Warning: This endpoint *cannot* accept oauth signed requests.
+
 ***
 
 ## Parameters
