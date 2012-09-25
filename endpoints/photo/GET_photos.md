@@ -31,8 +31,8 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'user_friends' — Return photos by users the specified user is following, as displayed on **[http://500px.com/:username/following][]**
     - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**
 
-- **only** — String name of the **[category][]** to return photos from.
-- **exclude** — String name of the **[category][]** to exclude photos by.
+- **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive.
+- **exclude** — String name of the **[category][]** to exclude photos by. **Note:** Case sensitive.
 - **sort** — Sort photos in the specified order.
     ###### Recognized values:
     **Note:** For global features default sorting will take precedence. (Consider a SQL query "ORDER BY rating DESC, times_viewed DESC" for feature popular)
