@@ -1,4 +1,4 @@
-# Blog Resources
+# Collections Resources
 
     DELETE collections/:ID
 
