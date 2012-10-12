@@ -212,7 +212,7 @@
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
 
-			<method id="get_photos_id_favorite" name="GET" apigee:displayName="GET photos/{id}/favorite">
+			<method id="get_photos_id_favorite" name="GET" apigee:displayName="GET photos/:id/favorite">
 				
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -228,8 +228,6 @@
 			</method>
 		</resource>
 
-
-
 		<resource path="photos/{id}/votes">
 
 			<param name="page" type="xsd:integer">
@@ -240,7 +238,7 @@
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
 
-			<method id="get_photos_id_votes" name="GET" apigee:displayName="GET photos/{id}/votes">
+			<method id="get_photos_id_votes" name="GET" apigee:displayName="GET photos/:id/votes">
 				
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -257,7 +255,105 @@
 		</resource>
 
 
+		<resource path="photos/{id}">
 
+			<param name="id" type="xsd:integer">
+				<doc>The Photo ID to update. Can be provided either as photos/:id or in the query string.</doc>
+			</param>
+
+			<param name="name" type="xsd:string">
+				<doc>Title for the photo.</doc>
+			</param>
+
+			<param name="description" type="xsd:string">
+				<doc> The description of the photo.</doc>
+			</param>
+
+			<method id="put_photos_id" name="PUT" apigee:displayName="PUT photos/:id">
+				
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+					<apigee:tag>Photos</apigee:tag>
+				</apigee:tags>
+
+				<apigee:authentication required="true" />
+				<apigee:example url="/photos/{id}" />
+
+				<doc apigee:url="https://api.500px.com/v1/photos/{id}">
+					Updates a photo.
+				</doc>
+			</method>
+		</resource>
+
+
+		<resource path="photos">
+
+			<param name="name" type="xsd:string">
+				<doc>Title for the photo.</doc>
+			</param>
+
+			<param name="description" type="xsd:string">
+				<doc>The description of the photo.</doc>
+			</param>
+
+			<param name="category" type="xsd:integer">
+				<doc>A numerical ID for the Category of the photo</doc>
+			</param>
+
+			<!-- Photo technical details -->
+			<param name="shutter_speed" type="xsd:string">
+				<doc>Shutter speed in seconds, represented by string containing a rational expression if the value is 1sec.</doc>
+			</param>
+
+			<param name="focal_length" type="xsd:string">
+				<doc>Focal length in millimetres, a string representing an integer value</doc>
+			</param>
+
+			<param name="aperture" type="xsd:string">
+				<doc>Aperture value</doc>
+			</param>
+
+			<param name="iso" type="xsd:string">
+				<doc>ISO value</doc>
+			</param>
+
+			<param name="camera" type="xsd:string">
+				<doc>Make and model of the camera. Note: Please make sure it contains sensible information (eg., does not contain camera's make or model twice)</doc>
+			</param>
+
+			<param name="lens" type="xsd:string">
+				<doc>Lens used to make this photo</doc>
+			</param>
+
+			<!-- Geographical information of the photo: -->
+			<param name="latitude" type="xsd:string">
+				<doc>Latitude, in decimal format</doc>
+			</param>
+
+			<param name="longitude" type="xsd:string">
+				<doc>Longitude, in decimal format</doc>
+			</param>
+
+			<!-- Geographical information of the photo: -->
+			<param name="privacy" type="xsd:integer">
+				<doc> Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.</doc>
+			</param>
+
+			<method id="post_photos" name="POST" apigee:displayName="POST photos">
+				
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+					<apigee:tag>Photos</apigee:tag>
+				</apigee:tags>
+
+				<apigee:authentication required="true" />
+				<apigee:example url="/photos" />
+
+				<doc apigee:url="https://api.500px.com/v1/photos">
+					Create a new photo on behalf of the user, and receive an upload key in exchange.
+				</doc>
+			</method>
+		</resource>
 
 
 
@@ -298,7 +394,7 @@
 
 
 		<resource path="photos/{id}/tags">
-			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/{id}/tags">
+			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/:id/tags">
 				
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -320,7 +416,7 @@
 
 		<!-- BLOG -->
 		<resource path="blogs/{id}/comments">
-			<method id="post_blogs_id_comments" name="POST" apigee:displayName="POST blogs/{id}/comments">
+			<method id="post_blogs_id_comments" name="POST" apigee:displayName="POST blogs/:id/comments">
 				
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
