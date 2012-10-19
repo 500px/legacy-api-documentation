@@ -49,7 +49,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 - **image_size** — The photo size to be returned. It has to be an integer: 1 to 4. Also an array is accepted:
     ###### Example:
     - '&image_size=3'
-    - '&image_size[]=3?image_size[]=4'
+    - '&image_size[]=3&image_size[]=4'
 
 
 - **include_store** — Returns market infomation about the photo.
