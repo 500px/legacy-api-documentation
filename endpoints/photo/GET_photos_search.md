@@ -21,6 +21,7 @@ Either of parameters **term** or **tag** is required.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
+- **image_size** — The photo size to be returned. It has to be an integer: 1 to 4.
 
 ## Return format
 An array with the following keys and values:
