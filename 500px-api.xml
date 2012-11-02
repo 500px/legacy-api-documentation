@@ -355,59 +355,326 @@
 			</method>
 		</resource>
 
+		<resource path="photos/{id}/vote">
+			<param name="id" type="xsd:string">
+				<doc> ID of the photo the vote is cast upon.</doc>
+			</param>
 
+			<param name="vote" default="1">
+				<doc>
+					 vote, values: '0' for 'dislike' or '1' for 'like'.
+				</doc>
+				<option value="0"/>
+				<option value="1"/>
+			</param>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<resource path="photos/{id}/tags">
-			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/:id/tags">
-				
+			<method id="post_photos_id_vote" name="POST" apigee:displayName="POST photos/:id/vote">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
-
-				<apigee:authentication required="true" />
-				<apigee:example url="/photos/{id}/tags" />
-
-			<doc title="" apigee:url="https://api.500px.com/v1/photos/{id}/tags">
-				Deletes one or multiple comma-separated tags from the photo.
-			</doc>
+				<apigee:authentication required="true"/>
+				
+				<doc apigee:url="/photos">
+					Allows the user to vote for a photo.
+				</doc>
 			</method>
 		</resource>
+
+		<resource path="photos/{id}/tags">
+			<param name="id" type="xsd:string">
+				<doc>The Photo ID to add tags for.</doc>
+			</param>
+
+			<param name="tags" type="xsd:string">
+				<doc>Coma separated tags.</doc>
+			</param>
+
+			<method id="post_photos_id_tags" name="POST" apigee:displayName="POST photos/:id/tags">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true"/>
+				
+				<doc apigee:url="/photos">
+					Adds tags to the photo. Accepts one or multiple coma separated tags.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="photos/{id}/favorite">
+			<param name="id" type="xsd:string">
+				<doc>ID of the photo the favorite is cast upon.</doc>
+			</param>
+
+			<method id="post_photos_id_favorite" name="POST" apigee:displayName="POST photos/:id/favorite">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true"/>
+				
+				<doc apigee:url="/photos">
+					Adds the photo to user's list of favorites.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="photos/{id}/comments">
+			<param name="id" type="xsd:string">
+				<doc>The Photo ID to post comments for.</doc>
+			</param>
+
+			<param name="body" type="xsd:string">
+				<doc>Content of the comment.</doc>
+			</param>
+
+			<method id="post_photos_id_comments" name="POST" apigee:displayName="POST photos/:id/comments">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true"/>
+				
+				<doc apigee:url="/photos">
+					Creates a new comment for the photo.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="photos/{id}">
+			<param name="id" type="xsd:string">
+				<doc>The Photo ID to delete.</doc>
+			</param>
+
+			<method id="delete_photos_id" name="DELETE" apigee:displayName="DELETE photos/:id">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/photos">
+					Deletes the photo from the User's library.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="photos/{id}/tags">
+			<param name="id" type="xsd:string">
+				<doc>The Photo ID to remove tags from.</doc>
+			</param>
+
+			<param name="tags" type="xsd:string">
+				<doc>Coma separated tags.</doc>
+			</param>
+
+			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/:id/tags">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/photos/:id/tags">
+					Removes tags from the photo. Accepts one or multiple coma separated tags.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="photos/{id}/favorite">
+			<param name="id" type="xsd:string">
+				<doc>ID of the photo to delete from list of favorites.</doc>
+			</param>
+
+			<method id="delete_photos_id_favorite" name="DELETE" apigee:displayName="DELETE photos/:id/favorite">
+				<apigee:tags>
+					<apigee:tag primary="true">Photos</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/photos/:id/favorite">
+					Removes the photo to user's list of favorites.
+				</doc>
+			</method>
+		</resource>
+
+
+
+		<!-- UPLOAD -->
+		<resource path="upload">
+			<param name="photo_id" type="xsd:string">
+				<doc>Upload key</doc>
+			</param>
+			<param name="upload_key" type="xsd:string">
+				<doc>The ID of the photo the file is being uploaded for. The ID should be known to the client from the POST photos request result.</doc>
+			</param>
+
+			<param name="file" type="xsd:string">
+				<doc>The multipart HTTP upload. This is expected to be of the same format as when a file is being sent from an HTML file form.</doc>
+			</param>
+
+			<method id="upload" name="POST" apigee:displayName="POST upload">
+				<apigee:tags>
+					<apigee:tag primary="true">Upload</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="false" />
+
+				<doc apigee:url="upload">
+					Allows an application to upload the photo file.
+					Warning: This endpoint cannot accept oauth signed requests.
+				</doc>
+			</method>
+		</resource>
+		<!-- //end UPLOAD -->
+
+
+
+		<!-- USER -->
+		<resource path="users">
+			<method id="get_users" name="GET" apigee:displayName="GET users">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users">
+					Returns the profile information for the current user.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/show">
+			<param name="id" type="xsd:string">
+				<doc>
+					Return information for the specified user ID. Can be provided either as users/:id or in the query string
+				</doc>
+			</param>
+
+			<param name="username" type="xsd:string">
+				<doc>Return information for the user with the specified username.</doc>
+			</param>
+
+			<param name="email" type="xsd:string">
+				<doc>Return information for the user with the specified email address.</doc>
+			</param>
+
+
+			<method id="get_users_show" name="GET" apigee:displayName="GET users/show">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/show">
+					Returns the profile information for a specified user.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{id}/friends">
+			<param name="id" type="xsd:string">
+				<doc>Return information for the specified user ID</doc>
+			</param>
+
+			<param name="page" type="xsd:string">
+				<doc>Return the specified page of the resource. Page numbering is 1-based.</doc>
+			</param>
+
+			<param name="rpp" type="xsd:string">
+				<doc>Results Per Page, default 20, max 100.</doc>
+			</param>
+
+			<method id="get_users_id_friends" name="GET" apigee:displayName="GET users/:id/friends">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/:id/friends">
+					Returns a list of friends for the specified user.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{id}/followers">
+			<param name="id" type="xsd:string">
+				<doc>ID of the user.</doc>
+			</param>
+
+			<param name="page" type="xsd:string">
+				<doc>Return the specified page of the resource. Page numbering is 1-based.</doc>
+			</param>
+
+			<method id="get_users_id_followers" name="GET" apigee:displayName="GET users/:id/followers">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/:id/followers">
+					Returns a list of users who follow the specified user.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/search">
+			<param name="term" type="xsd:string" required="true">
+				<doc>A keyword to search for.</doc>
+			</param>
+
+			<param name="page" type="xsd:string">
+				<doc>Return the specified page of the resource. Page numbering is 1-based.</doc>
+			</param>
+
+			<param name="rpp" type="xsd:string">
+				<doc>Results Per Page, default 20, max 100.</doc>
+			</param>
+
+			<method id="get_users_search" name="GET" apigee:displayName="GET users/search">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/:search">
+					Return listing of ten (up to one hundred) users from search results for a specified search term.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{id}/friends">
+			<param name="id" type="xsd:string">
+				<doc> ID of the User to add to the followers list.</doc>
+			</param>
+
+			<method id="post_users_search" name="POST" apigee:displayName="POST users/:id/friends">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/:id/friends">
+					Add the user to the list of followers.
+				</doc>
+			</method>
+		</resource>
+
+		<resource path="users/{id}/friends">
+			<param name="id" type="xsd:string">
+				<doc>ID of the User to remove from the followers list.</doc>
+			</param>
+
+			<method id="delete_users_search" name="DELETE" apigee:displayName="DELETE users/:id/friends">
+				<apigee:tags>
+					<apigee:tag primary="true">User</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="/users/:id/friends">
+					Removes the user from the list of followers.
+				</doc>
+			</method>
+		</resource>
+
+
+
+
 
 
 
