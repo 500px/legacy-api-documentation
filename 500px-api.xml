@@ -102,7 +102,7 @@
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos" />
 
-				<doc title="GET Photos" apigee:url="photos">
+				<doc title="GET Photos" apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md">
 					Retrieves list of photos
 				</doc>
 			</method>
@@ -134,7 +134,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true" />
-				<doc apigee:url="https://api.500px.com/v1/photos/search">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_search.md">
 					Returns a listing of twenty (up to one hundred) photos from search results for a specified tag or keyword.
 				</doc>
 			</method>
@@ -173,7 +173,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md">
 					Returns detailed information of a single photo.
 				</doc>
 			</method>
@@ -194,7 +194,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos/{id}/comments">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_comments.md">
 					Returns a listing of twenty comments for the photo.
 				</doc>
 			</method>
@@ -222,7 +222,7 @@
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos/{id}/favorite" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos/{id}/favorite">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_favorites.md">
 					Deletes the photo from User's favorite list.
 				</doc>
 			</method>
@@ -248,7 +248,7 @@
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos/{id}/votes" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos/{id}/votes">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_votes.md">
 					Deletes the photo from User's favorite list.
 				</doc>
 			</method>
@@ -270,7 +270,6 @@
 			</param>
 
 			<method id="put_photos_id" name="PUT" apigee:displayName="PUT photos/:id">
-
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -279,7 +278,7 @@
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos/{id}" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/PUT_photos_id.md">
 					Updates a photo.
 				</doc>
 			</method>
@@ -349,7 +348,7 @@
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos" />
 
-				<doc apigee:url="https://api.500px.com/v1/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md">
 					Create a new photo on behalf of the user, and receive an upload key in exchange.
 				</doc>
 			</method>
@@ -374,7 +373,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true"/>
 
-				<doc apigee:url="/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_vote.md">
 					Allows the user to vote for a photo.
 				</doc>
 			</method>
@@ -395,7 +394,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true"/>
 
-				<doc apigee:url="/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_tags.md">
 					Adds tags to the photo. Accepts one or multiple coma separated tags.
 				</doc>
 			</method>
@@ -412,7 +411,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true"/>
 
-				<doc apigee:url="/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_favorite.md">
 					Adds the photo to user's list of favorites.
 				</doc>
 			</method>
@@ -433,7 +432,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true"/>
 
-				<doc apigee:url="/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_comments.md">
 					Creates a new comment for the photo.
 				</doc>
 			</method>
@@ -450,7 +449,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/photos">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id.md">
 					Deletes the photo from the User's library.
 				</doc>
 			</method>
@@ -471,7 +470,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/photos/:id/tags">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_tags.md">
 					Removes tags from the photo. Accepts one or multiple coma separated tags.
 				</doc>
 			</method>
@@ -488,7 +487,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/photos/:id/favorite">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_favorite.md">
 					Removes the photo to user's list of favorites.
 				</doc>
 			</method>
@@ -521,7 +520,7 @@
 				</apigee:tags>
 				<apigee:authentication required="false" />
 
-				<doc apigee:url="upload">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/upload/POST_upload.md">
 					Allows an application to upload the photo file.
 					Warning: This endpoint cannot accept oauth signed requests.
 				</doc>
@@ -533,13 +532,66 @@
 				<doc>The multipart HTTP upload. This is expected to be of the same format as when a file is being sent from an HTML file form.</doc>
 			</param>
 
+			<!-- optional params -->
+			<param name="name" type="xsd:string">
+				<doc>Title for the photo.</doc>
+			</param>
+
+			<param name="description" type="xsd:string">
+				<doc>The description of the photo.</doc>
+			</param>
+
+			<param name="category" type="xsd:integer">
+				<doc>A numerical ID for the Category of the photo</doc>
+			</param>
+
+			<param name="privacy" type="xsd:integer" default="0">
+				<doc>Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. 0 - Public, 1 - Private</doc>
+				<option value="0"/>
+				<option value="1"/>
+			</param>
+
+			<!-- Photo technical details -->
+			<param name="shutter_speed" type="xsd:string">
+				<doc>Shutter speed in seconds, represented by string containing a rational expression if the value is 1sec.</doc>
+			</param>
+
+			<param name="focal_length" type="xsd:string">
+				<doc>Focal length in millimetres, a string representing an integer value</doc>
+			</param>
+
+			<param name="aperture" type="xsd:string">
+				<doc>Aperture value</doc>
+			</param>
+
+			<param name="iso" type="xsd:string">
+				<doc>ISO value</doc>
+			</param>
+
+			<param name="camera" type="xsd:string">
+				<doc>Make and model of the camera. Note: Please make sure it contains sensible information (eg., does not contain camera's make or model twice)</doc>
+			</param>
+
+			<param name="lens" type="xsd:string">
+				<doc>Lens used to make this photo</doc>
+			</param>
+
+			<!-- Geographical information of the photo: -->
+			<param name="latitude" type="xsd:string">
+				<doc>Latitude, in decimal format</doc>
+			</param>
+
+			<param name="longitude" type="xsd:string">
+				<doc>Longitude, in decimal format</doc>
+			</param>
+
 			<method id="photos_upload" name="POST" apigee:displayName="(NEW) POST photos/upload">
 				<apigee:tags>
 					<apigee:tag primary="true">Upload</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="upload">
+				<doc>
 					(This is a new, simplified upload endpoint.) Allows an application to upload the photo.
 				</doc>
 			</method>
@@ -554,7 +606,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users.md">
 					Returns the profile information for the current user.
 				</doc>
 			</method>
@@ -582,7 +634,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/show">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_show.md">
 					Returns the profile information for a specified user.
 				</doc>
 			</method>
@@ -607,7 +659,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/:id/friends">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_id_friends.md">
 					Returns a list of friends for the specified user.
 				</doc>
 			</method>
@@ -628,7 +680,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/:id/followers">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_id_followers.md">
 					Returns a list of users who follow the specified user.
 				</doc>
 			</method>
@@ -653,7 +705,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/:search">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/GET_users_search.md">
 					Return listing of ten (up to one hundred) users from search results for a specified search term.
 				</doc>
 			</method>
@@ -670,7 +722,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/:id/friends">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/POST_users_id_friends.md">
 					Add the user to the list of followers.
 				</doc>
 			</method>
@@ -687,7 +739,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/users/:id/friends">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/user/DELETE_users_id_friends.md">
 					Removes the user from the list of followers.
 				</doc>
 			</method>
@@ -727,7 +779,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs.md">
 					Returns a listing of five recent (blogs) stories (maximum 100 per page).
 				</doc>
 			</method>
@@ -744,7 +796,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id.md">
 					Returns detailed information of a single story.
 				</doc>
 			</method>
@@ -767,7 +819,7 @@
 
 				<apigee:authentication required="false" />
 
-				<doc apigee:url="/blogs/{id}/comments">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id_comments.md">
 					Returns a listing of twenty comments for a specific Story.
 				</doc>
 			</method>
@@ -789,7 +841,7 @@
 
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs/{id}/comments">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs_id_comments.md">
 					Creates a comment for the Story.
 				</doc>
 			</method>
@@ -827,7 +879,7 @@
 
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs.md">
 					Creates a new Story.
 				</doc>
 			</method>
@@ -869,7 +921,7 @@
 
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/PUT_blogs_id.md">
 					Creates a new Story.
 				</doc>
 			</method>
@@ -887,7 +939,7 @@
 
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/blogs/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/DELETE_blogs_id.md">
 					Deletes the story.
 				</doc>
 			</method>
@@ -903,7 +955,7 @@
 				</apigee:tags>
 				<apigee:authentication required="false" />
 
-				<doc apigee:url="/collections">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md">
 					Returns a listing of five recent (blogs) stories (maximum 100 per page).
 				</doc>
 			</method>
@@ -920,7 +972,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/collections/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections_id.md">
 					Returns the collection.
 				</doc>
 			</method>
@@ -955,7 +1007,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/collections">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/POST_collections.md">
 					Creates a new collection.
 				</doc>
 			</method>
@@ -994,7 +1046,7 @@
 				</apigee:tags>
 				<apigee:authentication required="true" />
 
-				<doc apigee:url="/collections/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md">
 					Updates collection.
 				</doc>
 			</method>
@@ -1011,7 +1063,7 @@
 				</apigee:tags>
 				<apigee:authentication required="false" />
 
-				<doc apigee:url="/collections/{id}">
+				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md">
 					Deletes the collection.
 				</doc>
 			</method>
