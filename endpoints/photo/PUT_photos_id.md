@@ -14,7 +14,7 @@ Updates a photo.
 
 ## Parameters
 
-- **id** _(required)_ — The Photo ID to update. Can be provided either as photos/:id or in the query string.
+- **id** _(required)_ — The Photo ID to update.
 - **name** — Title for the photo.
 - **description** — The description of the photo.
 

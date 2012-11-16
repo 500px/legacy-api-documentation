@@ -16,7 +16,7 @@ Returns the profile information for a specified user.
 ## Parameters
 (required) One of the unique user identifiers:
 
-- **id** — Return information for the specified user ID. Can be provided either as users/:id or in the query string
+- **id** — Return information for the specified user ID.
 - **username** — Return information for the user with the specified username.
 - **email** — Return information for the user with the specified email address.
 

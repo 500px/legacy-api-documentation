@@ -14,7 +14,7 @@ Updates the Story.
 
 ## Parameters
 
-- **id** _(required)_ — The Blog Post ID to update. Can be provided either as blogs/:id or in the query string.
+- **id** _(required)_ — The Blog Post ID to update.
 - **title** — Title for the blog post.
 - **body** — Content of the blog post.
 - **latitude** — Latitude for the blog post.
