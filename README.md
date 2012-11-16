@@ -7,11 +7,12 @@ The API is [REST API](http://en.wikipedia.org/wiki/Representational_State_Transf
 and uses [OAuth](http://oauth.net/ "OAuth") 1.0a for user authentication purposes.
 Currently, return format for all endpoints is [JSON](http://json.org/ "JSON").
 
-You can check out some hacks [here](http://developer.500px.com/hacks)
+You can check out some hacks [here](http://developer.500px.com/hacks) and try our api in [console](http://bitly.com/api500px) ([http://bitly.com/api500px](http://bitly.com/api500px))
 
 ***
 
 ## Checklist
+* [Try API console](http://bitly.com/api500px)
 * [See if the concepts used by the API are familiar to you][]
 * Familiarize yourself with API functionality
 * Read the 500px [API Terms of Use][]
