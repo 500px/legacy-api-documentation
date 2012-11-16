@@ -494,18 +494,24 @@
 			</method>
 		</resource>
 
-
-
 		<!-- UPLOAD -->
 		<resource path="upload">
-			<param name="photo_id" type="xsd:string">
-				<doc>Upload key</doc>
-			</param>
-			<param name="upload_key" type="xsd:string">
+			<param name="photo_id" type="xsd:string" required="true">
 				<doc>The ID of the photo the file is being uploaded for. The ID should be known to the client from the POST photos request result.</doc>
 			</param>
+			<param name="upload_key" type="xsd:string" required="true">
+				<doc>Upload key</doc>
+			</param>
 
-			<param name="file" type="xsd:string">
+			<param name="consumer_key" type="xsd:string" required="true">
+				<doc>Your application Consumer key.</doc>
+			</param>
+
+			<param name="access_key" type="xsd:string" required="true">
+				<doc>Oauth token.</doc>
+			</param>
+
+			<param name="file" type="xsd:string" required="true">
 				<doc>The multipart HTTP upload. This is expected to be of the same format as when a file is being sent from an HTML file form.</doc>
 			</param>
 
@@ -521,9 +527,24 @@
 				</doc>
 			</method>
 		</resource>
+
+		<resource path="photos/upload">
+			<param name="file" type="xsd:string" required="true">
+				<doc>The multipart HTTP upload. This is expected to be of the same format as when a file is being sent from an HTML file form.</doc>
+			</param>
+
+			<method id="photos_upload" name="POST" apigee:displayName="(NEW) POST photos/upload">
+				<apigee:tags>
+					<apigee:tag primary="true">Upload</apigee:tag>
+				</apigee:tags>
+				<apigee:authentication required="true" />
+
+				<doc apigee:url="upload">
+					(This is a new, simplified upload endpoint.) Allows an application to upload the photo.
+				</doc>
+			</method>
+		</resource>
 		<!-- //end UPLOAD -->
-
-
 
 		<!-- USER -->
 		<resource path="users">
