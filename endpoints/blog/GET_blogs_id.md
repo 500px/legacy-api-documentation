@@ -15,7 +15,7 @@ Returns detailed information of a single story.
 
 ## Parameters
 
-- **id** _(required)_ - Return information for the specific story. Can be provided either as blogs/:id or in the query string
+- **id** _(required)_ - Return information for the specific story.
 
 ***
 
@@ -56,7 +56,7 @@ All known errors cause the resource to return HTTP error code header together wi
       "fullname": "Evgeny Tchebotarev",
       "userpic_url": "http://acdn.500px.net/1/34059c97bf3c79f4923cd083756e6a8d726fa956/1.jpg?64",
       "upgrade_status": 2
-    }, 
+    },
     "tags": null,
     "photos": [
       {

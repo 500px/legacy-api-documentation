@@ -1,7 +1,7 @@
 
-<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:apigee="http://api.apigee.com/wadl/2010/07/" 
+	xmlns:apigee="http://api.apigee.com/wadl/2010/07/"
 	xmlns="http://wadl.dev.java.net/2009/02"
 	xsi:schemaLocation="http://wadl.dev.java.net/2009/02 http://apigee.com/schemas/wadl-schema.xsd http://api.apigee.com/wadl/2010/07/ http://apigee.com/schemas/apigee-wadl-extensions.xsd">
 
@@ -52,7 +52,7 @@
 				<option value="comments_count"/>
 				<option value="taken_at" />
 			</param>
-			
+
 			<param name="page" type="xsd:string">
 				<doc>Return a specific page in the photo stream. Page numbering is 1-based.</doc>
 			</param>
@@ -78,7 +78,7 @@
 				<option value="store_download"/>
 				<option value="store_print"/>
 			</param>
-			
+
 			<param name="include_states">
 				<doc>
 					Returns state of the photo for the currently logged in user and authenticated request.
@@ -98,7 +98,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Show</apigee:tag>
 				</apigee:tags>
-			
+
 				<apigee:authentication required="true" />
 				<apigee:example url="/photos" />
 
@@ -124,11 +124,11 @@
 			<param name="rpp" type="xsd:integer">
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
-			
+
 			<param name="tags" type="xsd:string">
 				<doc>Returns an array of tags for each photo.</doc>
 			</param>
-			
+
 			<method id="get_photos_search" name="GET" apigee:displayName="GET photos/search">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -213,7 +213,7 @@
 			</param>
 
 			<method id="get_photos_id_favorite" name="GET" apigee:displayName="GET photos/:id/favorite">
-				
+
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -233,13 +233,13 @@
 			<param name="page" type="xsd:integer">
 				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
 			</param>
-			
+
 			<param name="rpp" type="xsd:integer">
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
 
 			<method id="get_photos_id_votes" name="GET" apigee:displayName="GET photos/:id/votes">
-				
+
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -258,7 +258,7 @@
 		<resource path="photos/{id}">
 
 			<param name="id" type="xsd:integer">
-				<doc>The Photo ID to update. Can be provided either as photos/:id or in the query string.</doc>
+				<doc>The Photo ID to update.</doc>
 			</param>
 
 			<param name="name" type="xsd:string">
@@ -270,7 +270,7 @@
 			</param>
 
 			<method id="put_photos_id" name="PUT" apigee:displayName="PUT photos/:id">
-				
+
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -340,7 +340,7 @@
 			</param>
 
 			<method id="post_photos" name="POST" apigee:displayName="POST photos">
-				
+
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -373,7 +373,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true"/>
-				
+
 				<doc apigee:url="/photos">
 					Allows the user to vote for a photo.
 				</doc>
@@ -394,7 +394,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true"/>
-				
+
 				<doc apigee:url="/photos">
 					Adds tags to the photo. Accepts one or multiple coma separated tags.
 				</doc>
@@ -411,7 +411,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true"/>
-				
+
 				<doc apigee:url="/photos">
 					Adds the photo to user's list of favorites.
 				</doc>
@@ -432,7 +432,7 @@
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
 				<apigee:authentication required="true"/>
-				
+
 				<doc apigee:url="/photos">
 					Creates a new comment for the photo.
 				</doc>
@@ -542,7 +542,7 @@
 		<resource path="users/show">
 			<param name="id" type="xsd:string">
 				<doc>
-					Return information for the specified user ID. Can be provided either as users/:id or in the query string
+					Return information for the specified user ID.
 				</doc>
 			</param>
 

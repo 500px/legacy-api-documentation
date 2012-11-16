@@ -13,7 +13,7 @@ Creates a comment for the Story.
 ***
 
 ## Parameters
-- **id** _(required)_ — The Story ID to create a comment for. Can be provided either as blogs/:id or in the query string.
+- **id** _(required)_ — The Story ID to create a comment for.
 - **body** _(required)_ — Content of the comment.
 
 ***
