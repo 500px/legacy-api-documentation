@@ -92,6 +92,7 @@ All known errors cause the resource to return HTTP error code header together wi
     "highest_rating": 97.1,
     "highest_rating_date": "2012-04-16T15:05:56-04:00",
     "image_url": "http://pcdn.500px.net/4928401/16666558d7ba410f50922f86f736888d8cfaf9bb/4.jpg",
+    "images": {"size": 4, "url": "http://pcdn.500px.net/4928401/16666558d7ba410f50922f86f736888d8cfaf9bb/4.jpg"}
     "store_download": false,
     "store_print": false,
     "voted": false,
