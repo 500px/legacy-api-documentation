@@ -93,7 +93,7 @@
 			</param>
 
 
-			<method id="get_photos" name="GET" apigee:displayName="GET photos">
+			<method id="get_photos" name="GET" apigee:displayName="photos">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Show</apigee:tag>
@@ -129,7 +129,7 @@
 				<doc>Returns an array of tags for each photo.</doc>
 			</param>
 
-			<method id="get_photos_search" name="GET" apigee:displayName="GET photos/search">
+			<method id="get_photos_search" name="GET" apigee:displayName="photos/search">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -143,6 +143,10 @@
 
 
 		<resource path="photos/{id}">
+			<param name="id" type="xsd:string" required="true">
+				<doc>The Photo ID</doc>
+			</param>
+
 			<param name="image_size" default="3">
 				<doc>
 					The photo size to be returned.
@@ -167,7 +171,7 @@
 				<doc>Returns an array of tags for the photo.</doc>
 			</param>
 
-			<method id="get_photos_id" name="GET" apigee:displayName="GET photos/:id">
+			<method id="get_photos_id" name="GET" apigee:displayName="photos/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -180,15 +184,16 @@
 		</resource>
 
 
-
-
-
 		<resource path="photos/{id}/comments">
+			<param name="id" type="xsd:string" required="true">
+				<doc>The Photo ID</doc>
+			</param>
+
 			<param name="page" type="xsd:integer">
 				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
 			</param>
 
-			<method id="get_photos_id_comments" name="GET" apigee:displayName="GET photos/:id/comments">
+			<method id="get_photos_id_comments" name="GET" apigee:displayName="photos/{id}/comments">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -203,6 +208,9 @@
 
 
 		<resource path="photos/{id}/favorite">
+			<param name="id" type="xsd:string" required="true">
+				<doc>The Photo ID</doc>
+			</param>
 
 			<param name="page" type="xsd:integer">
 				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
@@ -212,7 +220,7 @@
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
 
-			<method id="get_photos_id_favorite" name="GET" apigee:displayName="GET photos/:id/favorite">
+			<method id="get_photos_id_favorite" name="GET" apigee:displayName="photos/{id}/favorite">
 
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -229,6 +237,9 @@
 		</resource>
 
 		<resource path="photos/{id}/votes">
+			<param name="id" type="xsd:string" required="true">
+				<doc>The Photo ID</doc>
+			</param>
 
 			<param name="page" type="xsd:integer">
 				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
@@ -238,7 +249,7 @@
 				<doc>The number of results to return. Can not be over 100, default 20.</doc>
 			</param>
 
-			<method id="get_photos_id_votes" name="GET" apigee:displayName="GET photos/:id/votes">
+			<method id="get_photos_id_votes" name="GET" apigee:displayName="photos/{id}/votes">
 
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -256,6 +267,9 @@
 
 
 		<resource path="photos/{id}">
+			<param name="id" type="xsd:string" required="true">
+				<doc>The Photo ID</doc>
+			</param>
 
 			<param name="id" type="xsd:integer">
 				<doc>The Photo ID to update.</doc>
@@ -269,7 +283,7 @@
 				<doc>The description of the photo.</doc>
 			</param>
 
-			<method id="put_photos_id" name="PUT" apigee:displayName="PUT photos/:id">
+			<method id="put_photos_id" name="PUT" apigee:displayName="photos/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 					<apigee:tag>Photos</apigee:tag>
@@ -338,7 +352,7 @@
 				<doc> Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.</doc>
 			</param>
 
-			<method id="post_photos" name="POST" apigee:displayName="POST photos">
+			<method id="post_photos" name="POST" apigee:displayName="photos">
 
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
@@ -355,7 +369,7 @@
 		</resource>
 
 		<resource path="photos/{id}/vote">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc> ID of the photo the vote is cast upon.</doc>
 			</param>
 
@@ -367,7 +381,7 @@
 				<option value="1"/>
 			</param>
 
-			<method id="post_photos_id_vote" name="POST" apigee:displayName="POST photos/:id/vote">
+			<method id="post_photos_id_vote" name="POST" apigee:displayName="photos/{id}/vote">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -380,7 +394,7 @@
 		</resource>
 
 		<resource path="photos/{id}/tags">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID to add tags for.</doc>
 			</param>
 
@@ -388,7 +402,7 @@
 				<doc>Coma separated tags.</doc>
 			</param>
 
-			<method id="post_photos_id_tags" name="POST" apigee:displayName="POST photos/:id/tags">
+			<method id="post_photos_id_tags" name="POST" apigee:displayName="photos/{id}/tags">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -401,11 +415,11 @@
 		</resource>
 
 		<resource path="photos/{id}/favorite">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>ID of the photo the favorite is cast upon.</doc>
 			</param>
 
-			<method id="post_photos_id_favorite" name="POST" apigee:displayName="POST photos/:id/favorite">
+			<method id="post_photos_id_favorite" name="POST" apigee:displayName="photos/{id}/favorite">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -418,7 +432,7 @@
 		</resource>
 
 		<resource path="photos/{id}/comments">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID to post comments for.</doc>
 			</param>
 
@@ -426,7 +440,7 @@
 				<doc>Content of the comment.</doc>
 			</param>
 
-			<method id="post_photos_id_comments" name="POST" apigee:displayName="POST photos/:id/comments">
+			<method id="post_photos_id_comments" name="POST" apigee:displayName="photos/{id}/comments">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -439,11 +453,11 @@
 		</resource>
 
 		<resource path="photos/{id}">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID to delete.</doc>
 			</param>
 
-			<method id="delete_photos_id" name="DELETE" apigee:displayName="DELETE photos/:id">
+			<method id="delete_photos_id" name="DELETE" apigee:displayName="photos/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -456,7 +470,7 @@
 		</resource>
 
 		<resource path="photos/{id}/tags">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID to remove tags from.</doc>
 			</param>
 
@@ -464,7 +478,7 @@
 				<doc>Coma separated tags.</doc>
 			</param>
 
-			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="DELETE photos/:id/tags">
+			<method id="delete_photos_id_tags" name="DELETE" apigee:displayName="photos/{id}/tags">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -477,11 +491,11 @@
 		</resource>
 
 		<resource path="photos/{id}/favorite">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>ID of the photo to delete from list of favorites.</doc>
 			</param>
 
-			<method id="delete_photos_id_favorite" name="DELETE" apigee:displayName="DELETE photos/:id/favorite">
+			<method id="delete_photos_id_favorite" name="DELETE" apigee:displayName="photos/{id}/favorite">
 				<apigee:tags>
 					<apigee:tag primary="true">Photos</apigee:tag>
 				</apigee:tags>
@@ -514,7 +528,7 @@
 				<doc>The multipart HTTP upload. This is expected to be of the same format as when a file is being sent from an HTML file form.</doc>
 			</param>
 
-			<method id="upload" name="POST" apigee:displayName="POST upload">
+			<method id="upload" name="POST" apigee:displayName="upload">
 				<apigee:tags>
 					<apigee:tag primary="true">Upload</apigee:tag>
 				</apigee:tags>
@@ -585,7 +599,7 @@
 				<doc>Longitude, in decimal format</doc>
 			</param>
 
-			<method id="photos_upload" name="POST" apigee:displayName="(NEW) POST photos/upload">
+			<method id="photos_upload" name="POST" apigee:displayName="(NEW) photos/upload">
 				<apigee:tags>
 					<apigee:tag primary="true">Upload</apigee:tag>
 				</apigee:tags>
@@ -600,7 +614,7 @@
 
 		<!-- USER -->
 		<resource path="users">
-			<method id="get_users" name="GET" apigee:displayName="GET users">
+			<method id="get_users" name="GET" apigee:displayName="users">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -628,7 +642,7 @@
 			</param>
 
 
-			<method id="get_users_show" name="GET" apigee:displayName="GET users/show">
+			<method id="get_users_show" name="GET" apigee:displayName="users/show">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -641,7 +655,7 @@
 		</resource>
 
 		<resource path="users/{id}/friends">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>Return information for the specified user ID</doc>
 			</param>
 
@@ -653,7 +667,7 @@
 				<doc>Results Per Page, default 20, max 100.</doc>
 			</param>
 
-			<method id="get_users_id_friends" name="GET" apigee:displayName="GET users/:id/friends">
+			<method id="get_users_id_friends" name="GET" apigee:displayName="users/{id}/friends">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -666,7 +680,7 @@
 		</resource>
 
 		<resource path="users/{id}/followers">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>ID of the user.</doc>
 			</param>
 
@@ -674,7 +688,7 @@
 				<doc>Return the specified page of the resource. Page numbering is 1-based.</doc>
 			</param>
 
-			<method id="get_users_id_followers" name="GET" apigee:displayName="GET users/:id/followers">
+			<method id="get_users_id_followers" name="GET" apigee:displayName="users/{id}/followers">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -699,7 +713,7 @@
 				<doc>Results Per Page, default 20, max 100.</doc>
 			</param>
 
-			<method id="get_users_search" name="GET" apigee:displayName="GET users/search">
+			<method id="get_users_search" name="GET" apigee:displayName="users/search">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -712,11 +726,11 @@
 		</resource>
 
 		<resource path="users/{id}/friends">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc> ID of the User to add to the followers list.</doc>
 			</param>
 
-			<method id="post_users_search" name="POST" apigee:displayName="POST users/:id/friends">
+			<method id="post_users_search" name="POST" apigee:displayName="users/{id}/friends">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -729,11 +743,11 @@
 		</resource>
 
 		<resource path="users/{id}/friends">
-			<param name="id" type="xsd:string">
+			<param name="id" type="xsd:string" required="true">
 				<doc>ID of the User to remove from the followers list.</doc>
 			</param>
 
-			<method id="delete_users_search" name="DELETE" apigee:displayName="DELETE users/:id/friends">
+			<method id="delete_users_search" name="DELETE" apigee:displayName="users/{id}/friends">
 				<apigee:tags>
 					<apigee:tag primary="true">User</apigee:tag>
 				</apigee:tags>
@@ -773,7 +787,7 @@
 				<doc>The number of results to return. Can not be over 100, default 5.</doc>
 			</param>
 
-			<method id="get_blogs" name="GET" apigee:displayName="GET blogs">
+			<method id="get_blogs" name="GET" apigee:displayName="blogs">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -786,11 +800,11 @@
 		</resource>
 
 		<resource path="blogs/{id}">
-			<param name="id" type="xsd:string"  required="true">
+			<param name="id" type="xsd:string" required="true">
 				<doc>Story ID</doc>
 			</param>
 
-			<method id="get_blogs_id" name="GET" apigee:displayName="GET blogs/:id">
+			<method id="get_blogs_id" name="GET" apigee:displayName="blogs/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -812,12 +826,12 @@
 				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
 			</param>
 
-			<method id="get_blogs_id_comments" name="GET" apigee:displayName="GET blogs/:id/comments">
+			<method id="get_blogs_id_comments" name="GET" apigee:displayName="blogs/{id}/comments">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
 
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 
 				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id_comments.md">
 					Returns a listing of twenty comments for a specific Story.
@@ -834,7 +848,7 @@
 				<doc>Content of the comment.</doc>
 			</param>
 
-			<method id="post_blogs_id_comments" name="POST" apigee:displayName="POST blogs/:id/comments">
+			<method id="post_blogs_id_comments" name="POST" apigee:displayName="blogs/{id}/comments">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -872,7 +886,7 @@
 				<doc>Comma separated list of Photo ID values to post with the blog.</doc>
 			</param>
 
-			<method id="post_blogs" name="POST" apigee:displayName="POST blogs">
+			<method id="post_blogs" name="POST" apigee:displayName="blogs">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -914,7 +928,7 @@
 				<doc>Comma separated list of Photo ID values to post with the blog.</doc>
 			</param>
 
-			<method id="put_blogs_id" name="PUT" apigee:displayName="PUT blogs/:id">
+			<method id="put_blogs_id" name="PUT" apigee:displayName="blogs/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -932,7 +946,7 @@
 				<doc>The Story ID to delete.</doc>
 			</param>
 
-			<method id="delete_blogs_id" name="DELETE" apigee:displayName="DELETE blogs/:id">
+			<method id="delete_blogs_id" name="DELETE" apigee:displayName="blogs/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Blogs</apigee:tag>
 				</apigee:tags>
@@ -949,11 +963,11 @@
 
 		<!-- COLLECTIONS -->
 		<resource path="collections">
-			<method id="get_collections" name="GET" apigee:displayName="GET collections">
+			<method id="get_collections" name="GET" apigee:displayName="collections">
 				<apigee:tags>
 					<apigee:tag primary="true">Collections</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 
 				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md">
 					Returns a listing of five recent (blogs) stories (maximum 100 per page).
@@ -966,7 +980,7 @@
 				<doc>Collection (set) ID.</doc>
 			</param>
 
-			<method id="get_collections_id" name="GET" apigee:displayName="GET collections/:id">
+			<method id="get_collections_id" name="GET" apigee:displayName="collections/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Collections</apigee:tag>
 				</apigee:tags>
@@ -1001,7 +1015,7 @@
 				<doc>Position of the collection in the list of collections.</doc>
 			</param>
 
-			<method id="post_collections" name="POST" apigee:displayName="POST collections">
+			<method id="post_collections" name="POST" apigee:displayName="collections">
 				<apigee:tags>
 					<apigee:tag primary="true">Collections</apigee:tag>
 				</apigee:tags>
@@ -1040,7 +1054,7 @@
 				<doc>Position of the collection in the list of collections.</doc>
 			</param>
 
-			<method id="put_collections_id" name="PUT" apigee:displayName="PUT collections/:id">
+			<method id="put_collections_id" name="PUT" apigee:displayName="collections/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Collections</apigee:tag>
 				</apigee:tags>
@@ -1057,11 +1071,11 @@
 				<doc>Collection (set) ID to delete.</doc>
 			</param>
 
-			<method id="delete_collections" name="DELETE" apigee:displayName="DELETE collections/:id">
+			<method id="delete_collections" name="DELETE" apigee:displayName="collections/{id}">
 				<apigee:tags>
 					<apigee:tag primary="true">Collections</apigee:tag>
 				</apigee:tags>
-				<apigee:authentication required="false" />
+				<apigee:authentication required="true" />
 
 				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md">
 					Deletes the collection.
