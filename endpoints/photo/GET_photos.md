@@ -1,6 +1,6 @@
 # Photo Resources
 
-    GET photos/:id
+    GET photos
 
 ## Description
 Returns a listing of twenty (up to one hundred) photos for a specified **[photo stream][]**.
