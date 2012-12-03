@@ -12,7 +12,7 @@ You can check out some hacks [here](http://developer.500px.com/hacks) and try ou
 ***
 
 ## Checklist
-* [Try API console](http://bitly.com/api500px)
+* [Try the API console](http://bitly.com/api500px)
 * [See if the concepts used by the API are familiar to you][]
 * Familiarize yourself with API functionality
 * Read the 500px [API Terms of Use][]
