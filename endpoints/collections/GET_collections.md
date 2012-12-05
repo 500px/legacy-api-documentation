@@ -37,6 +37,8 @@ None
       "position": 0,
       "created_at": "2012-05-24T10:13:34-04:00",
       "path": "film_set",
+      "has_password": false,
+      "private": false,
       "photos": [
         {
           "id": 7905188,
@@ -66,6 +68,8 @@ None
       "position": 1,
       "created_at": "2012-06-07T13:15:26-04:00",
       "path": "bikes_set",
+      "has_password": false,
+      "private": false,
       "photos": [
         {
           "id": 7651996,
