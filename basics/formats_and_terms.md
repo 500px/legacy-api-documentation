@@ -247,3 +247,4 @@ The full format of a Comment object includes the following data:
 
 [Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[License type]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license_types
