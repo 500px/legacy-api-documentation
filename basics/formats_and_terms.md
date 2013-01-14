@@ -131,7 +131,7 @@ The full format of a Photo object includes the following data:
 - **id** — ID of the photo, integer
 - **name** — Title of the photo, string
 - **description** — Description of the photo, string
-- **license_type** - [License Type][] of the photo, (short) integer
+- **license_type** - [License type][] of the photo, (short) integer
 - **category** — [Category][] of the photo, (short) integer
 - **image\_url** — URL of the image, string
 - **votes\_count** — Number of votes cast on this photo, integer
