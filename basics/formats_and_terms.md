@@ -76,6 +76,23 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>25</td><td>Wedding <sup>New!</sup></td></tr>
 </table>
 
+## License Types
+500px currently supports these types of licenses, more details can be found at http://500px.com/creativecommons
+
+<table id="license_types">
+  <tr>
+    <th>ID</th>
+    <th>License Type</th>
+  </tr>
+  <tr><td>0</td><td>Standard 500px License</td></tr>
+  <tr><td>1</td><td>Creative Commons License Non Commercial Attribution</td></tr>
+  <tr><td>2</td><td>Creative Commons License Non Commercial No Derivatives</td></tr>
+  <tr><td>3</td><td>Creative Commons License Non Commercial Share Alike</td></tr>
+  <tr><td>4</td><td>Creative Commons License Attribution</td></tr>
+  <tr><td>5</td><td>Creative Commons License No Derivatives</td></tr>
+  <tr><td>6</td><td>Creative Commons License Share Alike</td></tr>
+</table>
+
 ## Photo object formats
 Categories of photos may be specified by their ID or string name, depending on the API method.
 
@@ -106,6 +123,7 @@ Values returned on **include_states** and authenticated request.
 - 'purchased' — Boolean value whether the current user has bought this photo
 
 [Category]: #categories
+[License type]: #license_types
 
 ### Full format
 The full format of a Photo object includes the following data:
@@ -113,6 +131,7 @@ The full format of a Photo object includes the following data:
 - **id** — ID of the photo, integer
 - **name** — Title of the photo, string
 - **description** — Description of the photo, string
+- **license_type** - [License Type][] of the photo, (short) integer
 - **category** — [Category][] of the photo, (short) integer
 - **image\_url** — URL of the image, string
 - **votes\_count** — Number of votes cast on this photo, integer
