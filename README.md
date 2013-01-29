@@ -57,6 +57,7 @@ You can check out some hacks [here](http://developer.500px.com/hacks) and try ou
 - **[<code>POST</code> photos/:id/tags](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_tags.md)**
 - **[<code>POST</code> photos/:id/favorite](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_favorite.md)**
 - **[<code>POST</code> photos/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_comments.md)**
+- **[<code>POST</code> photos/:id/report](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_report.md)**
 - **[<code>DELETE</code> photos/:id](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id.md)**
 - **[<code>DELETE</code> photos/:id/tags](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_tags.md)**
 - **[<code>DELETE</code> photos/:id/favorite](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_favorite.md)**
