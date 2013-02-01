@@ -17,6 +17,8 @@ Returns a list of users who follow the specified user.
 
 - **id** _(required)_ — ID of the user.
 - **page** — Return the specified page of the resource. Page numbering is 1-based.
+- **rpp** — Results Per Page, default 20, max 100.
+
 
 ***
 
