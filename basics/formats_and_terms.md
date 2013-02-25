@@ -280,7 +280,16 @@ The full format of a Comment object includes the following data:
 - **user_id** — User ID of author of the comment, string
 - **created_at** — Timestamp indicating time the comment was created, timestamp
 - **user** — Author's profile in [short format][], object
+- **parent_id** - The ID of the comment that was replied to. If this value is null then the comment was not a reply to another comment, integer
+- **flagged** - A boolean value indicating whether or not this comment was flagged for review.
+- **rating** - The sum of the number of votes this comment has received, integer
+
+If you are authenticated these additional attributes will be returned:
+
+- **voted** - A boolean value indicating whether or not the currently authenticated user has voted on this comment.
 
 [Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
 [License type]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license_types
+
+
