@@ -118,7 +118,7 @@ The short format of a Photo object includes the following data:
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
 - **taken\_at** — Timestamp of when the photo was taken, timestamp
-- **for_\_sale** - Boolean value whether or not the photo is for sale
+- **for\_sale** - Boolean value whether or not the photo is for sale
 - **width** - The width of the original, unresized photo, integer
 - **height** - The height of the origin, unresized photo, integer
 - **votes\_count** — Number of votes cast on this photo, integer
@@ -160,7 +160,7 @@ The full format of a Photo object includes the following data:
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
 - **taken\_at** — Timestamp of when the photo was taken, timestamp
-- **for_\_sale** - Boolean value whether or not the photo is for sale
+- **for\_sale** - Boolean value whether or not the photo is for sale
 - **width** - The width of the original, unresized photo, integer
 - **height** - The height of the origin, unresized photo, integer
 - **votes\_count** — Number of votes cast on this photo, integer
