@@ -19,7 +19,7 @@ Creates a comment for the Story.
 ***
 
 ## Return format
-A JSON object with key "status" and value of 200, and key "message" with value of "Successfully added a comment."
+A JSON object with key "status" and value of 200, a key "message" with value of "Successfully added a comment.", and a key of "comment" including the comment model of the comment that was created.
 
 ***
 
@@ -43,9 +43,34 @@ All known errors cause the resource to return HTTP error code header together wi
 **Return**
 ``` json
 {
-  "status" : 200,
-  "message" : "Successfully added a comment.",
-  "error" : "None"
+  "status":200,
+  "message":"Successfully added a comment.",
+  "error":"None",
+  "comment": {
+    "id": 83858343,
+    "user_id": 198867,
+    "to_whom_user_id": 347823,
+    "body": "I like your photos",
+    "created_at": "2013-02-25T17:35:26-05:00",
+    "parent_id": null,
+    "flagged": false,
+    "rating": 0,
+    "voted": false,
+    "user": {
+      "id": 198867,
+      "username": "tye",
+      "firstname": "Tye",
+      "lastname": "Shavik",
+      "city": "Toronto",
+      "country": "Canada",
+      "fullname": "Tye Shavik",
+      "userpic_url": "http://acdn.500px.net/198867/7f5f29fd33e093062a30e2bf3a9e605c446ba960/1.jpg?29",
+      "upgrade_status": 2,
+      "followers_count": 36,
+      "affection": 103,
+      "admin": 1
+    }
+  }
 }
 ```
 
