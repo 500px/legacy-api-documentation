@@ -1,9 +1,9 @@
-# Blog Resources
+# Comment Resources
 
-    POST blogs/:id/comments
+    POST comments/:id/comments
 
 ## Description
-Creates a comment for the Story.
+Creates a reply to an existing comment. Comments can only be nested one level deep, you cannot reply to a reply of a comment. If a comment has a non-null parent_id value then it cannot be replied to.
 
 ***
 
@@ -13,7 +13,6 @@ Creates a comment for the Story.
 ***
 
 ## Parameters
-- **id** _(required)_ — The Story ID to create a comment for.
 - **body** _(required)_ — Content of the comment.
 
 ***
@@ -27,32 +26,32 @@ A JSON object with key "status" and value of 200, a key "message" with value of 
 All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
 
 - **400 Bad Request** — The body of the comment was not specified.
-- **404 Not Found** — The specified Story was not found.
+- **404 Not Found** — The specified comment was not found.
 
 ***
 
 ## Example
 **Request**
 
-    POST v1/blogs/40185/comments
+    POST v1/comments/73249443/comments
 
 **Body**
 
-    body=I+like+your+photos
+    body=Nice+color+and+composition.
 
-**Return**
+**Result**
 ``` json
 {
-  "status":200,
-  "message":"Successfully added a comment.",
-  "error":"None",
+  "status" : 200,
+  "message" : "Successfully added a comment.",
+  "error" : "None"
   "comment": {
     "id": 83858343,
     "user_id": 198867,
     "to_whom_user_id": 347823,
-    "body": "I like your photos",
+    "body": "Nice color and composition.",
     "created_at": "2013-02-25T17:35:26-05:00",
-    "parent_id": null,
+    "parent_id": 73249443,
     "flagged": false,
     "rating": 0,
     "voted": false,
