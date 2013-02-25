@@ -102,25 +102,38 @@ The short format of a Photo object includes the following data:
 - **id** — ID of the photo, integer
 - **name** — Title of the photo, string
 - **description** — Description of the photo, string
-- **category** — [Category][] of the photo, (short) integer
-- **image\_url** — URL of the image, string
-- **images** — Array with images URL and sizes
+- **camera** — Make and model of the camera this photo was made with, string
+- **lens** — This photo’s camera lens information, string
+- **focal\_length** — Focal length of the shot, string
+- **iso** — ISO value of the shot, string
+- **shutter\_speed** — Shutter speed value of the shot, string
+- **aperture** — Aperture value of the shot, string
+- **times\_viewed** - The number of views this photo has, integer
 - **rating** — Rating of the photo, decimal
-- **votes\_count** — The number of votes cast on this photo, integer
-- **favorites\_count** — The number of users that have this photo in favorites, integer
-- **comments\_count** — The number of comments on this photo, integer
-- **times\_viewed** — The number of times this photo has been viewed, integer
+- **status** — Status of the photo in the system, integer. An active photo always has the status of 1.
 - **created\_at** — Timestamp indicating time of photo creation, timestamp
+- **category** — [Category][] of the photo, (short) integer
+- **location** — A human-readable name of the location where the photo was taken, string
+- **privacy** - Boolean value whether or not the community page (http://500px.com/photo/:id) of this photo is available.  A value of true means the page is not available.
+- **latitude** — Latitude of the location where the photo was taken, decimal
+- **longitude** — Longitude of the location where the photo was taken, decimal
+- **taken\_at** — Timestamp of when the photo was taken, timestamp
+- **for_\_sale** - Boolean value whether or not the photo is for sale
+- **width** - The width of the original, unresized photo, integer
+- **height** - The height of the origin, unresized photo, integer
+- **votes\_count** — Number of votes cast on this photo, integer
+- **favorites\_count** — Number of times this photo was added as a favorite on the website, integer
+- **comments\_count** — Number of comments this photo has, integer
+- **positive_votes_count** - Number of positive votes (likes) this photo has received, integer
+- **nsfw** - Boolean value whether the current photo is NSFW
+- **sales_count** - The number of sales this photo has
+- **highest_rating** - The highest rating this photo has had, decimal
+- **highest_rating_date** - The date the highest rating was reached on, timestamp
+- **license_type** - [License type][] of the photo, (short) integer
+- **converted** - Boolean value indicating whether or not this photo has been converted.
+- **image\_url** — URL of the image, string
+- **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
-
-Values returned on **include_store** request:
-- 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
-- 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
-
-Values returned on **include_states** and authenticated request.
-- 'voted' — Boolean value whether the current user has voted for this photo
-- 'favorited' — Boolean value whether the current user has favorited this photo
-- 'purchased' — Boolean value whether the current user has bought this photo
 
 [Category]: #categories
 [License type]: #license_types
@@ -131,37 +144,48 @@ The full format of a Photo object includes the following data:
 - **id** — ID of the photo, integer
 - **name** — Title of the photo, string
 - **description** — Description of the photo, string
-- **license_type** - [License type][] of the photo, (short) integer
-- **category** — [Category][] of the photo, (short) integer
-- **image\_url** — URL of the image, string
-- **votes\_count** — Number of votes cast on this photo, integer
-- **favorites\_count** — Number of times this photo was added as a favorite on the website, integer
-- **comments\_count** — Number of comments this photo has, integer
-- **rating** — Rating of the photo, decimal
-- **created\_at** — Timestamp indicating time of photo creation, timestamp
-- **status** — Status of the photo in the system, integer. An active photo always has the status of 1.
-- **user** — Author’s profile in [short format][], object
 - **camera** — Make and model of the camera this photo was made with, string
 - **lens** — This photo’s camera lens information, string
-- **aperture** — Aperture value of the shot, string
 - **focal\_length** — Focal length of the shot, string
 - **iso** — ISO value of the shot, string
 - **shutter\_speed** — Shutter speed value of the shot, string
-- **taken\_at** — Timestamp of when the photo was taken, timestamp
+- **aperture** — Aperture value of the shot, string
+- **times\_viewed** - The number of views this photo has, integer
+- **rating** — Rating of the photo, decimal
+- **status** — Status of the photo in the system, integer. An active photo always has the status of 1.
+- **created\_at** — Timestamp indicating time of photo creation, timestamp
+- **category** — [Category][] of the photo, (short) integer
 - **location** — A human-readable name of the location where the photo was taken, string
+- **privacy** - Boolean value whether or not the community page (http://500px.com/photo/:id) of this photo is available. A value of true means the page is not available.
 - **latitude** — Latitude of the location where the photo was taken, decimal
 - **longitude** — Longitude of the location where the photo was taken, decimal
+- **taken\_at** — Timestamp of when the photo was taken, timestamp
+- **for_\_sale** - Boolean value whether or not the photo is for sale
+- **width** - The width of the original, unresized photo, integer
+- **height** - The height of the origin, unresized photo, integer
+- **votes\_count** — Number of votes cast on this photo, integer
+- **favorites\_count** — Number of times this photo was added as a favorite on the website, integer
+- **comments\_count** — Number of comments this photo has, integer
+- **positive_votes_count** - Number of positive votes (likes) this photo has received, integer
+- **nsfw** - Boolean value whether the current photo is NSFW
+- **sales_count** - The number of sales this photo has
+- **highest_rating** - The highest rating this photo has had, decimal
+- **highest_rating_date** - The date the highest rating was reached on, timestamp
+- **license_type** - [License type][] of the photo, (short) integer
+- **converted** - Boolean value indicating whether or not this photo has been converted.
+- **image\_url** — URL of the image, string
+- **images** - Array with images URL and sizes
+- **user** — Author’s profile in [short format][], object
+- **comments** - If requested, an array of comments.
+- **store_download** - Boolean value indicating whether or not the photo is for sale as a digital download.
+- **store_print** - Boolean value indicating whether or not the photo is for sale as a canvas print.
+- **editors_choice** - Boolean value indicating whether or not the photo is in Editors' Choice.
+- **feature** - The section of the site this photo appears under, string. Possible values are popular upcoming fresh_today fresh_yesterday fresh_week
 
-
-Values returned on **include_store** request:
-- 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
-- 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
-
-Values returned on **include_states** and authenticated request.
-- 'voted' — Boolean value whether the current user has voted for this photo
-- 'favorited' — Boolean value whether the current user has favorited this photo
-- 'purchased' — Boolean value whether the current user has bought this photo
-
+If you are authenticated when making the request. These additional fields will be returned:
+- **voted** — Boolean value whether the current user has voted for this photo
+- **favorited** — Boolean value whether the current user has favorited this photo
+- **purchased** — Boolean value whether the current user has bought this photo
 
 ***
 
