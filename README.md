@@ -94,6 +94,10 @@ You can check out some hacks [here](http://developer.500px.com/hacks) and try ou
 - **[<code>PUT</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md)**
 - **[<code>DELETE</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md)**
 
+#### Comment Resources
+
+- **[<code>POST</code> comments/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/comments/POST_comments_id_comments.md)**
+
 ## Authentication
 
 - **[<code>POST</code> oauth/request_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_requesttoken.md)**
