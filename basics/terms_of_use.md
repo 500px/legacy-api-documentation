@@ -30,8 +30,8 @@ Photos and images on the 500px site are owned by 500px members and not by 500px.
 - Use 500px APIs for any application or purpose other than as approved by 500px.
 - Use 500px APIs for any application that replicates or attempts to replace the essential user experience of the 500px.com website or software applications built by 500px.
 - Attempt to cloak or conceal your identity or your application’s identity when requesting authorization to use 500px APIs.
-- Display more than 20 500px photos or images per page in your application or use an unreasonable amount of bandwidth.
-- Cache or store any photos or images obtained from the 500px site for more than 24 hours.
+- ~~Display more than 20 500px photos or images per page in your application or~~ use an unreasonable amount of bandwidth.
+- Cache or store any photos or images obtained from the 500px site ~~for more than 24 hours~~ *without the user's express consent.*
 - Use 500px as a generic image hosting service for banner advertisements, graphics, etc.
 - Use 500px APIs in a manner that adversely impacts the stability of 500px.com servers or adversely impacts the behavior of other applications using the 500px APIs.
 - Sell, lease, or sublicense 500px APIs or access thereto or derive revenues from the use or provision of 500px APIs, whether for direct commercial or monetary gain or otherwise, except as set forth below.
