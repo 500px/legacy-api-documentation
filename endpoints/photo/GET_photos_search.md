@@ -24,6 +24,14 @@ Either of parameters **term**, **tag**, or **geo** is required.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
 - **image_size** — The photo size to be returned. It has to be an integer: 1 to 4.
+- **sort** — Sort photos in the specified order. The following values are recognized:
+  - **created_at** — Default: sort by time of upload, most recent first
+  - **rating** — Sort by current rating, highest rated first
+  - **times_viewed** — Sort by the number of views, most viewed first
+  - **votes_count** – Sort by the number of votes, most voted on first
+  - **favorites_count** — Sort by the number of favorites, most favorited first
+  - **comments_count** — Sort by the number of comments, most commented first
+  - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images)
 
 ## Return format
 An array with the following keys and values:
