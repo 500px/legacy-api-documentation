@@ -31,7 +31,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in **[short format][]**.
+- **photos** — An array of Photo objects in **[short format][]**. The objects will also include `latitude` and `longitude` attributes if the results are based on the geo-location search. 
 
 ***
 
