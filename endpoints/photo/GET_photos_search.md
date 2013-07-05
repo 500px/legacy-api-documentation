@@ -18,7 +18,7 @@ Either of parameters **term**, **tag**, or **geo** is required.
 
 - **term** — A keyword to search for.
 - **tag** — A complete tag string to search for.
-- **geo** — A geo-location point of the format `latitude,longitude,range<units>`. Acceptable `units` are `km` or `mi`.
+- **geo** — A geo-location point of the format `latitude,longitude,radius<units>`. Acceptable `units` are `km` or `mi`.
 - **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
