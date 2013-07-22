@@ -16,10 +16,6 @@ Allows the client application to update user-editable information on a photo.
 
 ## Parameters
 
-:name, :description, :category, :taken_at,
-          :shutter_speed, :focal_length, :aperture, :camera, :lens, :iso,
-          :location, :latitude, :longitude, :nsfw, :license_type
-
 The application must provide the ID of the photo to update in the URL of the request. The following parameters are recognized when included in the query string or POST body:
 
 - **name**: Title of the photo, up to 255 characters in length.
