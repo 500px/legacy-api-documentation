@@ -69,7 +69,7 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>17</td><td>Sport</td></tr>
   <tr><td>6</td><td>Still Life</td></tr>
   <tr><td>21</td><td>Street</td></tr>
-  <tr><td>26</td><td>Transporation <sup>New!</sup></td></tr>
+  <tr><td>26</td><td>Transportation <sup>New!</sup></td></tr>
   <tr><td>13</td><td>Travel</td></tr>
   <tr><td>22</td><td>Underwater</td></tr>
   <tr><td>27</td><td>Urban Exploration <sup>New!</sup></td></tr>
