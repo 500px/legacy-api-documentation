@@ -198,9 +198,14 @@ The short format of a User object includes the following data:
 - **username** — Username, string
 - **firstname** — First name, string
 - **lastname** — Last name, string
+- **fullname** — A combination of first and last names or a username that would naturally appear on the site, string
 - **city** — City as specified in user's profile, string
 - **country** — Country as specified in user's profile, string
-- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
+- **userpic\_url** — Profile picture’s URL of the user, string
+- **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
+- **followers_count** — User followers count
+- **affection** — Affection value, integer.
+
 
 ### Profile format
 The profile format of a User object includes the following data:
@@ -217,26 +222,27 @@ The profile format of a User object includes the following data:
 - **registration\_date** — Registration timestamp, timestamp
 - **about** — User’s about text, timestamp
 - **domain** - The host name of the user's portfolio, string
-- **upgrade_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
 - **locale** — User’s preferred locale, string. Current values: <code>en, ru, de, ja, br, es</code>.
+- **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
 - **show\_nude** — Whether the user has content filter disabled, boolean.
+- **userpic\_url** — Profile picture’s URL of the user, string
 - **store\_on** - Whether the user has the store option enabled, boolean
 - **contacts** — A dictionary of user’s contacts, object. Keys should be treated as provider names, and values as user IDs with given provider.
 - **equipment** - A dictionary of a user's equipment. Possible keys are <code>camera, lens, misc</code>. Each key will have an array of values.
-- **userpic\_url** — Profile picture’s URL of the user, string
-- **admin** - Boolean value that will be 1 if the user is a 500px team member.
-- **avatars** - A dictionary of different avatar sizes. Keys are <code>default, large, small, tiny</code>. default is up to 300x300px, large is 100x100px, small is 50x50px, tiny is 30x30px.
 - **photos\_count** — Number of active photos posted by the user, integer.
 - **affection** — Affection value, integer.
 - **in\_favorites\_count** — Number of times any photo of the user was added to favorites, integer.
 - **friends\_count** — Number of people this user follows, integer.
 - **followers\_count** — Number of people this user is being followed by, integer.
+- **admin** - Boolean value that will be 1 if the user is a 500px team member.
+- **avatars** - A dictionary of different avatar sizes. Keys are <code>default, large, small, tiny</code>. default is up to 300x300px, large is 100x100px, small is 50x50px, tiny is 30x30px.
 
 If the user you are requesting is the currently authenticated user these additional fields will be returned:
 - **email** - The user's email address.
 - **upload\_limit** - The remaining upload limit this user has, integer
 - **upload\_limit\_expiry** - The date at which additional uploads will be available, timestamp
 - **upgrade\_expiry\_date** - The date at which the user's subscription will expire, timestamp
+- **auth** - A dictionary of a user's social network authentications. Possible keys are <code>facebook, twitter, google_oauth2</code>. Each key will have a value of '1' as existing authentication or '0' as no authentication.
 
 If you are authenticated these additional fields will be returned:
 - **following** - A boolean value indicating whether or not you are following this user.
