@@ -33,7 +33,7 @@ The application must provide the ID of the photo to update in the URL of the req
 - **nsfw**: Boolean value indicating that the photo may contain not-safe-for-work content or content not suitable for minors.
 - **license_type**: Integer number of the license type chosen for this photo. See [license type mapping][] for exact values.
 - **privacy**: Integer value indicating that the photo should be shown (`0`) or hidden (`1`) on the user's profile.
-- **crop**: A hash containing keys `x`, `x2`, `y`, `y2` and representing coordinates within which the thumbnail must be cropped. The points must be given relative to image size `4`, an image of at most 900px on the larger side. The client application may skip this if the user does not wish to change photo thumbnail.
+- **crop**: A hash containing keys `x`, `x2`, `y`, `y2` and representing coordinates within which the thumbnail must be cropped. The crop is made using the top left corner as the origin. The points must be given relative to image size `4`, an image of at most 900px on the larger side. The client application may skip this if the user does not wish to change photo thumbnail.
 
 ## Implementation details
 
