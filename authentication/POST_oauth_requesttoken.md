@@ -3,7 +3,7 @@
     POST oauth/request_token
 
 ## Description
-Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills **[Section 6.1][]** of the **[OAuth 1.0 authentication flow][]**.
+Allows a Consumer application to obtain an OAuth Request Token to request user authorization. This method fulfills [Section 6.1][] of the [OAuth 1.0 authentication flow][].
 
 ***
 
