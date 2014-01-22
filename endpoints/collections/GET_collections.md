@@ -12,6 +12,12 @@ Returns a listing of all User's collections and sets.
 
 ***
 
+## Parameters
+
+- **photos_per_collection_limit** — The number of photos included in each collection. Can not be over 200, default 200.
+
+***
+
 ## Return format
 A JSON object with **collections** — An indexed array of Collection objects in **[short format][]**.:
 
