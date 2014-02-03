@@ -32,7 +32,6 @@ Either of parameters **term**, **tag**, or **geo** is required.
   - **favorites_count** — Sort by the number of favorites, most favorited first
   - **comments_count** — Sort by the number of comments, most commented first
   - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images)
-  - **licensed_at**- Sort by the date the image was added to http://prime.500px.com for licensing (might not be available for all images)
 
 ## Return format
 An array with the following keys and values:
