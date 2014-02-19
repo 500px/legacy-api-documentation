@@ -4,7 +4,7 @@
 
 ## Description
 
-Allows the client application to update user-editable information on a photo. 
+Allows the client application to update user-editable information on a photo.
 
 ## Resource URL
 
@@ -22,6 +22,8 @@ The application must provide the ID of the photo to update in the URL of the req
 - **description**: Text description of the photo, up to 65535 characters in length.
 - **category**: Integer number of the category of the photo. See [category mapping][] for exact values.
 - **tags**: Comma-separated list of tags applicable to this photo.
+- **add_tags**: Comma-separated list of tags to add to this photo's existing tags.
+- **remove_tags**: Comma-separated list of tags to remove from this photo's existing tags.
 - **shutter_speed**: Shutter speed value for the photo, internally stored as string.
 - **focal_length**: Focal length value for the photo, internally stored as string.
 - **aperture**: Aperture value value for the photo, internally stored as string.
@@ -37,7 +39,9 @@ The application must provide the ID of the photo to update in the URL of the req
 
 ## Implementation details
 
-With the exception of `privacy` and `crop`, a parameter missing from the request will be interpreted as the user wishing to reset the value of the field to its default value. The application must send parameters with their existing values to ensure the data is preserved.
+A parameter missing from the request will not be updated.  A parameter set to an empty string or null value will be interpreted as the user wishing to reset the value of the field to its default value.
+
+You can use the `add_tags` and `remove_tags` parameters to manupulate a photo's tags without having to send the complete list of tags in the request.
 
 ## Return format
 
