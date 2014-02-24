@@ -14,7 +14,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 ***
 
 ## Parameters
-- **feature** _(required)_ — Photo stream to be retrieved. Default _fresh_today_. Recognized values:
+- **feature** _(required)_ — Photo stream to be retrieved. Default *fresh_today*. Recognized values:
     ###### Global features
     - 'popular' — Return photos in Popular.  Default sort: rating.
     - 'upcoming' — Return photos in Upcoming.  Default sort: time when Upcoming was reached.
