@@ -30,7 +30,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'user_friends' — Return photos by users the specified user is following.  Default sort: time uploaded.
     - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**.  Default sort: time favorited.
 
-- **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive, separate multiple values with a comma..
+- **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive, separate multiple values with a comma.
 - **exclude** — String name of the **[category][]** to exclude photos by. **Note:** Case sensitive, separate multiple values with a comma.
 - **sort** — Sort photos in the specified order.
     ###### Recognized values:
