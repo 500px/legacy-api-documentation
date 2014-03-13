@@ -134,6 +134,7 @@ The short format of a Photo object includes the following data:
 - **image\_url** — URL of the image, string
 - **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
+- **collections_count** - Number of collections this photo is present in, integer
 
 [Category]: #categories
 [License type]: #license_types
@@ -181,6 +182,7 @@ The full format of a Photo object includes the following data:
 - **store_print** - Boolean value indicating whether or not the photo is for sale as a canvas print.
 - **editors_choice** - Boolean value indicating whether or not the photo is in Editors' Choice.
 - **feature** - The section of the site this photo appears under, string. Possible values are popular upcoming fresh_today fresh_yesterday fresh_week
+- **collections_count** - Number of collections this photo is present in, integer
 
 If you are authenticated when making the request. These additional fields will be returned:
 - **voted** — Boolean value whether the current user has voted for this photo
