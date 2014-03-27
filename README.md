@@ -33,6 +33,10 @@ You can check out some hacks [here](http://developer.500px.com/hacks) and try ou
 - **[Ruby](https://github.com/500px/api-documentation/blob/master/examples/Ruby/)**
 - **[PHP](https://github.com/500px/api-documentation/blob/master/examples/PHP/PHP.md)**
 
+## Changes
+
+* 2014-03-27 Deprecated photo object's image_url key.
+
 ## SDK
 
 - **[JavaScript](https://github.com/500px/500px-js-sdk)**
