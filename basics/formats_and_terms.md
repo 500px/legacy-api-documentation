@@ -16,7 +16,7 @@ Accessing the following streams is possible though means of the API:
 
 ### Time-based (Fresh) streams:
 - [Today][], photos created since midnight (EST time), cached for 60 seconds
-- [Yesterday][], photos created between last day’s midnight and past midnight (EST time), cached until the end of hour 
+- [Yesterday][], photos created between last day’s midnight and past midnight (EST time), cached until the end of hour
 - [Week][], photos created in the past 7 days, excluding today, cached until the end of hour
 
 ### User-based streams:
@@ -131,7 +131,7 @@ The short format of a Photo object includes the following data:
 - **highest_rating_date** - The date the highest rating was reached on, timestamp
 - **license_type** - [License type][] of the photo, (short) integer
 - **converted** - Boolean value indicating whether or not this photo has been converted.
-- **image\_url** — URL of the image, string
+- **image\_url** — URL of the image, string, **deprecated**
 - **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
 - **collections_count** - Number of collections this photo is present in, integer
@@ -174,7 +174,7 @@ The full format of a Photo object includes the following data:
 - **highest_rating_date** - The date the highest rating was reached on, timestamp
 - **license_type** - [License type][] of the photo, (short) integer
 - **converted** - Boolean value indicating whether or not this photo has been converted.
-- **image\_url** — URL of the image, string
+- **image\_url** — URL of the image, string, **deprecated**
 - **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
 - **comments** - If requested, an array of comments.
@@ -299,5 +299,3 @@ If you are authenticated these additional attributes will be returned:
 [Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
 [License type]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license_types
-
-
