@@ -4,7 +4,7 @@ There is an extensive wiki on of OAuth and xAuth authentication over at [oauth-p
 
 In <code>lib/TwitterOAuth.php</code> make the following adjustments:
     
-    $host = 'https://api.500px.com/v1/
+    $host = 'https://api.500px.com/v1/';
 
 And set up the URLs:
 
