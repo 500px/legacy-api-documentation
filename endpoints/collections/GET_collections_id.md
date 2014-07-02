@@ -14,7 +14,7 @@ Returns a collection.
 
 ## Parameters
 
-- **image_size** - Numerical size of the image to link to, 1 being the smallest and 4 being the largest. Multiple image sizes may be specified as ```image_size[]=2&image_size=4```.
+- **image_size** - Numerical size of the image to link to, 1 being the smallest and 4 being the largest. Multiple image sizes may be specified as ```image_size[]=2&image_size[]=4```.
 
 ***
 
