@@ -1,9 +1,11 @@
 # Upload Method
 
-    POST upload
+    POST http://upload.500px.com/v1/upload
 
 ## Description
 Allows an application to upload the photo file.
+
+Note that this endpoint is at the upload.500px.com domain, not the api.500px.com domain.
 
 ***
 
