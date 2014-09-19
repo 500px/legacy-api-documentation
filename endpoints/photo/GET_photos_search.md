@@ -24,14 +24,17 @@ Either of parameters **term**, **tag**, or **geo** is required.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
 - **image_size** — The photo size to be returned. It has to be an integer: 1 to 4.
+- **license_type** -- Restrict the results to one or more **[license types][]**.  Multiple types can be separated with a comma: `license_type=1,4`.
 - **sort** — Sort photos in the specified order. The following values are recognized:
-  - **created_at** — Default: sort by time of upload, most recent first
-  - **rating** — Sort by current rating, highest rated first
-  - **times_viewed** — Sort by the number of views, most viewed first
-  - **votes_count** – Sort by the number of votes, most voted on first
-  - **favorites_count** — Sort by the number of favorites, most favorited first
-  - **comments_count** — Sort by the number of comments, most commented first
-  - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images)
+  - **_score** — Sort by query score, best match first.
+  - **created_at** — Default: sort by time of upload, most recent first.
+  - **rating** — Sort by current rating, highest rated first.
+  - **highest_rating** — Sort by highest rating achieved, highest rated first.
+  - **times_viewed** — Sort by the number of views, most viewed first.
+  - **votes_count** – Sort by the number of votes, most voted on first.
+  - **favorites_count** — Sort by the number of favorites, most favorited first.
+  - **comments_count** — Sort by the number of comments, most commented first.
+  - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images).
 
 ## Return format
 An array with the following keys and values:
@@ -123,3 +126,5 @@ An array with the following keys and values:
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
+[license types]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license-types
