@@ -23,9 +23,9 @@ Essential information:
 - **description** — Description for the photo
 - **category** — A numerical ID for the **[Category][]** of the photo
 
-Special attributes:
+Optional attributes:
 
-- **privacy** — Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.
+- **privacy** — If 1, the photo is marked as private and will not be visible on the user's profile on the website.  If 0, the photo is visible to the user's profile and is eligible to enter Fresh.  Default value is 1 (private).
 
 Technical details of the photo: (this information may be overridden when the file is uploaded and parsed for EXIF and IPTC tags)
 
