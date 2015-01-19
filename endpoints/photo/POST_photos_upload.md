@@ -35,6 +35,7 @@ Technical details of the photo: (this information may be overridden when the fil
 - **iso** — ISO value
 - **camera** — Make and model of the camera. Note: Please make sure it contains sensible information (eg., does not contain camera's make or model twice)
 - **lens** — Lens used to make this photo
+- **crop** — A hash containing keys x, y, w, and h and representing coordinates within which the thumbnail must be cropped. The crop is made using the top left corner as the origin. The points must be given relative to image size 4, an image of at most 900px on the larger side. The client application may skip this if the user does not wish to change photo thumbnail.
 
 Geographical information of the photo:
 
