@@ -1,6 +1,6 @@
 # Photo Resources
 
-    GET photos/:id
+    GET photos
 
 ## Description
 Returns a listing of twenty (up to one hundred) photos for a specified **[photo stream][]**.
@@ -14,56 +14,61 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 ***
 
 ## Parameters
-- **feature** _(required)_ — Photo stream to be retrieved. Default _fresh_today_. Recognized values:
+- **feature** _(required)_ — Photo stream to be retrieved. Default *fresh_today*. Recognized values:
     ###### Global features
-    - 'popular' — Return photos in Popular
-    - 'upcoming' — Return photos in Upcoming
-    - 'editors' — Return photos in Editors' Choice
-    - 'fresh_today' — Return photos in Fresh Today
-    - 'fresh_yesterday' — Return photos in Fresh Yesterday
-    - 'fresh_week' — Return photos in Fresh This Week
-    - 'user' - Return photos of a user, additional parameter 'user_id' or 'username' is required 
+    - 'popular' — Return photos in Popular.  Default sort: rating.
+    - 'highest_rated' — Return photos that have been in Popular.  Default sort: highest_rating.
+    - 'upcoming' — Return photos in Upcoming.  Default sort: time when Upcoming was reached.
+    - 'editors' — Return photos in Editors' Choice.  Default sort: time when selected by an editor.
+    - 'fresh_today' — Return photos in Fresh Today.  Default sort: time when reached fresh.
+    - 'fresh_yesterday' — Return photos in Fresh Yesterday.  Default sort: same as 'fresh_today'.
+    - 'fresh_week' — Return photos in Fresh This Week.  Default sort: same as 'fresh_today'.
 
     ###### Per-user features
     All per-user streams require a **user_id** or **username** parameter
-    
-    - 'user' — Return photos by a specific user, as displayed on **[http://500px.com/:username][]**
-    - 'user_friends' — Return photos by users the specified user is following, as displayed on **[http://500px.com/:username/following][]**
-    - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**
 
-- **only** — String name of the **[category][]** to return photos from.
-- **exclude** — String name of the **[category][]** to exclude photos by.
+    - 'user' - Return photos of a user, additional parameter 'user_id' or 'username' is required.  Default sort: time uploaded.
+    - 'user_friends' — Return photos by users the specified user is following.  Default sort: time uploaded.
+    - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**.  Default sort: time favorited.
+
+- **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive, separate multiple values with a comma.
+- **exclude** — String name of the **[category][]** to exclude photos by. **Note:** Case sensitive, separate multiple values with a comma.
 - **sort** — Sort photos in the specified order.
     ###### Recognized values:
-    **Note:** For global features default sorting will take precedence. (Consider a SQL query "ORDER BY rating DESC, times_viewed DESC" for feature popular)
-    - 'created_at' — Sort by time of upload, most recent first (note: for a request of a user's favourite photos, this sort order will retrieve the list in the order that the user added photos to their favourites list, newest first.)
-    - 'rating' — Sort by rating, highest rated first
-    - 'times_viewed' — Sort by view count, most viewed first
-    - 'votes_count' — Sort by votes count, most voted first
-    - 'favorites_count' — Sort by favorites count, most favorited first
-    - 'comments_count' — Sort by comments count, most commented first
-    - 'taken_at' — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images)
+    - 'created_at' — Sort by time of upload (note: for a request of a user's favorite photos, this sort order will retrieve the list in the order that the user added photos to their favorites list.)
+    - 'rating' — Sort by rating
+    - 'highest_rating' — Sort by the highest rating the photo reached
+    - 'times_viewed' — Sort by view count
+    - 'votes_count' — Sort by votes count
+    - 'favorites_count' — Sort by favorites count
+    - 'comments_count' — Sort by comments count
+    - 'taken_at' — Sort by the original date of the image extracted from metadata (might not be available for all images)
+
+- **sort_direction** — Control the order of the sorting.  You can provide a **sort_direction** without providing a **sort**, in which case the default sort for the requested feature will be adjusted.
+    ###### Recognized values:
+    - 'asc' — Sort in ascending order (lowest or least-recent first)
+    - 'desc' — Sort in descending order (highest or most-recent first).  This is the default.
 
 - **page** — Return a specific page in the photo stream. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **image_size** — The photo size to be returned. It has to be an integer: 1 to 4. Also an array is accepted:
     ###### Example:
     - '&image_size=3'
-    - '&image_size[]=3?image_size[]=4'
+    - '&image_size[]=3&image_size[]=4'
 
 
-- **include_store** — Returns market infomation about the photo.
+- **include_store** — If set to 1, returns market infomation about the photo.
     ###### Returned values:
     - 'store_download' — Boolean value if the picture is avaliable for HD Download purchase.
     - 'store_print' — Boolean value if the picture is avaliable for Canvas print purchase.
 
-- **include_states** — Returns state of the photo for the currently logged in user and authenticated request.
+- **include_states** — If set to 1, returns state of the photo for the currently logged in user and authenticated request.
     ###### Returned values:
-    - 'voted' — Boolean value whether the current user has voted for this photo
+    - 'liked' — Boolean value whether the current user has liked this photo
     - 'favorited' — Boolean value whether the current user has favorited this photo
     - 'purchased' — Boolean value whether the current user has bought this photo
 
-- **tags** — Returns an array of tags for the photo.
+- **tags** — If set to 1, returns an array of tags for the photo.
 
 ***
 
@@ -78,7 +83,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in **[short format][]**.
+- **photos** — An array of Photo objects in **[short format][https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format]**.
 
 ***
 
@@ -89,7 +94,7 @@ None
 
 ## Example
 **Request**
-    
+
     https://api.500px.com/v1/photos?feature=popular
 
 **Return** __shortened for example purpose__

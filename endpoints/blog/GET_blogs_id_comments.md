@@ -15,7 +15,7 @@ Returns a listing of twenty comments for a specific Story.
 
 ## Parameters
 
-- **id** _(required)_ — The Story ID to get comments for. Can be provided either as blogs/:id or in the query string.
+- **id** _(required)_ — The Story ID to get comments for.
 - **page** — Return a specific page in the comment listing. Page numbering is 1-based.
 
 ***
@@ -40,7 +40,7 @@ An array with the following keys and values:
 ## Example
 **Request**
 
-    v1/blogs/27105/comments
+    GET v1/blogs/27105/comments
 
 **Return**
 ``` json

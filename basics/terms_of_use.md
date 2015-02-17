@@ -20,6 +20,7 @@ Photos and images on the 500px site are owned by 500px members and not by 500px.
 ## 500px API License Conditions and Restrictions
 
 ### You shall at all times:
+- **Provide attribution credit to the copyright owner (Photographer member of 500px) as well as a hyperlink to 500px website photo page adjacent to each use. Format for credit should read as "© Photographer Name / 500px"**
 - Comply with the API Terms of Use and the other terms and conditions of your 500px Agreement, [http://500px.com/terms](http://500px.com/terms) and [http://500px.com/privacy](http://500px.com/privacy).
 - Comply with any terms, conditions and copyright restrictions imposed on usage of photos and images by their respective member owners. 500px doesn't own the images; 500px members do. Although the 500px APIs can be used to gain access to photos, images and other information of 500px members, neither 500px’s provision of the 500px APIs to you nor your use of the 500px APIs override the owner member’s terms, conditions and copyright restrictions which may include "all rights reserved" and "private" restrictions, Creative Commons licenses and/or other terms and conditions that must be agreed upon between you and the member. You are solely responsible for making use of 500px photos, images and member other information in compliance with the member’s requirements and/or restrictions.
 - Remove from your application within 24 hours any 500px member’s photos, images or other information that the owner asks you to remove.
@@ -32,6 +33,7 @@ Photos and images on the 500px site are owned by 500px members and not by 500px.
 - Attempt to cloak or conceal your identity or your application’s identity when requesting authorization to use 500px APIs.
 - Display more than 20 500px photos or images per page in your application or use an unreasonable amount of bandwidth.
 - Cache or store any photos or images obtained from the 500px site for more than 24 hours.
+- Enable downloads or storage of photos that are protected by copyright by any application.
 - Use 500px as a generic image hosting service for banner advertisements, graphics, etc.
 - Use 500px APIs in a manner that adversely impacts the stability of 500px.com servers or adversely impacts the behavior of other applications using the 500px APIs.
 - Sell, lease, or sublicense 500px APIs or access thereto or derive revenues from the use or provision of 500px APIs, whether for direct commercial or monetary gain or otherwise, except as set forth below.

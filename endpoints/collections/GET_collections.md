@@ -1,4 +1,4 @@
-# Blog Resources
+# Collections Resources
 
     GET collections
 
@@ -9,6 +9,12 @@ Returns a listing of all User's collections and sets.
 
 ## Requires authentication
  **[OAuth][]**
+
+***
+
+## Parameters
+
+- **photos_per_collection_limit** — The number of photos included in each collection. Can not be over 200, default 200.
 
 ***
 

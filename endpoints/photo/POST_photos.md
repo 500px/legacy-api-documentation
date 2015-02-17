@@ -33,14 +33,16 @@ Technical details of the photo: (this information may be overridden when the fil
 - **latitude** — Latitude, in decimal format
 - **longitude** — Longitude, in decimal format
 
-### Special attributes:
+### Optional attributes:
 
+- **tags** — Comma-separated list of tags to apply to the photo.
 - **privacy** — Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.
 
 ***
 
 ## Return format
 Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file.
+
 
 ***
 
@@ -54,7 +56,7 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    POST v1/photos?name=Hello&description=World
+    POST v1/photos?name=Hello&description=World&tags=some,useful,tags
 
 
 **Return**

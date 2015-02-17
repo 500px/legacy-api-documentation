@@ -1,4 +1,4 @@
-# Blog Resources
+# Collections Resources
 
     PUT collections/:id
 
@@ -14,9 +14,10 @@ Updates collection.
 
 Essential information:
 
-- **title** _(required)_ — Title for the collection.
-- **path** _(required)_ — Path where the collection will be accessible at 500px.com/user/sets/:path.
-- **photo_ids** — Comma separated list of Photo ID values to post with the blog.
+- **id** _(required)_ — Collection ID.
+- **title** — Title for the collection.
+- **path** — Path where the collection will be accessible at 500px.com/user/sets/:path.
+- **photo_ids** — Comma separated list of Photo ID values that are in this collection.
 - **kind** — Change kind of the Collection. Recognized values: 1 - Portfolio Set, 2 - Profile Set.
 
 Optional information:

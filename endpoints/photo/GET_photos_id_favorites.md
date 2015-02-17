@@ -3,7 +3,7 @@
     GET photos/:id/favorites
 
 ## Description
-Returns all users that had favourite that photo.
+Returns all users that had favorite that photo.
 
 ***
 

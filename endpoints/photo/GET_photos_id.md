@@ -76,8 +76,8 @@ All known errors cause the resource to return HTTP error code header together wi
     "category": 11,
     "location": null,
     "privacy": false,
-    "latitude": null,
-    "longitude": null,
+    "latitude": 41.75968637583948,
+    "longitude": -68.935546875,
     "taken_at": "2010-11-13T08:37:37-05:00",
     "hi_res_uploaded": 0,
     "for_sale": false,
@@ -92,6 +92,7 @@ All known errors cause the resource to return HTTP error code header together wi
     "highest_rating": 97.1,
     "highest_rating_date": "2012-04-16T15:05:56-04:00",
     "image_url": "http://pcdn.500px.net/4928401/16666558d7ba410f50922f86f736888d8cfaf9bb/4.jpg",
+    "images": {"size": 4, "url": "http://pcdn.500px.net/4928401/16666558d7ba410f50922f86f736888d8cfaf9bb/4.jpg"}
     "store_download": false,
     "store_print": false,
     "voted": false,

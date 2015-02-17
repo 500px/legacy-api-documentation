@@ -3,7 +3,7 @@
     GET photos/search
 
 ## Description
-Returns a listing of twenty (up to one hundred) photos from search results for a specified tag or keyword.
+Returns a listing of twenty (up to one hundred) photos from search results for a specified tag, keyword, or location.
 
 ***
 
@@ -14,13 +14,28 @@ Returns a listing of twenty (up to one hundred) photos from search results for a
 ***
 
 ## Parameters
-Either of parameters **term** or **tag** is required.
+Either of parameters **term**, **tag**, or **geo** is required.
 
 - **term** — A keyword to search for.
 - **tag** — A complete tag string to search for.
+- **geo** — A geo-location point of the format `latitude,longitude,radius<units>`. Acceptable `units` are `km` or `mi`.
+- **only** — String name of the **[category][]** to return photos from. **Note:** Multiple categories may be given, separated by commas, e.g. `Fashion,Black and White`
+- **exclude** — String name of the **[category][]** to exclude from the results. **Note:** Multiple categories may be given, separated by commas, e.g. `People,Nude`
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
+- **image_size** — The photo size to be returned. It has to be an integer: 1 to 4.
+- **license_type** -- Restrict the results to one or more **[license types][]**.  Multiple types can be separated with a comma: `license_type=1,4`.
+- **sort** — Sort photos in the specified order. The following values are recognized:
+  - **_score** — Sort by query score, best match first.
+  - **created_at** — Default: sort by time of upload, most recent first.
+  - **rating** — Sort by current rating, highest rated first.
+  - **highest_rating** — Sort by highest rating achieved, highest rated first.
+  - **times_viewed** — Sort by the number of views, most viewed first.
+  - **votes_count** – Sort by the number of votes, most voted on first.
+  - **favorites_count** — Sort by the number of favorites, most favorited first.
+  - **comments_count** — Sort by the number of comments, most commented first.
+  - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images).
 
 ## Return format
 An array with the following keys and values:
@@ -28,7 +43,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in **[short format][]**.
+- **photos** — An array of Photo objects in **[short format][]**. The objects will also include `latitude` and `longitude` attributes if the results are based on the geo-location search. 
 
 ***
 
@@ -112,3 +127,5 @@ An array with the following keys and values:
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
+[license types]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license-types

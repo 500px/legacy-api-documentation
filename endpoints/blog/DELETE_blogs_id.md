@@ -14,7 +14,7 @@ Deletes the story.
 
 ## Parameters
 
-- **id** _(required)_ — The Story ID to delete. Can be provided either as blogs/:id or in the query string.
+- **id** _(required)_ — The Story ID to delete.
 
 ***
 
