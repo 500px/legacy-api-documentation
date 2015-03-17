@@ -40,7 +40,7 @@ Accessing the following streams is possible though means of the API:
 
 ## Image URLs and Image Sizes
 
-You'll find the URLs to the image(s) for a photo in the `images` field in the returned JSON for a photo.
+You'll find the URLs to the image(s) for a photo in the `images` field in the returned JSON for a photo.  The images provided with our standard API access will be watermarked with the 500px logo and attribution. For non-watermarked images please contact sales@500px.com
 
 **Important** - You must not alter the URLs returned by the API in any way.  Altered URLs will be rejected by our system when the image is loaded.  Instead, please use the `image_size` parameter to request the sizes your application needs.
 
