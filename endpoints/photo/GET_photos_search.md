@@ -24,7 +24,7 @@ Either of parameters **term**, **tag**, or **geo** is required.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
-- **image_size** — The photo size to be returned. It has to be an integer: 1 to 4.
+- **image_size** — The photo size(s) to be returned. See the documentation on **[photo sizes][]**.
 - **license_type** -- Restrict the results to one or more **[license types][]**.  Multiple types can be separated with a comma: `license_type=1,4`.
 - **sort** — Sort photos in the specified order. The following values are recognized:
   - **_score** — Sort by query score, best match first.
@@ -43,7 +43,7 @@ An array with the following keys and values:
 - **current_page** — Number of the page that is returned.
 - **total_pages** — Total number of pages in this feature's stream.
 - **total_items** — Total number of items in this feature's stream.
-- **photos** — An array of Photo objects in **[short format][]**. The objects will also include `latitude` and `longitude` attributes if the results are based on the geo-location search. 
+- **photos** — An array of Photo objects in **[short format][]**. The objects will also include `latitude` and `longitude` attributes if the results are based on the geo-location search.
 
 ***
 
@@ -129,3 +129,4 @@ An array with the following keys and values:
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
 [category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [license types]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license-types
+[photo sizes]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#image-urls-and-image-sizes

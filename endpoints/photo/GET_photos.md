@@ -51,10 +51,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
 - **page** — Return a specific page in the photo stream. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
-- **image_size** — The photo size to be returned. It has to be an integer: 1 to 4. Also an array is accepted:
-    ###### Example:
-    - '&image_size=3'
-    - '&image_size[]=3&image_size[]=4'
+- **image_size** — The photo size(s) to be returned. See the documentation on **[photo sizes][]**.
 
 
 - **include_store** — If set to 1, returns market infomation about the photo.
@@ -176,3 +173,4 @@ None
 [http://500px.com/:username/favorites]: http://500px.com/iansobolev/favorites
 [category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[photo sizes]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#image-urls-and-image-sizes
