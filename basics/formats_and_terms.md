@@ -177,7 +177,7 @@ The short format of a Photo object includes the following data:
 - **highest_rating** - The highest rating this photo has had, decimal
 - **highest_rating_date** - The date the highest rating was reached on, timestamp
 - **license_type** - [License type][] of the photo, (short) integer
-- **converted** - Boolean value indicating whether or not this photo has been converted.
+- **converted** - The number intigating the bitmask plain conversion.
 - **image\_url** — URL of the image, string, **deprecated**
 - **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
