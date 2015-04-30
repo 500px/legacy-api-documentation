@@ -40,7 +40,6 @@ You can try our API in [console](http://bitly.com/api500px) ([http://bitly.com/a
 ## SDK
 
 - **[JavaScript](https://github.com/500px/500px-js-sdk)**
-- **[Python](https://github.com/500px/PxMagic)**
 - **[Android](https://github.com/500px/500px-android-sdk)**
 - **[iOS](https://github.com/500px/500px-iOS-api)**
 
