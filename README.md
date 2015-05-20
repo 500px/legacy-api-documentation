@@ -9,6 +9,8 @@ Currently, return format for all endpoints is [JSON](http://json.org/ "JSON").
 
 You can try our API in [console](http://bitly.com/api500px) ([http://bitly.com/api500px](http://bitly.com/api500px))
 
+See [status.500px.com](http://status.500px.com) for API status updates, outages, and scheduled maintenance.
+
 ***
 
 ## Checklist
