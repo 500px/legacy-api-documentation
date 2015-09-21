@@ -17,6 +17,8 @@ Allows to report a photo.
     - '4' — Copyright (plagiarism, stealing)
     - '5' — Wrong content (illustration, 3D)
     - '6' — Should be tagged as adult content
+    - '0' — Other, request should ideally also include **reason_details**
+- **reason_details** — Additional information about the report, as a text blob
 
 ***
 
