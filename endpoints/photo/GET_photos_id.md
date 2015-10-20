@@ -18,7 +18,7 @@ Returns detailed information of a single photo.
 - **image_size** — Numerical size of the image to link to, 1 being the smallest and 4 being the largest.
 - **comments** — Return comments to the photo in the response. Comments are returned in order of creation, 20 entries per page. If omitted no comments will be returned, if present comments will be returned.
 - **comments_page** — Return the specified page from the comments listing. Page numbers are 1-based.
-- **tags** — Returns an array of tags for the photo. If omitted no tags will be returned, if present comments will be returned.
+- **tags** — Returns an array of tags for the photo. If omitted no tags will be returned, if present tags will be returned.
 
 ***
 
