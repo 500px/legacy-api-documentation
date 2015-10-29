@@ -78,6 +78,7 @@ These are the standard uncropped sizes:
   </tr>
   <tr><td>4</td><td>900px on the longest edge</td></tr>
   <tr><td>5</td><td>1170px on the longest edge</td></tr>
+  <tr><td>6</td><td>1080px high</td></tr>
   <tr><td>20</td><td>300px high</td></tr>
   <tr><td>21</td><td>600px high</td></tr>
   <tr><td>30</td><td>256px on the longest edge</td></tr>
