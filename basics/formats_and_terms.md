@@ -282,6 +282,7 @@ The profile format of a User object includes the following data:
 - **contacts** — A dictionary of user’s contacts, object. Keys should be treated as provider names, and values as user IDs with given provider.
 - **equipment** - A dictionary of a user's equipment. Possible keys are <code>camera, lens, misc</code>. Each key will have an array of values.
 - **photos\_count** — Number of active photos posted by the user, integer.
+- **galleries\_count** — Number of galleries visible on the user's profile, integer.
 - **affection** — Affection value, integer.
 - **in\_favorites\_count** — Number of times any photo of the user was added to favorites, integer.
 - **friends\_count** — Number of people this user follows, integer.
