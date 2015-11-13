@@ -1,6 +1,6 @@
 # Photo Resources
 
-    DELETE photos/:photo_id/votes
+    DELETE photos/:photo_id/vote
 
 ## Description
 Unlikes the specified photo for the user.
@@ -34,7 +34,7 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    DELETE v1/photos/8359543/votes
+    DELETE v1/photos/8359543/vote
 
 **Return**
 ``` json
