@@ -26,7 +26,6 @@ A JSON object containing keys: **status**, **message**, **photo** (in **[short f
 ## Errors
 All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
 
-- **403 Forbidden** — You have not liked the photo you are trying to unlike.
 - **404 Not Found** — The requested photo does not exist or was deleted.
 
 ***
