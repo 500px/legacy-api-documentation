@@ -19,7 +19,7 @@ Adds the photo to user's list of favorites.
 ***
 
 ## Return format
-A JSON object containing keys: **status**, **message** and **error**(if happened).
+A JSON object containing keys: **status**, **message**, **error**(if happened) and **photo**, where **photo** is a Photo object in [full format][].
 
 ***
 
@@ -35,14 +35,61 @@ All known errors cause the resource to return HTTP error code header together wi
 ## Example
 **Request**
 
-    POST /v1/photos/7942222/favorite
+    POST /v1/photos/112116/favorite
 
 **Return**
 ``` json
 {
-  status: 200,
-  message: "Successfully created added a favorite.",
-  error: "None"
+  "status": 200,
+  "message": "Successfully added a favorite.",
+  "error": "None",
+  "photo": {
+    "id": 4928402,
+    "user_id": 69241,
+    "name": "Guitar",
+    "description": "",
+    "camera": "Canon EOS rebel T2i",
+    "lens": null,
+    "focal_length": "35",
+    "iso": "400",
+    "shutter_speed": "1/20",
+    "aperture": "2",
+    "times_viewed": 4,
+    "rating": 27,
+    "status": 1,
+    "created_at": "2012-02-09T21:12:01-05:00",
+    "category": 5,
+    "location": null,
+    "privacy": false,
+    "latitude": null,
+    "longitude": null,
+    "taken_at": "2012-02-09T14:50:29-05:00",
+    "hi_res_uploaded": 0,
+    "for_sale": false,
+    "width": 5184,
+    "height": 3456,
+    "votes_count": 1,
+    "favorites_count": 0,
+    "comments_count": 0,
+    "positive_votes_count": 1,
+    "nsfw": false,
+    "sales_count": 0,
+    "for_sale_date": null,
+    "highest_rating": 66.5287,
+    "highest_rating_date": "2009-11-14T09:26:56-05:00",
+    "image_url": "http://pcdn.500px.net/4928402/5868f8b7f020e4f7ce75fd8f1b66c6f75f53bd4f/4.jpg",
+    "user": {
+      "id": 69241,
+      "username": "rileywiebe",
+      "firstname": "Riley",
+      "lastname": "Wiebe",
+      "city": "Swift Current",
+      "country": "Canada",
+      "fullname": "Riley Wiebe",
+      "userpic_url": "http://acdn.500px.net/69241.jpg",
+      "upgrade_status": 0
+    }
+  }
 }
 ```
 
