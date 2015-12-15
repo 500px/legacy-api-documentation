@@ -81,6 +81,18 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 - **[<code>POST</code> users/:id/friends](https://github.com/500px/api-documentation/blob/master/endpoints/user/POST_users_id_friends.md)**
 - **[<code>DELETE</code> users/:id/friends](https://github.com/500px/api-documentation/blob/master/endpoints/user/DELETE_users_id_friends.md)**
 
+#### Gallery Resources
+
+- **[<code>GET</code> users/:user_id/galleries](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/GET_galleries.md)**
+- **[<code>GET</code> users/:user_id/galleries/:id](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/GET_galleries_id.md)**
+- **[<code>GET</code> users/:user_id/galleries/:id/items](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/GET_galleries_id_items.md)**
+- **[<code>GET</code> users/:user_id/galleries/:id/share_url](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/GET_galleries_id.md)**
+- **[<code>PUT</code> users/:user_id/galleries/:id](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/PUT_galleries_id.md)**
+- **[<code>PUT</code> users/:user_id/galleries/:id/items](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/PUT_galleries_id_items.md)**
+- **[<code>PUT</code> users/:user_id/galleries/reposition](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/PUT_galleries_reposition.md)**
+- **[<code>POST</code> users/:user_id/galleries](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/POST_galleries.md)**
+- **[<code>DELETE</code> users/:user_id/galleries/:id](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/DELETE_galleries_id.md)**
+
 #### Blog Resources
 
 - **[<code>GET</code> blogs](https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs.md)**
@@ -93,11 +105,7 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 #### Collections Resources
 
-- **[<code>GET</code> collections](https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md)**
-- **[<code>GET</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections_id.md)**
-- **[<code>POST</code> collections](https://github.com/500px/api-documentation/blob/master/endpoints/collections/POST_collections.md)**
-- **[<code>PUT</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md)**
-- **[<code>DELETE</code> collections/:id](https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md)**
+- **DEPRECIATED** for [Gallery Resources](#gallery-resources)
 
 #### Comment Resources
 

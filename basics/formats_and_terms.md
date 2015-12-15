@@ -143,6 +143,22 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>6</td><td>Creative Commons License Share Alike</td></tr>
 </table>
 
+## Gallery kinds
+
+<table id="gallery_kinds">
+  <tr>
+    <th>ID</th>
+    <th>Gallery Kinds</th>
+    <th>Contents</th>
+  </tr>
+  <tr><td>0</td><td>General</td><td>Any photo on 500px</td></tr>
+  <tr><td>1</td><td>Lightbox</td><td>Marketplace photos</td></tr>
+  <tr><td>3</td><td>Portfolio<sup>*</sup></td><td>Photos displayed on the portfolio page</td></tr>
+  <tr><td>4</td><td>Profile<sup>*</sup></td><td>Photos uploaded by the gallery owner</td></tr>
+  <tr><td>5</td><td>Favorite</td><td>Photos favorited by the gallery owner</td></tr>
+</table>
+<sub>* Can only contain photos uploaded by the gallery owner</sub>
+
 ## Photo object formats
 Categories of photos may be specified by their ID or string name, depending on the API method.
 
@@ -347,6 +363,52 @@ If you are authenticated these additional attributes will be returned:
 
 - **voted** - A boolean value indicating whether or not the currently authenticated user has voted on this comment.
 
+***
+
+## Gallery object formats
+
+### Short format
+The short format of a Gallery object includes the following data:
+
+- **id** — ID of the gallery, integer
+- **user_id** — ID of the user that owns the gallery, integer
+- **name** — Title of the gallery, string
+- **description** — Description of the gallery, string
+- **subtitle** — A short (500 char.) blurb of the gallery, string
+- **items_count** — Number of items in the gallery, integer
+- **privacy** - Boolean value whether or not the gallery is private. A value of true means the gallery is private to the user
+- **kind** - Indicates the **[gallery kind][]**, integer
+- **created\_at** — Timestamp indicating time the gallery was created, timestamp
+- **updated\_at** — Timestamp indicating time the gallery was updated, timestamp
+- **thumbnail_photos** - An array of Photo objects in **[short format](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format)** for use as the gallery's thumbnails.  A maximum of five thumbnails will be returned
+- **cover_photo** - Array containing a JSON hash of the cover photo's id, size, url, and nsfw flag
+- **custom_path** - Custom path of the gallery, string
+- **last_added_photo** _(optional)_ - Photo that was last added to the gallery, in **[short format](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format)**
+- **user** _(optional)_ - User who owns the gallery, in **[short format][]**
+
+### Full format
+
+The full format of a Gallery object includes the following data:
+
+- **id** — ID of the gallery, integer
+- **user_id** — ID of the user that owns the gallery, integer
+- **name** — Title of the gallery, string
+- **description** — Description of the gallery, string
+- **cover_photo** - Array containing a JSON hash of the cover photo's id, size, url, and nsfw flag
+- **subtitle** — A short (500 char.) blurb of the gallery, string
+- **items_count** — Number of items in the gallery, integer
+- **privacy** - Boolean value whether or not the gallery is private. A value of true means the gallery is private to the user
+- **kind** - Indicates the **[gallery kind][]**, integer
+- **created\_at** — Timestamp indicating time the gallery was created, timestamp
+- **updated\_at** — Timestamp indicating time the gallery was updated, timestamp
+- **custom_path** - A slug for the gallery url, string
+- **editors_choice** - Boolean value indicating whether the gallery has been featured in editor's choice
+- **feature** - Name of stream where gallery has been featured. Values can be either 'popular' or 'fresh'
+- **featured_at** - Timestamp indicating when gallery was featured
+- **token** - Token signature for a private gallery url. Only returned if request is made by the gallery owner
+- **user** _(optional)_ - User who owns the gallery, in **[short format][]**
+
 [Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[gallery kind]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#gallery-kinds
 [License type]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#license_types
