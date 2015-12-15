@@ -105,7 +105,7 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 #### Collections Resources
 
-- **DEPRECIATED** for [Gallery Resources](#gallery-resources)
+- **DEPRECATED** for [Gallery Resources](#gallery-resources)
 
 #### Comment Resources
 

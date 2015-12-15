@@ -1,4 +1,4 @@
-### DEPRECIATED
+### DEPRECATED
 
 Please use the corresponding **[galleries endpoint][]**
 
