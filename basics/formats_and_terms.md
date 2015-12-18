@@ -54,6 +54,10 @@ If you want to request multiple sizes, you can pass an array for `image_size` as
 ```
 GET /v1/photos?feature=popular&image_size[]=3&image_size[]=2
 ```
+which can equivalently be specified as:
+```
+GET /v1/photos?feature=popular&image_size=3,2
+```
 
 These are the standard cropped sizes:
 <table id="image_sizes">
