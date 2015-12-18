@@ -29,18 +29,16 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
     - 'user' - Return photos of a user, additional parameter 'user_id' or 'username' is required.  Default sort: time uploaded.
     - 'user_friends' — Return photos by users the specified user is following.  Default sort: time uploaded.
-    - 'user_favorites' — Return photos added as favorites by the specified user, as displayed on **[http://500px.com/:username/favorites][]**.  Default sort: time favorited.
 
 - **only** — String name of the **[category][]** to return photos from. **Note:** Case sensitive, separate multiple values with a comma.
 - **exclude** — String name of the **[category][]** to exclude photos by. **Note:** Case sensitive, separate multiple values with a comma.
 - **sort** — Sort photos in the specified order.
     ###### Recognized values:
-    - 'created_at' — Sort by time of upload (note: for a request of a user's favorite photos, this sort order will retrieve the list in the order that the user added photos to their favorites list.)
+    - 'created_at' — Sort by time of upload
     - 'rating' — Sort by rating
     - 'highest_rating' — Sort by the highest rating the photo reached
     - 'times_viewed' — Sort by view count
     - 'votes_count' — Sort by votes count
-    - 'favorites_count' — Sort by favorites count
     - 'comments_count' — Sort by comments count
     - 'taken_at' — Sort by the original date of the image extracted from metadata (might not be available for all images)
 
@@ -62,7 +60,6 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 - **include_states** — If set to 1, returns state of the photo for the currently logged in user and authenticated request.
     ###### Returned values:
     - 'liked' — Boolean value whether the current user has liked this photo
-    - 'favorited' — Boolean value whether the current user has favorited this photo
     - 'purchased' — Boolean value whether the current user has bought this photo
 
 - **tags** — If set to 1, returns an array of tags for the photo.
@@ -118,7 +115,6 @@ None
       "width": 472,
       "height": 709,
       "votes_count": 88,
-      "favorites_count": 26,
       "comments_count": 58,
       "nsfw": false,
       "image_url": "http://pcdn.500px.net/4910421/c4a10b46e857e33ed2df35749858a7e45690dae7/2.jpg",
@@ -146,7 +142,6 @@ None
       "width": 750,
       "height": 500,
       "votes_count": 69,
-      "favorites_count": 34,
       "comments_count": 29,
       "nsfw": false,
       "image_url": "http://pcdn.500px.net/4905955/7e1a6be3d8319b3b7357c6390289b20c16a26111/2.jpg",
@@ -170,7 +165,6 @@ None
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [http://500px.com/:username]: http://500px.com/iansobolev
 [http://500px.com/:username/following]: http://500px.com/iansobolev/following
-[http://500px.com/:username/favorites]: http://500px.com/iansobolev/favorites
 [category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
 [photo sizes]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#image-urls-and-image-sizes

@@ -33,7 +33,7 @@ An array with the following keys and values:
 
 ## Errors
 
-- **404 Not Found** — The requested blog post does not exist or was deleted.
+- **404 Not Found** — The requested photo does not exist or was deleted.
 
 ***
 

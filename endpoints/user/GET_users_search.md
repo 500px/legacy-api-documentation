@@ -83,7 +83,6 @@ An array with the following keys and values:
       },
       "photos_count": 17,
       "affection": 4,
-      "in_favorites_count": 1,
       "friends_count": 86,
       "followers_count": 18,
       "following": false

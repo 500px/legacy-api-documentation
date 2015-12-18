@@ -85,8 +85,8 @@ All known errors cause the resource to return HTTP error code header together wi
       ]
     },
     "photos_count": 12,
+    "galleries_count": 5,
     "affection": 20,
-    "in_favorites_count": 4,
     "friends_count": 57,
     "followers_count": 77,
     "following": false

@@ -1,4 +1,4 @@
-# Blog Resources
+# Photo Resources
 
     POST photos/:id/comments
 

@@ -37,7 +37,6 @@ A JSON object containing keys **photo** and **comments**, where **photo** is a P
 ### When requested with OAuth authentication, following keys will be included in the photo object:
 
 - **voted** — Whether the current user has voted for this photo, boolean
-- **favorited** — Whether the current user currently has this photo in favorites, boolean
 
 ***
 
@@ -84,7 +83,6 @@ All known errors cause the resource to return HTTP error code header together wi
     "width": 588,
     "height": 750,
     "votes_count": 36,
-    "favorites_count": 18,
     "comments_count": 36,
     "nsfw": false,
     "sales_count": 0,
@@ -96,7 +94,6 @@ All known errors cause the resource to return HTTP error code header together wi
     "store_download": false,
     "store_print": false,
     "voted": false,
-    "favorited": false,
     "purchased": false,
     "user": {
       "id": 164677,

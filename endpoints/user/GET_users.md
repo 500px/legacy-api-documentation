@@ -18,7 +18,7 @@ None
 ***
 
 ## Return format
-Current user's profile information in **[full format][]**. 
+Current user's profile information in **[full format][]**.
 
 Additional data:
 
@@ -82,8 +82,8 @@ None.
     "userpic_url": "http://acdn.500px.net/173.jpg",
     "email": "vladimir@drizhepolov.com",
     "photos_count": 5,
+    "galleries_count": 5,
     "affection": 7,
-    "in_favorites_count": 0,
     "friends_count": 37,
     "followers_count": 7,
     "upload_limit": null,

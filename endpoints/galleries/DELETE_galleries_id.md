@@ -3,6 +3,7 @@
     DELETE users/:user_id/galleries/:id
 
 ## Description
+
 Deletes the gallery.
 
 ***
