@@ -1,3 +1,9 @@
+### DEPRECATED
+
+Please use the corresponding **[galleries endpoint][]**
+
+***
+
 # Collections Resources
 
     POST collections
@@ -57,3 +63,4 @@ A JSON object with **collections** — An indexed array of Collection objects in
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [Feature]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#500px-photo-terms
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[galleries endpoint]: https://github.com/500px/api-documentation/blob/master/endpoints/galleries/POST_galleries.md

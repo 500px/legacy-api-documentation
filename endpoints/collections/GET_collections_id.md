@@ -1,3 +1,9 @@
+### DEPRECATED
+
+Please use the corresponding **[galleries endpoint][]**
+
+***
+
 # Collections Resources
 
     GET collections/:id
@@ -77,3 +83,4 @@ None
 
 [OAuth]: https://github.com/500px/api-documentation/tree/master/authentication
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
+[galleries endpoint]: https://github.com/500px/api-documentation/blob/master/endpoints/galleries/GET_galleries_id.md
