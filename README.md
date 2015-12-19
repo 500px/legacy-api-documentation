@@ -53,19 +53,17 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 - **[<code>GET</code> photos/search](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_search.md)**
 - **[<code>GET</code> photos/:id](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md)**
 - **[<code>GET</code> photos/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_comments.md)**
-- **[<code>GET</code> photos/:id/favorites](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_favorites.md)**
 - **[<code>GET</code> photos/:id/votes](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_votes.md)**
 - **[<code>PUT</code> photos/:id](https://github.com/500px/api-documentation/blob/master/endpoints/photo/PUT_photos_id.md)**
 - **[<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md)**
 - **[<code>POST</code> photos/upload](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_upload.md)**
 - **[<code>POST</code> photos/:id/vote](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_vote.md)**
+- **[<code>DELETE</code> photos/:id/vote](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_vote.md)**
 - **[<code>POST</code> photos/:id/tags](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_tags.md)**
-- **[<code>POST</code> photos/:id/favorite](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_favorite.md)**
 - **[<code>POST</code> photos/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_comments.md)**
 - **[<code>POST</code> photos/:id/report](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_report.md)**
 - **[<code>DELETE</code> photos/:id](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id.md)**
 - **[<code>DELETE</code> photos/:id/tags](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_tags.md)**
-- **[<code>DELETE</code> photos/:id/favorite](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_favorite.md)**
 
 #### Upload Method
 
@@ -93,19 +91,9 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 - **[<code>POST</code> users/:user_id/galleries](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/POST_galleries.md)**
 - **[<code>DELETE</code> users/:user_id/galleries/:id](https://github.com/500px/api-documentation/blob/master/endpoints/galleries/DELETE_galleries_id.md)**
 
-#### Blog Resources
+#### Collections/Sets Resources
 
-- **[<code>GET</code> blogs](https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs.md)**
-- **[<code>GET</code> blogs/:id](https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id.md)**
-- **[<code>GET</code> blogs/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id_comments.md)**
-- **[<code>POST</code> blogs/:id/comments](https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs_id_comments.md)**
-- **[<code>POST</code> blogs](https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs.md)**
-- **[<code>PUT</code> blogs/:id](https://github.com/500px/api-documentation/blob/master/endpoints/blog/PUT_blogs_id.md)**
-- **[<code>DELETE</code> blogs/:id](https://github.com/500px/api-documentation/blob/master/endpoints/blog/DELETE_blogs_id.md)**
-
-#### Collections Resources
-
-- **DEPRECATED** for [Gallery Resources](#gallery-resources)
+- **DEPRECATED**.  Please use [Gallery Resources](#gallery-resources) instead
 
 #### Comment Resources
 

@@ -33,7 +33,6 @@ Either of parameters **term**, **tag**, or **geo** is required.
   - **highest_rating** — Sort by highest rating achieved, highest rated first.
   - **times_viewed** — Sort by the number of views, most viewed first.
   - **votes_count** – Sort by the number of votes, most voted on first.
-  - **favorites_count** — Sort by the number of favorites, most favorited first.
   - **comments_count** — Sort by the number of comments, most commented first.
   - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images).
 
@@ -77,7 +76,6 @@ An array with the following keys and values:
       "width": 2500,
       "height": 1883,
       "votes_count": 1,
-      "favorites_count": 0,
       "comments_count": 0,
       "nsfw": false,
       "image_url": "http://pcdn.500px.net/4930535/140c1f84fb63be76884b2b60350c6b6d75c2433f/2.jpg",
@@ -105,7 +103,6 @@ An array with the following keys and values:
       "width": 4542,
       "height": 3042,
       "votes_count": 1,
-      "favorites_count": 1,
       "comments_count": 1,
       "nsfw": false,
       "image_url": "http://pcdn.500px.net/4930206/bedeed09e5a15014c558aa59de29bd40c4212811/2.jpg",

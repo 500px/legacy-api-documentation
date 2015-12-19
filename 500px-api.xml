@@ -21,7 +21,6 @@
 				<option value="fresh_week"/>
 				<option value="user" />
 				<option value="user_friends" />
-				<option value="user_favorites" />
 			</param>
 
 			<param name="user_id" type="xsd:string">
@@ -48,7 +47,6 @@
 				<option value="rating"/>
 				<option value="times_viewed"/>
 				<option value="votes_count"/>
-				<option value="favorites_count"/>
 				<option value="comments_count"/>
 				<option value="taken_at" />
 			</param>
@@ -84,7 +82,6 @@
 					Returns state of the photo for the currently logged in user and authenticated request.
 				</doc>
 				<option value="voted"/>
-				<option value="favorited"/>
 				<option value="purchased"/>
 			</param>
 
@@ -206,36 +203,6 @@
 		</resource>
 
 
-
-		<resource path="photos/{id}/favorite">
-			<param name="id" type="xsd:string" required="true">
-				<doc>The Photo ID</doc>
-			</param>
-
-			<param name="page" type="xsd:integer">
-				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
-			</param>
-
-			<param name="rpp" type="xsd:integer">
-				<doc>The number of results to return. Can not be over 100, default 20.</doc>
-			</param>
-
-			<method id="get_photos_id_favorite" name="GET" apigee:displayName="photos/{id}/favorite">
-
-				<apigee:tags>
-					<apigee:tag primary="true">Photos</apigee:tag>
-					<apigee:tag>Photos</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-				<apigee:example url="/photos/{id}/favorite" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_favorites.md">
-					Deletes the photo from User's favorite list.
-				</doc>
-			</method>
-		</resource>
-
 		<resource path="photos/{id}/votes">
 			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID</doc>
@@ -260,7 +227,7 @@
 				<apigee:example url="/photos/{id}/votes" />
 
 				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_votes.md">
-					Deletes the photo from User's favorite list.
+					Likes the photo
 				</doc>
 			</method>
 		</resource>
@@ -349,7 +316,7 @@
 
 			<!-- Geographical information of the photo: -->
 			<param name="privacy" type="xsd:integer">
-				<doc> Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.</doc>
+				<doc> Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in galleries. Recognized values: 1, 0.</doc>
 			</param>
 
 			<method id="post_photos" name="POST" apigee:displayName="photos">
@@ -414,23 +381,6 @@
 			</method>
 		</resource>
 
-		<resource path="photos/{id}/favorite">
-			<param name="id" type="xsd:string" required="true">
-				<doc>ID of the photo the favorite is cast upon.</doc>
-			</param>
-
-			<method id="post_photos_id_favorite" name="POST" apigee:displayName="photos/{id}/favorite">
-				<apigee:tags>
-					<apigee:tag primary="true">Photos</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true"/>
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_favorite.md">
-					Adds the photo to user's list of favorites.
-				</doc>
-			</method>
-		</resource>
-
 		<resource path="photos/{id}/comments">
 			<param name="id" type="xsd:string" required="true">
 				<doc>The Photo ID to post comments for.</doc>
@@ -486,23 +436,6 @@
 
 				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_tags.md">
 					Removes tags from the photo. Accepts one or multiple coma separated tags.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="photos/{id}/favorite">
-			<param name="id" type="xsd:string" required="true">
-				<doc>ID of the photo to delete from list of favorites.</doc>
-			</param>
-
-			<method id="delete_photos_id_favorite" name="DELETE" apigee:displayName="photos/{id}/favorite">
-				<apigee:tags>
-					<apigee:tag primary="true">Photos</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_favorite.md">
-					Removes the photo to user's list of favorites.
 				</doc>
 			</method>
 		</resource>
@@ -759,330 +692,6 @@
 			</method>
 		</resource>
 		<!-- //end USERS -->
-
-
-		<!-- BLOG -->
-		<resource path="blogs">
-			<param name="feature" default="fresh_today" required="true">
-				<doc>
-					Blogs (Story) stream to be retrieved. Default fresh.
-				</doc>
-				<option value="fresh"/>
-				<option value="user"/>
-			</param>
-
-			<param name="user_id" type="xsd:string">
-				<doc>User ID 'user' blogs (stories)</doc>
-			</param>
-
-			<param name="username" type="xsd:string">
-				<doc>OR username for 'user' Blog (story) stream</doc>
-			</param>
-
-			<param name="page" type="xsd:string">
-				<doc>Return a specific page in the blog (story) listing. Page numbering is 1-based.</doc>
-			</param>
-
-			<param name="rpp" type="xsd:string">
-				<doc>The number of results to return. Can not be over 100, default 5.</doc>
-			</param>
-
-			<method id="get_blogs" name="GET" apigee:displayName="blogs">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs.md">
-					Returns a listing of five recent (blogs) stories (maximum 100 per page).
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="blogs/{id}">
-			<param name="id" type="xsd:string" required="true">
-				<doc>Story ID</doc>
-			</param>
-
-			<method id="get_blogs_id" name="GET" apigee:displayName="blogs/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id.md">
-					Returns detailed information of a single story.
-				</doc>
-			</method>
-		</resource>
-
-
-		<resource path="blogs/{id}/comments">
-			<param name="id" type="xsd:integer" required="true">
-				<doc>The Story ID to get comments for.</doc>
-			</param>
-
-			<param name="page" type="xsd:string">
-				<doc>Return a specific page in the comment listing. Page numbering is 1-based.</doc>
-			</param>
-
-			<method id="get_blogs_id_comments" name="GET" apigee:displayName="blogs/{id}/comments">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/GET_blogs_id_comments.md">
-					Returns a listing of twenty comments for a specific Story.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="blogs/{id}/comments">
-			<param name="id" type="xsd:integer" required="true">
-				<doc> The Story ID to create a comment for.</doc>
-			</param>
-
-			<param name="body" type="xsd:string" required="true">
-				<doc>Content of the comment.</doc>
-			</param>
-
-			<method id="post_blogs_id_comments" name="POST" apigee:displayName="blogs/{id}/comments">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs_id_comments.md">
-					Creates a comment for the Story.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="blogs">
-			<param name="title" type="xsd:string" required="true">
-				<doc>Title for the blog post.</doc>
-			</param>
-
-			<param name="body" type="xsd:string" required="true">
-				<doc>Content of the blog post.</doc>
-			</param>
-
-			<param name="latitude" type="xsd:string">
-				<doc>Latitude for the blog post.</doc>
-			</param>
-
-			<param name="longitude" type="xsd:string">
-				<doc>Longitude for the blog post.</doc>
-			</param>
-
-			<param name="tags" type="xsd:string">
-				<doc>Comma separated list of tags.</doc>
-			</param>
-
-			<param name="photo_ids" type="xsd:string">
-				<doc>Comma separated list of Photo ID values to post with the blog.</doc>
-			</param>
-
-			<method id="post_blogs" name="POST" apigee:displayName="blogs">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/POST_blogs.md">
-					Creates a new Story.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="blogs/{id}">
-			<param name="id" type="xsd:integer" required="true">
-				<doc>The Blog Post ID to update.</doc>
-			</param>
-
-			<param name="title" type="xsd:string">
-				<doc>Title for the blog post.</doc>
-			</param>
-
-			<param name="body" type="xsd:string">
-				<doc>Content of the blog post.</doc>
-			</param>
-
-			<param name="latitude" type="xsd:string">
-				<doc>Latitude for the blog post.</doc>
-			</param>
-
-			<param name="longitude" type="xsd:string">
-				<doc>Longitude for the blog post.</doc>
-			</param>
-
-			<param name="tags" type="xsd:string">
-				<doc>Comma separated list of tags.</doc>
-			</param>
-
-			<param name="photo_ids" type="xsd:string">
-				<doc>Comma separated list of Photo ID values to post with the blog.</doc>
-			</param>
-
-			<method id="put_blogs_id" name="PUT" apigee:displayName="blogs/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/PUT_blogs_id.md">
-					Creates a new Story.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="blogs/{id}">
-			<param name="id" type="xsd:integer" required="true">
-				<doc>The Story ID to delete.</doc>
-			</param>
-
-			<method id="delete_blogs_id" name="DELETE" apigee:displayName="blogs/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Blogs</apigee:tag>
-				</apigee:tags>
-
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/blog/DELETE_blogs_id.md">
-					Deletes the story.
-				</doc>
-			</method>
-		</resource>
-		<!-- //end BLOG -->
-
-
-		<!-- COLLECTIONS -->
-		<resource path="collections">
-			<method id="get_collections" name="GET" apigee:displayName="collections">
-				<apigee:tags>
-					<apigee:tag primary="true">Collections</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections.md">
-					Returns a listing of five recent (blogs) stories (maximum 100 per page).
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="collections/{id}">
-			<param name="id" type="xsd:string" required="true">
-				<doc>Collection (set) ID.</doc>
-			</param>
-
-			<method id="get_collections_id" name="GET" apigee:displayName="collections/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Collections</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/GET_collections_id.md">
-					Returns the collection.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="collections">
-			<param name="title" type="xsd:string" required="true">
-				<doc>Title for the collection.</doc>
-			</param>
-
-			<param name="path" type="xsd:string" required="true">
-				<doc>Path where the collection will be accessible at 500px.com/user/sets/:path.</doc>
-			</param>
-
-			<param name="kind" type="xsd:integer">
-				<doc>Kind of the Collection to be created Recognized values: 1 - Portfolio Set (default), 2 - Profile Set.</doc>
-				<option value="1"/>
-				<option value="2"/>
-			</param>
-
-			<param name="photo_ids" type="xsd:string">
-				<doc>Comma separated list of Photo ID values.</doc>
-			</param>
-
-			<param name="position" type="xsd:string">
-				<doc>Position of the collection in the list of collections.</doc>
-			</param>
-
-			<method id="post_collections" name="POST" apigee:displayName="collections">
-				<apigee:tags>
-					<apigee:tag primary="true">Collections</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/POST_collections.md">
-					Creates a new collection.
-				</doc>
-			</method>
-		</resource>
-	 
-		<resource path="collections/{id}">
-			<param name="id" type="xsd:integer" required="true">
-				<doc> The Collection (set) ID.</doc>
-			</param>
-
-			<param name="title" type="xsd:string">
-				<doc>Title for the collection (set).</doc>
-			</param>
-
-			<param name="path" type="xsd:string">
-				<doc>Path where the collection (set) will be accessible at 500px.com/user/sets/:path.</doc>
-			</param>
-
-			<param name="kind" type="xsd:integer">
-				<doc>Kind of the Collection to be created Recognized values: 1 - Portfolio Set (default), 2 - Profile Set.</doc>
-				<option value="1"/>
-				<option value="2"/>
-			</param>
-
-			<param name="photo_ids" type="xsd:string">
-				<doc>Comma separated list of Photo ID values.</doc>
-			</param>
-
-			<param name="position" type="xsd:string">
-				<doc>Position of the collection in the list of collections.</doc>
-			</param>
-
-			<method id="put_collections_id" name="PUT" apigee:displayName="collections/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Collections</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/PUT_collections_id.md">
-					Updates collection.
-				</doc>
-			</method>
-		</resource>
-
-		<resource path="collections/{id}">
-			<param name="id" type="xsd:string" required="true">
-				<doc>Collection (set) ID to delete.</doc>
-			</param>
-
-			<method id="delete_collections" name="DELETE" apigee:displayName="collections/{id}">
-				<apigee:tags>
-					<apigee:tag primary="true">Collections</apigee:tag>
-				</apigee:tags>
-				<apigee:authentication required="true" />
-
-				<doc apigee:url="https://github.com/500px/api-documentation/blob/master/endpoints/collections/DELETE_collections_id.md">
-					Deletes the collection.
-				</doc>
-			</method>
-		</resource>
-		<!-- //end COLLECTIONS -->
 
 	</resources>
 </application>

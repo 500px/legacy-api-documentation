@@ -21,7 +21,6 @@ Accessing the following streams is possible though means of the API:
 
 ### User-based streams:
 - [User’s Photos][], all active public photos of a given user
-- [User’s Favorites][], all photos a user has added to their favourites
 - [User’s Friends’ Photos][Week], a collection of User’s Photos streams from all followings of a given user
 
 ### Special streams:
@@ -33,7 +32,6 @@ Accessing the following streams is possible though means of the API:
 [Yesterday]: http://500px.com/fresh/yesterday
 [Week]: http://500px.com/fresh/week
 [User’s Photos]: http://500px.com/iansobolev
-[User’s Favorites]: http://500px.com/iansobolev/favorites
 [Editors’ Choice]: http://500px.com/editors
 
 ***
@@ -159,7 +157,7 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>1</td><td>Lightbox</td><td>Marketplace photos</td></tr>
   <tr><td>3</td><td>Portfolio<sup>*</sup></td><td>Photos displayed on the portfolio page</td></tr>
   <tr><td>4</td><td>Profile<sup>*</sup></td><td>Photos uploaded by the gallery owner</td></tr>
-  <tr><td>5</td><td>Favorite</td><td>Photos favorited by the gallery owner</td></tr>
+  <tr><td>5</td><td>Favorite</td><td>Photos favorited by the gallery owner via the old API.</td></tr>
 </table>
 <sub>* Can only contain photos uploaded by the gallery owner</sub>
 
@@ -192,9 +190,7 @@ The short format of a Photo object includes the following data:
 - **width** - The width of the original, unresized photo, integer
 - **height** - The height of the origin, unresized photo, integer
 - **votes\_count** — Number of votes cast on this photo, integer
-- **favorites\_count** — Number of times this photo was added as a favorite on the website, integer
 - **comments\_count** — Number of comments this photo has, integer
-- **positive_votes_count** - Number of positive votes (likes) this photo has received, integer
 - **nsfw** - Boolean value whether the current photo is NSFW
 - **sales_count** - The number of sales this photo has
 - **highest_rating** - The highest rating this photo has had, decimal
@@ -204,7 +200,7 @@ The short format of a Photo object includes the following data:
 - **image\_url** — URL of the image, string, **deprecated**
 - **images** - Array with images URL and sizes
 - **user** — Author’s profile in [short format][], object
-- **collections_count** - Number of collections this photo is present in, integer
+- **galleries_count** - Number of galleries this photo is present in, integer
 
 [Category]: #categories
 [License type]: #license_types
@@ -235,9 +231,7 @@ The full format of a Photo object includes the following data:
 - **width** - The width of the original, unresized photo, integer
 - **height** - The height of the origin, unresized photo, integer
 - **votes\_count** — Number of votes cast on this photo, integer
-- **favorites\_count** — Number of times this photo was added as a favorite on the website, integer
 - **comments\_count** — Number of comments this photo has, integer
-- **positive_votes_count** - Number of positive votes (likes) this photo has received, integer
 - **nsfw** - Boolean value whether the current photo is NSFW
 - **sales_count** - The number of sales this photo has
 - **highest_rating** - The highest rating this photo has had, decimal
@@ -252,11 +246,10 @@ The full format of a Photo object includes the following data:
 - **store_print** - Boolean value indicating whether or not the photo is for sale as a canvas print.
 - **editors_choice** - Boolean value indicating whether or not the photo is in Editors' Choice.
 - **feature** - The section of the site this photo appears under, string. Possible values are popular upcoming fresh_today fresh_yesterday fresh_week
-- **collections_count** - Number of collections this photo is present in, integer
+- **galleries_count** - Number of galleries this photo is present in, integer
 
 If you are authenticated when making the request. These additional fields will be returned:
 - **voted** — Boolean value whether the current user has voted for this photo
-- **favorited** — Boolean value whether the current user has favorited this photo
 - **purchased** — Boolean value whether the current user has bought this photo
 
 ***
@@ -304,7 +297,6 @@ The profile format of a User object includes the following data:
 - **photos\_count** — Number of active photos posted by the user, integer.
 - **galleries\_count** — Number of galleries visible on the user's profile, integer.
 - **affection** — Affection value, integer.
-- **in\_favorites\_count** — Number of times any photo of the user was added to favorites, integer.
 - **friends\_count** — Number of people this user follows, integer.
 - **followers\_count** — Number of people this user is being followed by, integer.
 - **admin** - Boolean value that will be 1 if the user is a 500px team member.
@@ -319,31 +311,6 @@ If the user you are requesting is the currently authenticated user these additio
 
 If you are authenticated these additional fields will be returned:
 - **following** - A boolean value indicating whether or not you are following this user.
-
-***
-
-## Blog Post object formats
-
-### Short format
-The short format of a Blog Post object includes the following data:
-
-- **id** — ID of the blog post, integer
-- **title** — Title of the blog post, string
-- **created\_at** — Timestamp indicating time the blog post was created, timestamp
-- **user** — Author’s profile in [short format][], object
-
-### Full format
-The full format of a Blog Post object includes the following data:
-
-- **id** — ID of the blog post, integer
-- **longitude** — Longitude attached to the blog post, string
-- **latitude** — Latitude attached to the blog post, string
-- **title** — Title, string
-- **body** — Content of post, string
-- **tags** — Comma separated list of tags, string
-- **created\_at** — Timestamp indicating time the blog post was created, timestamp
-- **user** — Author’s profile in [short format][], object
-- **photos** — A list of photos given in [short format][], object
 
 ***
 
@@ -384,7 +351,6 @@ The short format of a Gallery object includes the following data:
 - **kind** - Indicates the **[gallery kind][]**, integer
 - **created\_at** — Timestamp indicating time the gallery was created, timestamp
 - **updated\_at** — Timestamp indicating time the gallery was updated, timestamp
-- **thumbnail_photos** - An array of Photo objects in **[short format](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format)** for use as the gallery's thumbnails.  A maximum of five thumbnails will be returned
 - **cover_photo** - Array containing a JSON hash of the cover photo's id, size, url, and nsfw flag
 - **custom_path** - Custom path of the gallery, string
 - **last_added_photo** _(optional)_ - Photo that was last added to the gallery, in **[short format](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format)**

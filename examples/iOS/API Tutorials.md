@@ -4,9 +4,9 @@ Hello astronauts, war heroes, Olympians - you're here because we want the best, 
 
 ## Specifics
 
-500px API requests are RESTful and return JSON. **All** 500px API requests are conducted over HTTPS. There are two ways to sign requests: Consumer Key and OAuth. Consumer Key-signed requests are ones that aren't specific to a logged-in user. For instance, getting a list of popular photos only requires the Consumer Key authentication. However, favouriting a photo requires a user to be logged in; these types of requests must be signed with OAuth.
+500px API requests are RESTful and return JSON. **All** 500px API requests are conducted over HTTPS. There are two ways to sign requests: Consumer Key and OAuth. Consumer Key-signed requests are ones that aren't specific to a logged-in user. For instance, getting a list of popular photos only requires the Consumer Key authentication. However, liking a photo requires a user to be logged in; these types of requests must be signed with OAuth.
 
-There are some requests which can be signed with either a Consumer Key or OAuth. In these cases, additional information is returned if the request is signed with OAuth. This information is specific to the currently logged-in user; for example, whether or not a user has favourited a photo or is following a specific user.
+There are some requests which can be signed with either a Consumer Key or OAuth. In these cases, additional information is returned if the request is signed with OAuth. This information is specific to the currently logged-in user; for example, whether or not a user has liked a photo or is following a specific user.
 
 ## Signing Requests with your Consumer Key
 
@@ -205,13 +205,13 @@ GET parameters are added to the end of URLs. They should not be URL-encoded, but
 
 Whenever you want to DELETE an item, send a POST request instead with `_method` parameter set to "`delete`".
 
-## [Photo Streams](http://developers.500px.com/docs/photos-index)
+## Photo Streams
 
-Photo streams include Popular, Editor's Choice, Upcoming, Fresh (variants include today, yesterday, and this week), a user's feed, a user's friend feed, and a user's favourite feed.
+Photo streams include Popular, Editor's Choice, Upcoming, Fresh (variants include today, yesterday, and this week), a user's feed, and a user's friend feed.
 
-Photo Streams are a GET request that can be signed either with your Consumer Key or OAuth. If you sign with OAuth, the response will indicate if the currently logged in user has voted for each photo and whether or not they have each photo in their favourites.
+Photo Streams are a GET request that can be signed either with your Consumer Key or OAuth. If you sign with OAuth, the response will indicate if the currently logged in user has voted for each photo.
 
-Specifying specific users (`user`, `user_friends`, or `user_favorites` features) requires either specifying a `user_id` or `username` parameter.
+Specifying specific users (`user` or `user_friends` features) requires either specifying a `user_id` or `username` parameter.
 
 Photo streams can be sorted into only displaying one category, excluding a category, and sorting the results. You can specify a pagination values for page number and results per page. Excluding categories with spaces, like "Black and White" uses the string "Black+and+White" as a value for the `exclude` key.
 
@@ -229,39 +229,31 @@ Optionally, you may specify an `image_size` parameter to specify the size of the
 
 Please specify an `image_size` that is appropriate for your app; it will help your user experience and reduce our bandwidth costs! If the photographer has uploaded a smaller image to 500px, then we do *not* scale that image up to 900px.
 
-## [Search](http://developers.500px.com/docs/photos-search)
+## Search
 
 The search API currently only searches *photos*, not *users*. You can specify either a search `term` or `tag` (exactly one is required). You can also specify pagination information which includes the page number and results per page.
 
 Returned JSON is in the same format as the photo stream response.
 
-## [Specific Photo Details](http://developers.500px.com/docs/photos-show)
+## Specific Photo Details
 
 This endpoint returns a long-form photo model and a `comments` array. You can specify pagination data for the comments with `comments_page` (comment pages always contain 20 comments or fewer).
 
-## [Voting for Photos](http://developers.500px.com/docs/photos-vote)
+## Liking Photos
 
-Our API only allows users to vote *for* photos; it doesn't allow them to downvote or to undo their vote.
+Our API only allows users to vote *for* photos; it doesn't allow them to downvote.
 
-To vote for a photo, POST to the `photos/PHOTO_ID/vote` endpoint with the parameter `vote` set to `1`. This method **must** be signed with OAuth.
+To like a photo, POST to the `photos/PHOTO_ID/vote` endpoint with the parameter `vote` set to `1`. This method **must** be signed with OAuth.
 
-Your response includes, in part, a short-form photo model; this model's rating has been updated to reflect your user's vote.
+To undo a like on a photo, DELETE to the `photos/PHOTO_ID/vote` endpoint. This method **must** be signed with OAuth.
 
-## Favouriting Photos
-
-A POST to the `photos/PHOTO_ID/favorite` endpoint allows you to add the specified photo to the favourites of the currently logged-in user. Similarly, a DELETE to the endpoint will remove the photo from the favourites. This method must be signed with OAuth.
-
-Return values are 200 if everything went fine. If the response code is 403, the resulting JSON contains an `error` key/value pair with a description of the problem. A common `error` value is "The photo specified is already in your favorites."
-
-## [User Friends](http://developers.500px.com/docs/users-friends)
-
-Friends are other users that a user is following. Listing the friends with a GET request returns a list of short-form user models, a `friends_count`, and pagination data.
+Your response includes, in part, a short-form photo model; this model's rating has been updated to reflect your user's like (or unlike).
 
 ### Following/Unfollowing Users
 
 To follow or unfollow a user, either POST or DELETE to the `users/USER_ID/friends` endpoint. You can only do this for the currently logged-in user. If the response code is non-200, an `error` key/value pair will specify what went wrong. Common `error` values are "Already following" and "Your're following too many users". Currently, the number of users you can follow is capped to ~4000.
 
-## [Uploading Photos](http://developers.500px.com/docs/auth-upload)
+## Uploading Photos
 
 To upload a photo, you need to create the photo entity first with an OAuth-signed POST request to the [`photos`](http://developers.500px.com/docs/photos-post) endpoint. Thise requires a name, description, and category number (there are some additional, optional parameters). A successful response shoudl return a 200 response code and a JSON dictionary with an `upload_key` and short-form photo model. Parse out the model's `id`; we'll need it for later.
 
@@ -315,7 +307,7 @@ Creating a multi-part form request can sometimes be difficult, depending on your
 Please note that, unless otherwise stated, any "optional" fields can be `null` (instead of being absent from the JSON altogether). This can cause parsing issues, so please check for `null` values when parsing the JSON into your data models.
 
 ## Short-Form Photos
-Short-form photos contain the category, photo ID, a thumbnail URL, photo name, rating, a user in short-form (below) and number of votes. If the photo request was signed with OAuth, it also contains information if the currently logged-in user has favourited or voted for the photo.
+Short-form photos contain the category, photo ID, a thumbnail URL, photo name, rating, a user in short-form (below) and number of votes. If the photo request was signed with OAuth, it also contains information if the currently logged-in user has voted for the photo.
 
 ## Long-Form Photos
 Long-form photos are a containing a photo's description(`body`), upload date (`created_at`), photo ID, latitude and longitude (both `null` if not present), title, a short-form user model, any tags the photo has, and the short-form photo model.
@@ -324,7 +316,7 @@ Long-form photos are a containing a photo's description(`body`), upload date (`c
 A short-form user model is contained in a photo model, either short or long-form. It contains a user's first name, last name, full name, User ID, "Awesome" status, their user display name, and their avatar image URL.
 
 ## Long-Form Users
-Long-form user models contain a user bio (`about`), affection, birthday, city, state, country, a contacts dictionary (listing any specified contacts, noted below), a 500px domain, first name, last name, full name, number of followers, user ID, any equipment, their "in favourites" count, number of photos on 500px, registration date, gender, "Awesome" status, user display name, and user avatar image URL.
+Long-form user models contain a user bio (`about`), affection, birthday, city, state, country, a contacts dictionary (listing any specified contacts, noted below), a 500px domain, first name, last name, full name, number of followers, user ID, any equipment, number of photos on 500px, registration date, gender, "Awesome" status, user display name, and user avatar image URL.
 
 The contacts dictionary lists any contact information the user has specified in their 500px profile. It can include the following. (Note that if a contact method isn't supplied, it's not present in the `contacts` dictionary at all.)
 

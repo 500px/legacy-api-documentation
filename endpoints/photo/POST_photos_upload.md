@@ -104,7 +104,6 @@ Content-Location: file
     "width": null,
     "height": null,
     "votes_count": 0,
-    "favorites_count": 0,
     "comments_count": 0,
     "nsfw": false,
     "sales_count": 0,
@@ -122,7 +121,6 @@ Content-Location: file
     "store_download": false,
     "store_print": false,
     "voted": false,
-    "favorited": false,
     "purchased": false,
     "user": {
       "id": 173,

@@ -51,7 +51,6 @@ Returns a listing of twenty (up to one hundred) photos in the given gallery.
 - **include_states** — If set to 1, returns state of the photo for the currently logged in user and authenticated request.
     ###### Returned values:
     - 'liked' — Boolean value whether the current user has liked this photo
-    - 'favorited' — Boolean value whether the current user has favorited this photo
     - 'purchased' — Boolean value whether the current user has bought this photo
 
 - **include_tags** (or **tags**) — If set to 1, returns an array of tags for the photo.
