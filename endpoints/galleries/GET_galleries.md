@@ -23,6 +23,8 @@ Returns a listing of twenty (up to one hundred) galleries for the given user.
     - 'rating' — Sort by gallery rating
     - 'position' — Sort by gallery position (as defined by the user)
 
+- **cover_size** — The cover photo size to be returned, if `include_cover` is set.  Defaults to 4.
+- **include_cover** — If 1, the user's cover is included.
 - **sort_direction** — Control the order of the sorting.  You can provide a **sort_direction** without providing a **sort**, in which case the default sort is used.
     ###### Recognized values:
     - 'asc' — Sort in ascending order (lowest or least-recent first).  This is the default.
