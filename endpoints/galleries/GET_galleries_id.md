@@ -25,7 +25,7 @@ The gallery id can be used to access any gallery owned by the current user (publ
 ***
 
 ## Parameters
-None
+- **cover_size** — The cover photo size to be returned.  Defaults to 4.
 
 ***
 
