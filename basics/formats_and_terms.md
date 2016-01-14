@@ -306,7 +306,7 @@ The profile format of a User object includes the following data:
 If the user you are requesting is the currently authenticated user these additional fields will be returned:
 - **email** - The user's email address.
 - **upload\_limit** - The remaining upload limit this user has, integer
-- **upload\_limit\_expiry** - The date at which additional uploads will be available, timestamp
+- **upload\_limit\_expiry** - The date at which additional uploads will be available, if the user is currently allowed to upload then this will be now, timestamp
 - **upgrade\_expiry\_date** - The date at which the user's subscription will expire, timestamp
 - **auth** - A dictionary of a user's social network authentications. Possible keys are <code>facebook, twitter, google_oauth2</code>. Each key will have a value of '1' as existing authentication or '0' as no authentication.
 
