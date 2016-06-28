@@ -144,6 +144,8 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>4</td><td>Creative Commons License Attribution</td></tr>
   <tr><td>5</td><td>Creative Commons License No Derivatives</td></tr>
   <tr><td>6</td><td>Creative Commons License Share Alike</td></tr>
+  <tr><td>7</td><td>Creative Commons License Public Domain Mark 1.0</td></tr>
+  <tr><td>8</td><td>Creative Commons License Public Domain Dedication</td></tr>
 </table>
 
 ## Gallery kinds
