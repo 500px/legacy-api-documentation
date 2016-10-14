@@ -36,7 +36,7 @@ Technical details of the photo: (this information may be overridden when the fil
 ### Optional attributes:
 
 - **tags** — Comma-separated list of tags to apply to the photo.
-- **privacy** — Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1, 0.
+- **privacy** — Whether to hide the photo from the user profile on the website. Otherwise, the photo is only available for use in Collections/Portfolio. Recognized values: 1 for private, 0 for public.
 
 ***
 
