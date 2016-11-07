@@ -1,6 +1,6 @@
 # Upload Method
 
-    POST http://upload.500px.com/v1/upload
+    POST https://upload.500px.com/v1/upload
 
 ## Description
 Allows an application to upload the photo file.
