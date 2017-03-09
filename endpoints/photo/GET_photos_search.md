@@ -24,6 +24,7 @@ Either of parameters **term**, **tag**, or **geo** is required.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
+- **user_id** — Limit your search within photos of the given user.
 - **image_size** — The photo size(s) to be returned. See the documentation on **[photo sizes][]**.
 - **license_type** -- Restrict the results to one or more **[license types][]**.  Multiple types can be separated with a comma: `license_type=1,4`.
 - **sort** — Sort photos in the specified order. The following values are recognized:
