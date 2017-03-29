@@ -21,6 +21,7 @@ Either of parameters **term**, **tag**, or **geo** is required.
 - **geo** — A geo-location point of the format `latitude,longitude,radius<units>`. Acceptable `units` are `km` or `mi`.
 - **only** — String name of the **[category][]** to return photos from. **Note:** Multiple categories may be given, separated by commas, e.g. `Fashion,Black and White`
 - **exclude** — String name of the **[category][]** to exclude from the results. **Note:** Multiple categories may be given, separated by commas, e.g. `People,Nude`
+- **exclude_nude=1** - Specifically exclude all photos marked as NSFW. **Note:** We do our best to ensure all NSFW photos are marked as such, but we are unable to guarantee that this will always be the case.
 - **page** — Return a specific page. Page numbering is 1-based.
 - **rpp** — The number of results to return. Can not be over 100, default 20.
 - **tags** — Returns an array of tags for each photo.
