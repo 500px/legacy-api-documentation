@@ -131,7 +131,7 @@ Applications must identify themselves to access any resource.
 If your application only needs read-only access and does not authenticate the user, **consumer_key** containing a valid Consumer Key parameter should be specified in the query string. Otherwise, [OAuth](https://github.com/500px/api-documentation/tree/master/authentication) or upload key authentication takes care of identifying the application as well as the user accessing the API.
 
 ### Is there a request rate limit?
-There is a rate limit of 1,000,000 API requests per month per account. We will contact you and if required disable your application if we find that your application is exceeding this limit or interfering with our system's stability.This revised rate limit will come into effect May 1, 2014.
+There is a rate limit of 1,000,000 API requests per month per account. We will contact you and, if required, disable your application if we find that your application is exceeding this limit or interfering with our system's stability. This revised rate limit came into effect May 1, 2014.
 
 [REST software pattern]: http://en.wikipedia.org/wiki/Representational_State_Transfer
 [OAuth]: http://oauth.net/core/1.0a/
