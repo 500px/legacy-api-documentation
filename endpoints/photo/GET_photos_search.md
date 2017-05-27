@@ -35,8 +35,8 @@ Either of parameters **term**, **tag**, or **geo** is required.
   - **rating** — Sort by current rating, highest rated first.
   - **highest_rating** — Sort by highest rating achieved, highest rated first.
   - **times_viewed** — Sort by the number of views, most viewed first.
-  - **votes_count** – Sort by the number of votes, most voted on first.
-  - **comments_count** — Sort by the number of comments, most commented first.
+  - **vote_count** – Sort by the number of votes, most voted on first.
+  - **comment_count** — Sort by the number of comments, most commented first.
   - **taken_at** — Sort by the original date of the image extracted from metadata, most recent first (might not be available for all images).
 
 ## Return format
