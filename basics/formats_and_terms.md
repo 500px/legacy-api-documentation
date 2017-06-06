@@ -101,6 +101,7 @@ Categories of photos may be specified by their ID or string name, depending on t
   </tr>
   <tr><td>0</td><td>Uncategorized</td></tr>
   <tr><td>10</td><td>Abstract</td></tr>
+  <tr><td>29</td><td>Aerial <sup>New!</sup></td></tr>
   <tr><td>11</td><td>Animals</td></tr>
   <tr><td>5</td><td>Black and White</td></tr>
   <tr><td>1</td><td>Celebrities</td></tr>
@@ -116,6 +117,7 @@ Categories of photos may be specified by their ID or string name, depending on t
   <tr><td>8</td><td>Landscapes</td></tr>
   <tr><td>12</td><td>Macro</td></tr>
   <tr><td>18</td><td>Nature</td></tr>
+  <tr><td>30</td><td>Night <sup>New!</sup></td></tr>
   <tr><td>4</td><td>Nude</td></tr>
   <tr><td>7</td><td>People</td></tr>
   <tr><td>19</td><td>Performing Arts</td></tr>
