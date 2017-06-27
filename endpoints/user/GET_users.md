@@ -24,6 +24,7 @@ Additional data:
 
 - **upload_limit** — the number of photos the user may upload at this moment, integer.
 - **upload_limit_expiry** — date and time of the beginning of the new upload limit cycle, datetime.
+- **show_personalized_categories** - checks if the user can see personalized photo categories, boolean.
 
 ***
 
@@ -89,6 +90,7 @@ None.
     "upload_limit": null,
     "upload_limit_expiry": "2012-06-08T14:30:28-04:00",
     "upgrade_status_expiry": "2012-12-12",
+    "show_personalized_categories": true,
     "auth": {
       "facebook": 0,
       "twitter": 0
