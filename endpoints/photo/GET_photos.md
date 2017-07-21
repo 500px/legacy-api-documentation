@@ -62,6 +62,8 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'liked' — Boolean value whether the current user has liked this photo
     - 'purchased' — Boolean value whether the current user has bought this photo
 
+-  **personalized_categories** - If set to true, returns photos from personalized categories for the currently logged in user and authenticated request, if personalization is available for the current user. 
+
 - **tags** — If set to 1, returns an array of tags for the photo.
 
 ***
