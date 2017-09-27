@@ -294,6 +294,7 @@ The profile format of a User object includes the following data:
 - **domain** - The host name of the user's portfolio, string
 - **locale** — User’s preferred locale, string. Current values: <code>en, ru, de, ja, br, es</code>.
 - **upgrade\_status** — Whether the user is a premium user, integer. Non-zero values identify premium users; a value of 2 identifies an Awesome user while a value of 1 identifies a Plus user. Other states may be added in the future, so write your parsers accordingly.
+- **upgrade\_type** - Whether this is a paid user or trial user. Values: 0 - free user, 1 - trial user, 2 - paid user
 - **show\_nude** — Whether the user has content filter disabled, boolean.
 - **userpic\_url** — Profile picture’s URL of the user, string
 - **store\_on** - Whether the user has the store option enabled, boolean
