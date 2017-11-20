@@ -109,7 +109,7 @@ You can also programmatically access the [500px Directory](https://500px.com/dir
 - **[<code>POST</code> oauth/authorize](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_authorize.md)**
 - **[<code>POST</code> oauth/access_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_accesstoken.md)**
 - **[Upload key](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)**
-- **[presigned_post](https://github.com/500px/api-documentation/blob/master/authentication/presigned_post.md)**
+- **[presigned_post](https://github.com/500px/api-documentation/blob/master/authentication/presigned_post.md)** used for direct uploads to s3
 
 
 ## FAQ
