@@ -27,6 +27,7 @@ Technical details of the photo: (this information may be overridden when the fil
 - **iso** — ISO value
 - **camera** — Make and model of the camera. Note: Please make sure it contains sensible information (eg., does not contain camera's make or model twice)
 - **lens** — Lens used to make this photo
+- **auto_activate** - Set this to 'true' if the photo should be automatically marked as active as soon as it's uploaded. It this parmeter is not included, the photo will not be automatically marked "active" after upload. 
 
 ### Geographical information of the photo:
 
