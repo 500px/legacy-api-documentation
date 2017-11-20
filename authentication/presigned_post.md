@@ -26,7 +26,8 @@ In this case a POST request would have to be made to 'https://s3.amazonaws.com/p
   "x-amz-algorithm": "...",
   "x-amz-credential": "...",
   "x-amz-date": "20120608131704z"
-}```
+}
+```
 
 ***
 
