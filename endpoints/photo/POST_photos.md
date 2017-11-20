@@ -18,6 +18,8 @@ Essential information:
 - **name** — Title of the photo
 - **description** — Description for the photo
 - **category** — A numerical ID for the **[Category][]** of the photo
+- **auto_activate** - Set this to 'true' if the photo should be automatically marked as active as soon as it's uploaded. It this parmeter is not included, the photo will not be automatically marked as active after upload. 
+
 
 Technical details of the photo: (this information may be overridden when the file is uploaded and parsed for EXIF and IPTC tags)
 
@@ -41,7 +43,7 @@ Technical details of the photo: (this information may be overridden when the fil
 ***
 
 ## Return format
-Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file.
+Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file. Also included is **['presigned_post'](https://github.com/500px/api-documentation/blob/master/authentication/presigned_post.md)** this is to be used for authenticating a direct upload to S3.   
 
 
 ***
@@ -63,6 +65,17 @@ All known errors cause the resource to return HTTP error code header together wi
 ``` json
 {
   "upload_key": "89653832030e7d26daf3a43fc2ccd501",
+  "presigned_post": {
+    "url": "https://s3.amazonaws.com/photos.500px.net",
+    "fields": {
+       "key": "...",
+       "x-amz-meta-user_id": "173",
+       "x-amz-signature": "...",
+       "x-amz-algorithm": "...",
+       "x-amz-credential": "...",
+       "x-amz-date": "20120608131704Z"
+    },
+  },
   "photo": {
     "id": 10000277,
     "user_id": 173,
