@@ -18,6 +18,8 @@ Essential information:
 - **name** — Title of the photo
 - **description** — Description for the photo
 - **category** — A numerical ID for the **[Category][]** of the photo
+- **auto_activate** - Set this to 'true' if the photo should be automatically marked as active as soon as it's uploaded. It this parmeter is not included, the photo will not be automatically marked as active after upload. 
+
 
 Technical details of the photo: (this information may be overridden when the file is uploaded and parsed for EXIF and IPTC tags)
 
