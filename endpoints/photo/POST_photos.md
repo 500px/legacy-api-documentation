@@ -43,7 +43,7 @@ Technical details of the photo: (this information may be overridden when the fil
 ***
 
 ## Return format
-Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file.
+Status code 200, along with a JSON array containing photo and 'upload_key' keys, where value of photo is an object representing the Photo information in **[short format][]**, and **['upload_key'](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)** is the token to be used by the client to upload the file. Also included is **['presigned_post'](https://github.com/500px/api-documentation/blob/master/authentication/presigned_post.md)** this is to be used for authenticating a direct upload to S3.   
 
 
 ***
