@@ -5,30 +5,12 @@ A sample 'presigned_post' dict taken from this **[example](https://github.com/50
     "presigned_post": {
       "url": "https://s3.amazonaws.com/photos.500px.net",
       "fields": {
-        "key": "...",
-        "policy": "...",
-        "x-amz-meta-user_id": "173",
-        "x-amz-signature": "...",
-        "x-amz-algorithm": "...",
-        "x-amz-credential": "...",
-        "x-amz-date": "20120608131704Z"
+        ...
       }
     }
 ```
 
-In this case a POST request would have to be made to 'https://s3.amazonaws.com/photos.500px.net' with the following object containing key-value pairs taken from the 'fields' from 'presigned_post':
-``` json 
-{
-  "key": "...",
-  "policy": "...",
-  "x-amz-meta-user_id": "173",
-  "x-amz-signature": "...",
-  "x-amz-algorithm": "...",
-  "x-amz-credential": "...",
-  "x-amz-date": "20120608131704z"
-}
-```
-
+To upload, simply make a POST request to `presigned_post['url']` (eg. 'https://s3.amazonaws.com/photos.500px.net'). The body should contain the contents of `presigned_post['fields']`, followed by the file to be uploaded in the `file` field.
 ***
 
 ## Return format
