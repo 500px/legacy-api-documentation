@@ -1,10 +1,9 @@
 # Photo Resources
-
     POST photos/upload
+NOTE: This endpoint has been **deprecated**.
 
 ## Description
-This is a new photo upload endpoint. It is currently in beta.
-Create a new photo on behalf of the user and upload a file.
+Creates a new photo on behalf of the user and upload a file.
 **file** parameter is passed in multipart/form-data, other parameters are passed as query parametrs or multipart/form-data.
 
 ***
