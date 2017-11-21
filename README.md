@@ -56,7 +56,8 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 - **[<code>GET</code> photos/:id/votes](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id_votes.md)**
 - **[<code>PUT</code> photos/:id](https://github.com/500px/api-documentation/blob/master/endpoints/photo/PUT_photos_id.md)**
 - **[<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md)**
-- **[<code>POST</code> photos/upload](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_upload.md)**
+- **[<code>POST</code> photos/upload](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_upload.md)** **Deprecated**, use [<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md) instead
+
 - **[<code>POST</code> photos/:id/vote](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_vote.md)**
 - **[<code>DELETE</code> photos/:id/vote](https://github.com/500px/api-documentation/blob/master/endpoints/photo/DELETE_photos_id_vote.md)**
 - **[<code>POST</code> photos/:id/tags](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos_id_tags.md)**
@@ -67,7 +68,7 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 #### Upload Method
 
-- **[<code>POST</codE> upload](https://github.com/500px/api-documentation/blob/master/endpoints/upload/POST_upload.md)**
+- **[<code>POST</codE> upload](https://github.com/500px/api-documentation/blob/master/endpoints/upload/POST_upload.md)** **Deprecated**, use [<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md) instead
 
 #### User Resources
 
