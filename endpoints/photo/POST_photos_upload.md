@@ -1,6 +1,6 @@
 # Photo Resources
     POST photos/upload
-NOTE: This endpoint has been **deprecated**.
+NOTE: This endpoint has been **deprecated**. Please use [<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md) endpoint instead.
 
 ## Description
 Creates a new photo on behalf of the user and upload a file.
