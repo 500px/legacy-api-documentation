@@ -1,7 +1,7 @@
 # Upload Method
 
     POST https://upload.500px.com/v1/upload
-
+Note: This endpoint has been **deprecated**.
 ## Description
 Allows an application to upload the photo file.
 
