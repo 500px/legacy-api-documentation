@@ -1,7 +1,7 @@
 # Upload Method
 
     POST https://upload.500px.com/v1/upload
-Note: This endpoint has been **deprecated**.
+Note: This endpoint has been **deprecated**.Please use [<code>POST</code> photos](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md) endpoint instead.
 ## Description
 Allows an application to upload the photo file.
 
