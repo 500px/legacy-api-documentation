@@ -40,4 +40,6 @@ Content-Type: image/jpeg
 ***
 
 ## Return format
-Http status 204 is returned upon successful upload.
+`POST /photos` will return HTTP status 200 on success. Proceed with the second request only when you get back the 200 status.
+
+`POST url-from-first-request` will return HTTP status 204 upon successful upload.
