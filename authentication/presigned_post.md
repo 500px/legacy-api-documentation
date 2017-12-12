@@ -10,7 +10,7 @@ A sample 'presigned_post' dict taken from this **[example](https://github.com/50
     }
 ```
 
-To upload, simply make a POST request to `presigned_post['url']` (eg. 'https://s3.amazonaws.com/photos.500px.net'). The body should contain the contents of `presigned_post['fields']`, followed by the file to be uploaded in the `file` field.
+To upload, simply make a POST request to `presigned_post['url']` (eg. 'https://s3.amazonaws.com/photos.500px.net'). The body should contain the contents of `presigned_post['fields']` (NOTE: the order matters, you need to supply the `fields` in the exact same order you receive it), followed by the file to be uploaded in the `file` field.
 ***
 
 ## Return format
