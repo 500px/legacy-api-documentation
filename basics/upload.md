@@ -3,7 +3,7 @@ To upload a photo, you need to do 2 requests:
  1. `POST /photos`
  1. `POST url-obtained-from-first-request`
  
-First, send a `POST` request to `/photos` ([see documentation](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md)) with the photo details like title, description and so on. You may also want to set the `privacy` parameter to `1` if you wish to do a private upload or `0` for public upload.
+First, send a `POST` request to `/photos` ([see documentation](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md)) with the photo details like title, description and so on. You may also want to set the `privacy` parameter to `1` if you wish to do a private upload or `0` for public upload. Finally, you can pass `auto_activate` parameter set to `true` to have to photo marked active as soon as it is uploaded.
 
 This request will return a JSON with the upload `url` and a data structure that you need to use for the second request. Here's an example of [such data structure taken from the `POST /photos`](https://github.com/500px/api-documentation/blob/master/endpoints/photo/POST_photos.md#example)
 ``` json
