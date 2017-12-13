@@ -27,6 +27,8 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 - **[Formats and Terms](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md)**
 - **[API Terms of Use](https://github.com/500px/api-documentation/blob/master/basics/terms_of_use.md)**
+- **[Uploading photos](https://github.com/500px/api-documentation/blob/master/basics/upload.md)**
+
 
 ## Examples
 
@@ -37,6 +39,7 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 ## Changes
 
+* 2017-12-12 Deprecated the old upload flow with `upload_key` and [replaced with new one](https://github.com/500px/api-documentation/blob/master/basics/upload.md)
 * 2014-03-27 Deprecated photo object's image_url key.
 
 ## SDK
@@ -104,8 +107,6 @@ You can also programmatically access the [500px Directory](https://500px.com/dir
 - **[<code>POST</code> oauth/authorize](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_authorize.md)**
 - **[<code>POST</code> oauth/access_token](https://github.com/500px/api-documentation/blob/master/authentication/POST_oauth_accesstoken.md)**
 - **[Upload key](https://github.com/500px/api-documentation/blob/master/authentication/upload_key.md)**
-- **[presigned_post](https://github.com/500px/api-documentation/blob/master/authentication/presigned_post.md)** used for direct uploads to s3
-
 
 ## FAQ
 ### What do I need to know before I start using the API?
