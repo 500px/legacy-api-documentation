@@ -13,16 +13,6 @@ See [status.500px.com](http://status.500px.com) for API status updates, outages,
 
 ***
 
-## Checklist
-* [Try the API console](http://bitly.com/api500px)
-* [See if the concepts used by the API are familiar to you][]
-* Familiarize yourself with API functionality
-* Read the 500px [API Terms of Use][]
-* [Register your application][] and get OAuth consumer key and secret
-* Hack away
-
-***
-
 ## Basics
 
 - **[Formats and Terms](https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md)**
