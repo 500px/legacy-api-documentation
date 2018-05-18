@@ -25,6 +25,7 @@ Additional data:
 - **upload_limit** — the number of photos the user may upload at this moment, integer.
 - **upload_limit_expiry** — date and time of the beginning of the new upload limit cycle, datetime.
 - **show_personalized_categories** - checks if the user can see personalized photo categories, boolean.
+- **gdpr_acceptance_timestamp** - timestamp of when a user accepted the GDPR-compliant EULA.
 
 ***
 
