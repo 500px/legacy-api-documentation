@@ -12,7 +12,7 @@ Accessing the following streams is possible though means of the API:
 
 ### Rating-based streams
 - [Popular][], photos with a rating over 80, sorted by rating, cached for 5 minutes
-- [Upcoming][], photos with a rating over 60, sorted by creation timestamp, cached for 5 minutes
+- [Upcoming][], photos with a rating over 70, sorted by creation timestamp, cached for 5 minutes
 
 ### Time-based (Fresh) streams:
 - [Today][], photos created since midnight (EST time), cached for 60 seconds
