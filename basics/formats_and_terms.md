@@ -289,6 +289,7 @@ The profile format of a User object includes the following data:
 - **city** — City as specified in user’s profile, string
 - **state** — State as specified in user’s profile, string
 - **country** — Country as specified in user’s profile, string
+- **active** — Active status of user. Values: 0 - not active, 1 - active, 2 - deleted by user, 3 - banned
 - **registration\_date** — Registration timestamp, timestamp
 - **about** — User’s about text, timestamp
 - **domain** - The host name of the user's portfolio, string
