@@ -52,6 +52,7 @@ None.
     "city": "",
     "state": "",
     "country": "",
+    "active": 1,
     "registration_date": "2009-11-08T12:41:14-05:00",
     "about": "lbalblabla",
     "domain": "vovko.500px.com",
