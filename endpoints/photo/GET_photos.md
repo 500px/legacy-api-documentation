@@ -66,7 +66,13 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
 
 - **tags** — If set to 1, returns an array of tags for the photo.
 
-- **followers_count** - Filter the photo stream by number of followers each photo's user has. The expected value is in the form of `lt:N` or `gt:N` where `lt` and `gt` is "less-than" and "greater-than" respectively and `N` is the number of followers. At the time of this documentation, the default for "Undiscovered photographers" is `lt:200`.
+- **followers_count** - Filter the photo stream by number of followers each photo's user has. The expected value is `operator:N`. `Operator` can be one of `eq ne lt lte gt gte` (details below) and `N` is the number of followers. At the time of this documentation, the default for "Undiscovered photographers" is `lt:200`.
+  - eq = `equals` 
+  - ne = `not equals`
+  - lt = `less than`
+  - lte = `less than or equals`
+  - gt = `greater than`
+  - gte = `greater than or equals`
 
 ***
 
