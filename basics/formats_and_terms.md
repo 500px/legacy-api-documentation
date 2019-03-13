@@ -385,6 +385,44 @@ The full format of a Gallery object includes the following data:
 - **token** - Token signature for a private gallery url. Only returned if request is made by the gallery owner
 - **user** _(optional)_ - User who owns the gallery, in **[short format][]**
 
+***
+
+## Equipment object formats
+
+### Camera info
+
+- **id** - ID of the camera, integer
+- **friendly_name** - Displayable name, eg. "Canon EOS 70D"
+- **name** - Actual name of the camera, eg. "EOS 70D"
+- **verified** - Whether or not this entry is verified, true or false
+- **features** - Short list of features, HTML-formatted string
+- **slug** - The slug, eg "eos-70d",
+- **camera_type** - The type of camera this is, one of "dslr" ...
+- **brand** - A small object containing brand info, eg.
+```
+{
+  "id": 1,
+  "name": "Canon",
+  "slug": "canon"
+}
+```
+
+### Lens info
+
+- **id** - ID of the lens, integer
+- **friendly_name** - Displayable name, eg. "Canon EF-S 10-18mm f/4.5-5.6 IS STM"
+- **name** - Actual name of the lens, eg. "EF-S 10-18mm f/4.5-5.6 IS STM"
+- **slug** - The slug, eg. "ef-s-10-18mm-f-4-5-5-6-is-stm"
+- **features** - Short list of features, HTML-formatted string
+- **brand** - A small object containing brand info, eg.
+```
+{
+  "id": 1,
+  "name": "Canon",
+  "slug": "canon"
+}
+```
+
 [Category]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#categories
 [short format]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#short-format-1
 [gallery kind]: https://github.com/500px/api-documentation/blob/master/basics/formats_and_terms.md#gallery-kinds
