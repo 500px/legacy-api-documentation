@@ -397,7 +397,16 @@ The full format of a Gallery object includes the following data:
 - **verified** - Whether or not this entry is verified, true or false
 - **features** - Short list of features, HTML-formatted string
 - **slug** - The slug, eg "eos-70d",
-- **camera_type** - The type of camera this is, one of "dslr" ...
+- **camera_type** - The type of camera this is, one of 
+  - dslr
+  - film
+  - smartphone
+  - mirrorless
+  - compact
+  - medium_format
+  - film_scanner
+  - action_camera
+  - drone
 - **brand** - A small object containing brand info, eg.
 ```
 {
