@@ -48,7 +48,7 @@ Returns a listing of twenty (up to one hundred) photos for a specified **[photo 
     - 'desc' — Sort in descending order (highest or most-recent first).  This is the default.
 
 - **page** — Return a specific page in the photo stream. Page numbering is 1-based.
-- **rpp** — The number of results to return. Can not be over 100, default 20.
+- **rpp** — The number of results to return. Can not be over 100, default 50.
 - **image_size** — The photo size(s) to be returned. See the documentation on **[photo sizes][]**.
 
 
